@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://alituofo.github.io">
-  <title>Category: markdown | Alituofo</title>
+  <title>C++提高编程 | Alituofo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Alituofo">
-<meta property="og:url" content="http://alituofo.github.io/categories/markdown/index.html">
+  <meta name="description" content="C++八股文的一些个人总结一、内存相关C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的 全局区：存放全局变量和静态变量以及常量 栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等 堆区：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收   C++中在程序运行前分为全局区和代码区  代码区特点是共享和只读 全局区中存放全局变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++提高编程">
+<meta property="og:url" content="http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/index.html">
 <meta property="og:site_name" content="Alituofo">
+<meta property="og:description" content="C++八股文的一些个人总结一、内存相关C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的 全局区：存放全局变量和静态变量以及常量 栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等 堆区：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收   C++中在程序运行前分为全局区和代码区  代码区特点是共享和只读 全局区中存放全局变量">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-03-08T14:15:28.000Z">
+<meta property="article:modified_time" content="2022-03-08T14:20:19.049Z">
 <meta property="article:author" content="Alituofo">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Alituofo" type="application/atom+xml">
@@ -202,76 +207,439 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C++八股文" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/14/Markdown%E7%AC%94%E8%AE%B0%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-        <time datetime="2020-04-14T10:55:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/14/Markdown%E7%AC%94%E8%AE%B0%E6%B5%8B%E8%AF%95/" target="_blank">Markdown笔记测试</a>
   
+    <h1 class="article-title" itemprop="name">
+      C++提高编程
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+ <!--显示阅读次数-->
+ 
+   <br/>
+   <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+   <span class="icon-sort"></span>
+   <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+             阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+   </span>
+   </a>
+   
+   
+  
+  
+<a href="/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/" class="archive-article-date">
+        <time datetime="2022-03-08T14:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.9k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">12分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="C-八股文的一些个人总结"><a href="#C-八股文的一些个人总结" class="headerlink" title="C++八股文的一些个人总结"></a>C++八股文的一些个人总结</h1><h2 id="一、内存相关"><a href="#一、内存相关" class="headerlink" title="一、内存相关"></a>一、内存相关</h2><p>C++程序在执行时，将内存大方向划分为<strong>4个区域</strong></p>
+<ol>
+<li><strong>代码区</strong>：存放函数体的二进制代码，由操作系统进行管理的</li>
+<li><strong>全局区</strong>：存放全局变量和静态变量以及常量</li>
+<li><strong>栈区</strong>：由编译器自动分配释放, 存放函数的参数值,局部变量等</li>
+<li><strong>堆区</strong>：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收</li>
+</ol>
+<ul>
+<li><p>C++中在<strong>程序运行前</strong>分为全局区和代码区</p>
+<ul>
+<li>代码区特点是共享和只读</li>
+<li>全局区中存放全局变量、静态变量(static)、常量<ul>
+<li>常量中存放 const修饰的全局变量(全局常量) 和 字符串常量<br/><br/></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在<strong>程序运行后</strong>分为栈区和堆区</p>
+<ul>
+<li>栈区由编译器自动分配释放, 存放函数的参数值,局部变量等，🧐注意事项：不要返回局部变量的地址，栈区开辟的数据由编译器自动释放</li>
+<li>堆区数据由程序员管理开辟和释放，堆区数据利用new关键字进行开辟内存，析构代码将堆区开辟数据做释放操作<span id="more"></span>
+<h3 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">public:</span><br><span class="line">    Person()&#123;</span><br><span class="line">        cout&lt;&lt;&quot;Person的默认构造函数调用&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    Person(int age,int height)&#123;</span><br><span class="line"></span><br><span class="line">        m_Age = age;</span><br><span class="line">        m_Height = new int(height);</span><br><span class="line">        cout&lt;&lt;&quot;Person的有参构造函数调用&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    //要利用深拷贝来解决：自己实现拷贝构造函数，解决浅拷贝带来的问题</span><br><span class="line">    Person(const Person &amp;p)&#123;</span><br><span class="line">        cout&lt;&lt;&quot;Person拷贝构造函数的调用&quot;&lt;&lt;endl;</span><br><span class="line">        m_Age = p.m_Age;</span><br><span class="line">        //m_Height = p.m_Height;编译器默认实现（浅拷贝）</span><br><span class="line">        //深拷贝操作</span><br><span class="line">        m_Height =  new int(*p.m_Height);//在堆区重新创建一块内存</span><br><span class="line">    &#125;</span><br><span class="line">    ~Person()&#123;</span><br><span class="line">        if(m_Height!=NULL)&#123;</span><br><span class="line">            delete m_Height;</span><br><span class="line">            m_Height = NULL;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;&quot;Person的析构函数调用&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    int m_Age;</span><br><span class="line">    int *m_Height;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void test01()&#123;</span><br><span class="line">    Person p1(18,180);</span><br><span class="line">    cout&lt;&lt;&quot;p1的年龄为：&quot;&lt;&lt;p1.m_Age &lt;&lt;&quot;身高为：&quot;&lt;&lt;*p1.m_Height&lt;&lt;endl;</span><br><span class="line">    Person p2(p1);</span><br><span class="line">    cout&lt;&lt;&quot;p2的年龄为：&quot;&lt;&lt;p2.m_Age&lt;&lt;&quot;身高为：&quot;&lt;&lt;*p2.m_Height&lt;&lt;endl;</span><br><span class="line">    //栈的后进先出原则，先析构p2再析构p1，导致同一内存地址释放两次</span><br><span class="line">    //浅拷贝带来的问题：堆区的内存重复释放</span><br><span class="line">    //要利用深拷贝来解决：自己实现拷贝构造函数，解决浅拷贝带来的问题</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">    test01();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="内存对齐"><a href="#内存对齐" class="headerlink" title="内存对齐"></a>内存对齐</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">#pragma pack(show)//对齐模数默认是8，编译后查看</span><br><span class="line">//#pragma pack(1)// 对齐模数可以修改为2的n次方</span><br><span class="line"></span><br><span class="line">//自定义数据类型 内存对齐规则如下</span><br><span class="line">//1.第一个属性开始，从偏移量0位置开始存储</span><br><span class="line">//2.第二个属性开始，放在min(该类型大小，对齐模数「默认是8」）的整数倍上</span><br><span class="line">//3.整体计算完毕后，做二次对齐，结构体大小必须是min(该结构体中最大数据类型，对齐模数)的整数倍上，不足补齐</span><br><span class="line">struct Student&#123;</span><br><span class="line">    int a;  //0~3</span><br><span class="line">    char b; //4~7</span><br><span class="line">    double c;//8~15</span><br><span class="line">    float d; //16~19</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//2、结构体嵌套结构体</span><br><span class="line">struct Student2&#123;</span><br><span class="line">    char a;     //0~7</span><br><span class="line">    struct Student b;//8~31</span><br><span class="line">    double c;   //32~39</span><br><span class="line">&#125;;</span><br><span class="line">void test01()&#123;</span><br><span class="line">    cout&lt;&lt;&quot;sizeof = &quot;&lt;&lt;sizeof(struct Student)&lt;&lt;endl;//24</span><br><span class="line">    cout&lt;&lt;&quot;sizeof = &quot;&lt;&lt;sizeof(struct Student2)&lt;&lt;endl;//40</span><br><span class="line">&#125;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">    test01();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、代码相关"><a href="#二、代码相关" class="headerlink" title="二、代码相关"></a>二、代码相关</h2><h3 id="关于static关键字"><a href="#关于static关键字" class="headerlink" title="关于static关键字"></a>关于static关键字</h3><ul>
+<li><ol>
+<li>static修饰普通变量</li>
+</ol>
+<ul>
+<li>该静态变量存储在全局区，在程序运行前就生成了，如果没有初始值，默认为0</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>static修饰普通函数</li>
+</ol>
+<ul>
+<li>该函数作用范围仅限当前文件内，防止多文件环境下与其他文件内函数重名</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>static修饰成员变量</li>
+</ol>
+<ul>
+<li>该成员变量全局唯一一份，与实例化对象创建的个数无关。该成员变量无需实例化对象就可以进行访问</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>static修饰成员函数</li>
+</ol>
+<ul>
+<li>该函数无需实例化对象就可以进行访问，函数不能访问非静态变量</li>
+</ul>
+</li>
+</ul>
+<h3 id="关于const关键字"><a href="#关于const关键字" class="headerlink" title="关于const关键字"></a>关于const关键字</h3><ul>
+<li><ol>
+<li>const修饰指针 常量指针 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * p1 = &amp;a;</span><br><span class="line"><span class="comment">//指针指向的值不可以修改，指针的指向可以修改</span></span><br><span class="line"><span class="comment">//*p1 = 20;错误</span></span><br><span class="line">p1 = &amp;b;<span class="comment">//正确</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>const修饰常量 指针常量<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int * const p2 = &amp;a;</span><br><span class="line">*p2 = 100;//正确，指针指向的值可以修改</span><br><span class="line">//p2 = &amp;b;错误，指针的指向不可以修改</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>const修饰指针和常量<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const int * const p3 = &amp;a;</span><br><span class="line">//指针指向的值和指针的指向都不可以修改</span><br><span class="line">//*p3 = 100;错误</span><br><span class="line">//p3 = &amp;b;错误</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p> <em>技巧：关注const后面紧跟的事指针还是常量，是指针就是常量指针，是常量就是指针常量。</em></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>在函数形参列表中，可以加==<strong>const</strong>修饰形参==，防止形参改变实参</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引用使用的场景，通常用来修饰形参</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showValue</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp; v)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//v += 10;</span></span><br><span class="line">	cout &lt;&lt; v &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//int&amp; ref = 10;  引用本身需要一个合法的内存空间，因此这行错误</span></span><br><span class="line">	<span class="comment">//加入const就可以了，编译器优化代码，int temp = 10; const int&amp; ref = temp;</span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span>&amp; ref = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//ref = 100;  //加入const后不可以修改变量</span></span><br><span class="line">	cout &lt;&lt; ref &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//函数中利用常量引用防止误操作修改实参</span></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">showValue</span>(a);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>const修饰成员函数</strong></p>
+<ul>
+<li><p>常函数：</p>
+<ul>
+<li>成员函数后加const后我们称为这个函数为常函数</li>
+<li>常函数内不可以修改成员属性</li>
+<li>成员属性声明时加关键字mutable后，在常函数中依然可以修改</li>
+</ul>
+</li>
+<li><p>常对象：</p>
+<ul>
+<li>声明对象前加const称该对象为常对象</li>
+<li>常对象只能调用常函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">public:</span><br><span class="line">    Person() &#123;</span><br><span class="line">        m_A = 0;</span><br><span class="line">        m_B = 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    //this指针的本质是一个指针常量(Person * const this)指针的指向不可修改</span><br><span class="line">    //如果想让指针指向的值也不可以修改，需要声明常函数,即添加const</span><br><span class="line">    //相当于变成const Person * const this</span><br><span class="line">    void ShowPerson() const &#123;</span><br><span class="line">        //const Type* const pointer;</span><br><span class="line">        //this = NULL; //不能修改指针的指向 Person* const this;</span><br><span class="line">        //this-&gt;mA = 100; //但是this指针指向的对象的数据是可以修改的</span><br><span class="line"></span><br><span class="line">        //const修饰成员函数，表示指针指向的内存空间的数据不能修改，除了mutable修饰的变量</span><br><span class="line">        this-&gt;m_B = 100;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    void MyFunc() const &#123;</span><br><span class="line">        //mA = 10000;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">public:</span><br><span class="line">    int m_A;</span><br><span class="line">    mutable int m_B; //可修改 可变的</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//const修饰对象  常对象</span><br><span class="line">void test01() &#123;</span><br><span class="line"></span><br><span class="line">    const Person person; //常量对象</span><br><span class="line">    cout &lt;&lt; person.m_A &lt;&lt; endl;</span><br><span class="line">    //person.mA = 100; //常对象不能修改成员变量的值,但是可以访问</span><br><span class="line">    person.m_B = 100; //但常对象可以修改mutable修饰成员变量</span><br><span class="line"></span><br><span class="line">    //常对象访问成员函数</span><br><span class="line">    person.MyFunc(); //常对象能调用常函数</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">    test01();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>因为this指针的本质是一个<strong>指针常量</strong>（Person * const this)指针的指向不可修改</li>
+<li>所以加const后相当于变成<strong>常量指针常量</strong>(const Person * const this)值也不可以修改了</li>
+</ul>
+<h2 id="构造函数调用规则如下："><a href="#构造函数调用规则如下：" class="headerlink" title="构造函数调用规则如下："></a><strong>构造函数</strong>调用规则如下：</h2><p>   如果用户定义有参构造函数，c++不在提供默认无参构造，但是会提供默认拷贝构造</p>
+<p>   如果用户定义拷贝构造函数，c++不会再提供其他构造函数</p>
+<p>示例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//无参（默认）构造函数</span></span><br><span class="line">	<span class="built_in">Person</span>() &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;无参构造函数!&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//有参构造函数</span></span><br><span class="line">	<span class="built_in">Person</span>(<span class="keyword">int</span> a) &#123;</span><br><span class="line">		age = a;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;有参构造函数!&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//拷贝构造函数</span></span><br><span class="line">	<span class="built_in">Person</span>(<span class="keyword">const</span> Person&amp; p) &#123;</span><br><span class="line">		age = p.age;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;拷贝构造函数!&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//析构函数</span></span><br><span class="line">	~<span class="built_in">Person</span>() &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;析构函数!&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function">Person <span class="title">p1</span><span class="params">(<span class="number">18</span>)</span></span>;</span><br><span class="line">	<span class="comment">//如果不写拷贝构造，编译器会自动添加拷贝构造，并且做浅拷贝操作</span></span><br><span class="line">	<span class="function">Person <span class="title">p2</span><span class="params">(p1)</span></span>;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;p2的年龄为： &quot;</span> &lt;&lt; p2.age &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//如果用户提供有参构造，编译器不会提供默认构造，会提供拷贝构造</span></span><br><span class="line">	Person p1; <span class="comment">//此时如果用户自己没有提供默认构造，会出错</span></span><br><span class="line">	<span class="function">Person <span class="title">p2</span><span class="params">(<span class="number">10</span>)</span></span>; <span class="comment">//用户提供的有参</span></span><br><span class="line">	<span class="function">Person <span class="title">p3</span><span class="params">(p2)</span></span>; <span class="comment">//此时如果用户没有提供拷贝构造，编译器会提供</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//如果用户提供拷贝构造，编译器不会提供其他构造函数</span></span><br><span class="line">	Person p4; <span class="comment">//此时如果用户自己没有提供默认构造，会出错</span></span><br><span class="line">	<span class="function">Person <span class="title">p5</span><span class="params">(<span class="number">10</span>)</span></span>; <span class="comment">//此时如果用户自己没有提供有参，会出错</span></span><br><span class="line">	<span class="function">Person <span class="title">p6</span><span class="params">(p5)</span></span>; <span class="comment">//用户自己提供拷贝构造</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="拷贝构造函数调用时机"><a href="#拷贝构造函数调用时机" class="headerlink" title="拷贝构造函数调用时机"></a>拷贝构造函数调用时机</h2><p>C++中拷贝构造函数调用时机通常有三种情况</p>
+<ul>
+<li>使用一个已经创建完毕的对象来初始化一个新对象</li>
+<li>值传递的方式给函数参数传值</li>
+<li>以值方式返回局部对象</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">public:</span><br><span class="line">	Person() &#123;</span><br><span class="line">		cout &lt;&lt; &quot;无参构造函数!&quot; &lt;&lt; endl;</span><br><span class="line">		mAge = 0;</span><br><span class="line">	&#125;</span><br><span class="line">	Person(int age) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;有参构造函数!&quot; &lt;&lt; endl;</span><br><span class="line">		mAge = age;</span><br><span class="line">	&#125;</span><br><span class="line">	Person(const Person&amp; p) &#123;</span><br><span class="line">		cout &lt;&lt; &quot;拷贝构造函数!&quot; &lt;&lt; endl;</span><br><span class="line">		mAge = p.mAge;</span><br><span class="line">	&#125;</span><br><span class="line">	//析构函数在释放内存之前调用</span><br><span class="line">	~Person() &#123;</span><br><span class="line">		cout &lt;&lt; &quot;析构函数!&quot; &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">public:</span><br><span class="line">	int mAge;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">//1. 使用一个已经创建完毕的对象来初始化一个新对象</span><br><span class="line">void test01() &#123;</span><br><span class="line"></span><br><span class="line">	Person man(100); //p对象已经创建完毕</span><br><span class="line">	Person newman(man); //调用拷贝构造函数</span><br><span class="line">	Person newman2 = man; //拷贝构造</span><br><span class="line"></span><br><span class="line">	//Person newman3;</span><br><span class="line">	//newman3 = man; //不是调用拷贝构造函数，赋值操作</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//2. 值传递的方式给函数参数传值</span><br><span class="line">//相当于Person p1 = p;</span><br><span class="line">void doWork(Person p1) &#123;&#125;</span><br><span class="line">void test02() &#123;</span><br><span class="line">	Person p; //无参构造函数</span><br><span class="line">	doWork(p);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//3. 以值方式返回局部对象</span><br><span class="line">Person doWork2()</span><br><span class="line">&#123;</span><br><span class="line">	Person p1;</span><br><span class="line">	cout &lt;&lt; (int *)&amp;p1 &lt;&lt; endl;</span><br><span class="line">	return p1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void test03()</span><br><span class="line">&#123;</span><br><span class="line">	Person p = doWork2();</span><br><span class="line">	cout &lt;&lt; (int *)&amp;p &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">	//test01();</span><br><span class="line">	//test02();</span><br><span class="line">	test03();</span><br><span class="line"></span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="从this指针理解拷贝构造函数"><a href="#从this指针理解拷贝构造函数" class="headerlink" title="从this指针理解拷贝构造函数"></a>从this指针理解拷贝构造函数</h2><ul>
+<li><p>this指针指向被调用的成员函数所属的对象</p>
+</li>
+<li><p>this指针是隐含每一个非静态成员<strong>函数</strong>内的一种指针</p>
+</li>
+<li><p>this指针不需要定义，直接使用即可</p>
+</li>
+<li><p>this指针的用途：</p>
+<p> 当形参和成员变量同名时，可用this指针来区分</p>
+<p> 在类的非静态成员函数中返回对象本身，可使用return *this</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">class Person</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line"></span><br><span class="line">    Person(int age)</span><br><span class="line">    &#123;</span><br><span class="line">        //1、当形参和成员变量同名时，可用this指针来区分</span><br><span class="line">        this-&gt;age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Person&amp; PersonAddPerson(Person p)</span><br><span class="line">    //若不加&amp;(返回引用改为返回值)</span><br><span class="line">    // 相当于 值方式返回局部对象 不会返回传进来的对象，而是调用拷贝构造函数，拷贝一个新的对象返回</span><br><span class="line">    // 这样链式编程后的结果p2的值为20而不是40，因为每次返回都是一个新的p2</span><br><span class="line">    &#123;</span><br><span class="line">        this-&gt;age += p.age;</span><br><span class="line">        //返回对象本身</span><br><span class="line">        return *this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">void test01()</span><br><span class="line">&#123;</span><br><span class="line">    Person p1(10);</span><br><span class="line">    cout &lt;&lt; &quot;p1.age = &quot; &lt;&lt; p1.age &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    Person p2(10);</span><br><span class="line">    //链式编程</span><br><span class="line">    p2.PersonAddPerson(p1).PersonAddPerson(p1).PersonAddPerson(p1);</span><br><span class="line">    cout &lt;&lt; &quot;p2.age = &quot; &lt;&lt; p2.age &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line">    test01();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>好活当赏！<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/assets/paywechat.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Alituofo
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://alituofo.github.io/2022/03/08/C++八股文/" title="C++提高编程" target="_blank">http://alituofo.github.io/2022/03/08/C++八股文/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/alituofo/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/markdown//" class="article-tag-list-link color4">markdown</a>
+        			<a href="/categories/C//" class="article-tag-list-link color4">C++</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2022/03/08/os-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          OS
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/03/04/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++提高编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%85%AB%E8%82%A1%E6%96%87%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">C++八股文的一些个人总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3"><span class="toc-number">1.1.</span> <span class="toc-text">一、内存相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.1.1.</span> <span class="toc-text">深拷贝与浅拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">内存对齐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%A3%E7%A0%81%E7%9B%B8%E5%85%B3"><span class="toc-number">1.2.</span> <span class="toc-text">二、代码相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Estatic%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.2.1.</span> <span class="toc-text">关于static关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Econst%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.2.2.</span> <span class="toc-text">关于const关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">构造函数调用规则如下：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="toc-number">1.4.</span> <span class="toc-text">拷贝构造函数调用时机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8Ethis%E6%8C%87%E9%92%88%E7%90%86%E8%A7%A3%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">从this指针理解拷贝构造函数</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "C++提高编程" -->
+  var giteement = new Giteement({
+    id: '20220308221528',
+    owner: 'alituofo',
+    repo: 'yilia-plus',
+    backcall_uri: 'https://alituofo.github.io',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: 'b27748d2d6089a20f33e6191f4fdbdeb9b23f17a7aed73c65f26201d62e65864',
+      client_secret: '46e3d6fee79c9c7a5f23a76cdc2a7037c88c6b19a57dc64cc01dc0eb16850266'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
+
+
+
+
+
+
 
 
           </div>
@@ -300,10 +668,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
