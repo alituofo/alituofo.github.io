@@ -25,6 +25,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - 'live2d_models/**/*'
+  - 'live2dw/**/*'
   - 'lib/**/*'
   - 'assets/**/*'
   - 'img/**/*'
