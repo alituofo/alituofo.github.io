@@ -335,26 +335,6 @@ windows 2000/XP、嵌入式OS
 
 
 
-赏
-
-
-
-
-好活当赏！
-
-
-
-
-![](/assets/paywechat.jpg)
-微信
-
-
-
-
-
-
-
-
 
 
 
