@@ -10,18 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="C++ 八股文知识点整理。">
+  <meta name="description" content="C++八股文的一些个人总结 一、内存相关C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的  全局区：存放全局变量和静态变量以及常量  栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等  堆区：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收   C++中在程序运行前分为全局区和代码区  代码区特点是共享和只读  全局区中存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++提高编程">
 <meta property="og:url" content="http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/index.html">
 <meta property="og:site_name" content="Alituofo">
-<meta property="og:description" content="C++ 八股文知识点整理。">
+<meta property="og:description" content="C++八股文的一些个人总结 一、内存相关C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的  全局区：存放全局变量和静态变量以及常量  栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等  堆区：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收   C++中在程序运行前分为全局区和代码区  代码区特点是共享和只读  全局区中存">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://alituofo.github.io/assets/paywechat.jpg">
 <meta property="article:published_time" content="2022-03-08T06:15:28.000Z">
-<meta property="article:modified_time" content="2026-05-28T11:57:01.091Z">
+<meta property="article:modified_time" content="2026-05-28T12:35:18.566Z">
 <meta property="article:author" content="Alituofo">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://alituofo.github.io/assets/paywechat.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Alituofo" type="application/atom+xml">
   
@@ -230,7 +232,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">9字</span>
+      <span class="post-count">2.9k字</span>
     </span>
   </span>
 
@@ -239,7 +241,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">12分</span>
     </span>
   </span>
 </div>
@@ -250,7 +252,164 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>C++ 八股文知识点整理。</p>
+    <p><a href="#C-%E5%85%AB%E8%82%A1%E6%96%87%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93"></a>C++八股文的一些个人总结</p>
+<h2 id="一、内存相关"><a href="#一、内存相关" class="headerlink" title="一、内存相关"></a>一、内存相关</h2><p>C++程序在执行时，将内存大方向划分为<strong>4个区域</strong></p>
+<ul>
+<li><p><strong>代码区</strong>：存放函数体的二进制代码，由操作系统进行管理的</p>
+</li>
+<li><p><strong>全局区</strong>：存放全局变量和静态变量以及常量</p>
+</li>
+<li><p><strong>栈区</strong>：由编译器自动分配释放, 存放函数的参数值,局部变量等</p>
+</li>
+<li><p><strong>堆区</strong>：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收</p>
+</li>
+</ul>
+<p>C++中在<strong>程序运行前</strong>分为全局区和代码区</p>
+<ul>
+<li>代码区特点是共享和只读</li>
+</ul>
+<p>全局区中存放全局变量、静态变量(static)、常量<br>常量中存放 const修饰的全局变量(全局常量) 和 字符串常量</p>
+<p>在<strong>程序运行后</strong>分为栈区和堆区</p>
+<ul>
+<li>栈区由编译器自动分配释放, 存放函数的参数值,局部变量等，🧐注意事项：不要返回局部变量的地址，栈区开辟的数据由编译器自动释放</li>
+</ul>
+<p>堆区数据由程序员管理开辟和释放，堆区数据利用new关键字进行开辟内存，析构代码将堆区开辟数据做释放操作<br><a href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D"></a>深拷贝与浅拷贝<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>class Person&#123;<br>public:<br>Person()&#123;<br>cout”Person的默认构造函数调用”<br>&#125;<br>Person(int age,int height)&#123;</p>
+<p>m_Age &#x3D; age;<br>m_Height &#x3D; new int(height);<br>cout”Person的有参构造函数调用”<br>&#125;<br>&#x2F;&#x2F;要利用深拷贝来解决：自己实现拷贝构造函数，解决浅拷贝带来的问题<br>Person(const Person &amp;p)&#123;<br>cout”Person拷贝构造函数的调用”<br>m_Age &#x3D; p.m_Age;<br>&#x2F;&#x2F;m_Height &#x3D; p.m_Height;编译器默认实现（浅拷贝）<br>&#x2F;&#x2F;深拷贝操作<br>m_Height &#x3D;  new int(*p.m_Height);&#x2F;&#x2F;在堆区重新创建一块内存<br>&#125;<br>~Person()&#123;<br>if(m_Height!&#x3D;NULL)&#123;<br>delete m_Height;<br>m_Height &#x3D; NULL;<br>&#125;<br>cout”Person的析构函数调用”<br>&#125;</p>
+<p>int m_Age;<br>int *m_Height;<br>&#125;;</p>
+<p>void test01()&#123;<br>Person p1(18,180);<br>cout”p1的年龄为：””身高为：”<br>Person p2(p1);<br>cout”p2的年龄为：””身高为：”<br>&#x2F;&#x2F;栈的后进先出原则，先析构p2再析构p1，导致同一内存地址释放两次<br>&#x2F;&#x2F;浅拷贝带来的问题：堆区的内存重复释放<br>&#x2F;&#x2F;要利用深拷贝来解决：自己实现拷贝构造函数，解决浅拷贝带来的问题<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>return 0;<br>&#125;</p>
+<p><a href="#%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90"></a>内存对齐<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>#include<br>using namespace std;</p>
+<p>#pragma pack(show)&#x2F;&#x2F;对齐模数默认是8，编译后查看<br>&#x2F;&#x2F;#pragma pack(1)&#x2F;&#x2F; 对齐模数可以修改为2的n次方</p>
+<p>&#x2F;&#x2F;自定义数据类型 内存对齐规则如下<br>&#x2F;&#x2F;1.第一个属性开始，从偏移量0位置开始存储<br>&#x2F;&#x2F;2.第二个属性开始，放在min(该类型大小，对齐模数「默认是8」）的整数倍上<br>&#x2F;&#x2F;3.整体计算完毕后，做二次对齐，结构体大小必须是min(该结构体中最大数据类型，对齐模数)的整数倍上，不足补齐<br>struct Student&#123;<br>int a;  &#x2F;&#x2F;0<del>3<br>char b; &#x2F;&#x2F;4</del>7<br>double c;&#x2F;&#x2F;8<del>15<br>float d; &#x2F;&#x2F;16</del>19<br>&#125;;</p>
+<p>&#x2F;&#x2F;2、结构体嵌套结构体<br>struct Student2&#123;<br>char a;     &#x2F;&#x2F;0<del>7<br>struct Student b;&#x2F;&#x2F;8</del>31<br>double c;   &#x2F;&#x2F;32~39<br>&#125;;<br>void test01()&#123;<br>cout”sizeof &#x3D; “sizeof(struct Student)&#x2F;&#x2F;24<br>cout”sizeof &#x3D; “sizeof(struct Student2)&#x2F;&#x2F;40<br>&#125;<br>int main() &#123;</p>
+<p>test01();</p>
+<p>return 0;<br>&#125;</p>
+<h2 id="二、代码相关"><a href="#二、代码相关" class="headerlink" title="二、代码相关"></a>二、代码相关</h2><p><a href="#%E5%85%B3%E4%BA%8Estatic%E5%85%B3%E9%94%AE%E5%AD%97"></a>关于static关键字</p>
+<ul>
+<li><p>static修饰普通变量</p>
+</li>
+<li><p>该静态变量存储在全局区，在程序运行前就生成了，如果没有初始值，默认为0</p>
+</li>
+<li><p>static修饰普通函数</p>
+</li>
+<li><p>该函数作用范围仅限当前文件内，防止多文件环境下与其他文件内函数重名</p>
+</li>
+<li><p>static修饰成员变量</p>
+</li>
+<li><p>该成员变量全局唯一一份，与实例化对象创建的个数无关。该成员变量无需实例化对象就可以进行访问</p>
+</li>
+<li><p>static修饰成员函数</p>
+</li>
+<li><p>该函数无需实例化对象就可以进行访问，函数不能访问非静态变量</p>
+</li>
+</ul>
+<p><a href="#%E5%85%B3%E4%BA%8Econst%E5%85%B3%E9%94%AE%E5%AD%97"></a>关于const关键字</p>
+<p>const修饰指针 常量指针<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>int a &#x3D; 10;<br>int b &#x3D; 10;</p>
+<p>const int * p1 &#x3D; &a;<br>&#x2F;&#x2F;指针指向的值不可以修改，指针的指向可以修改<br>&#x2F;&#x2F;*p1 &#x3D; 20;错误<br>p1 &#x3D; &b;&#x2F;&#x2F;正确</p>
+<p>const修饰常量 指针常量<br>1<br>2<br>3<br>int * const p2 &#x3D; &a;<br>*p2 &#x3D; 100;&#x2F;&#x2F;正确，指针指向的值可以修改<br>&#x2F;&#x2F;p2 &#x3D; &b;错误，指针的指向不可以修改</p>
+<p>const修饰指针和常量<br>1<br>2<br>3<br>4<br>const int * const p3 &#x3D; &a;<br>&#x2F;&#x2F;指针指向的值和指针的指向都不可以修改<br>&#x2F;&#x2F;*p3 &#x3D; 100;错误<br>&#x2F;&#x2F;p3 &#x3D; &b;错误</p>
+<p><em>技巧：关注const后面紧跟的事指针还是常量，是指针就是常量指针，是常量就是指针常量。</em></p>
+<ul>
+<li>在函数形参列表中，可以加&#x3D;&#x3D;<strong>const</strong>修饰形参&#x3D;&#x3D;，防止形参改变实参</li>
+</ul>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>&#x2F;&#x2F;引用使用的场景，通常用来修饰形参<br>void showValue(const int&amp; v) &#123;<br>&#x2F;&#x2F;v +&#x3D; 10;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;int&amp; ref &#x3D; 10;  引用本身需要一个合法的内存空间，因此这行错误<br>&#x2F;&#x2F;加入const就可以了，编译器优化代码，int temp &#x3D; 10; const int&amp; ref &#x3D; temp;<br>const int&amp; ref &#x3D; 10;</p>
+<p>&#x2F;&#x2F;ref &#x3D; 100;  &#x2F;&#x2F;加入const后不可以修改变量<br>cout </p>
+<p>&#x2F;&#x2F;函数中利用常量引用防止误操作修改实参<br>int a &#x3D; 10;<br>showValue(a);</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>const修饰成员函数</strong></p>
+<p>常函数：</p>
+<ul>
+<li><p>成员函数后加const后我们称为这个函数为常函数</p>
+</li>
+<li><p>常函数内不可以修改成员属性</p>
+</li>
+<li><p>成员属性声明时加关键字mutable后，在常函数中依然可以修改</p>
+</li>
+</ul>
+<p>常对象：</p>
+<ul>
+<li><p>声明对象前加const称该对象为常对象</p>
+</li>
+<li><p>常对象只能调用常函数</p>
+</li>
+</ul>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>class Person &#123;<br>public:<br>Person() &#123;<br>m_A &#x3D; 0;<br>m_B &#x3D; 0;<br>&#125;</p>
+<p>&#x2F;&#x2F;this指针的本质是一个指针常量(Person * const this)指针的指向不可修改<br>&#x2F;&#x2F;如果想让指针指向的值也不可以修改，需要声明常函数,即添加const<br>&#x2F;&#x2F;相当于变成const Person * const this<br>void ShowPerson() const &#123;<br>&#x2F;&#x2F;const Type* const pointer;<br>&#x2F;&#x2F;this &#x3D; NULL; &#x2F;&#x2F;不能修改指针的指向 Person* const this;<br>&#x2F;&#x2F;this-&gt;mA &#x3D; 100; &#x2F;&#x2F;但是this指针指向的对象的数据是可以修改的</p>
+<p>&#x2F;&#x2F;const修饰成员函数，表示指针指向的内存空间的数据不能修改，除了mutable修饰的变量<br>this-&gt;m_B &#x3D; 100;<br>&#125;</p>
+<p>void MyFunc() const &#123;<br>&#x2F;&#x2F;mA &#x3D; 10000;<br>&#125;</p>
+<p>public:<br>int m_A;<br>mutable int m_B; &#x2F;&#x2F;可修改 可变的<br>&#125;;</p>
+<p>&#x2F;&#x2F;const修饰对象  常对象<br>void test01() &#123;</p>
+<p>const Person person; &#x2F;&#x2F;常量对象<br>cout<br>&#x2F;&#x2F;person.mA &#x3D; 100; &#x2F;&#x2F;常对象不能修改成员变量的值,但是可以访问<br>person.m_B &#x3D; 100; &#x2F;&#x2F;但常对象可以修改mutable修饰成员变量</p>
+<p>&#x2F;&#x2F;常对象访问成员函数<br>person.MyFunc(); &#x2F;&#x2F;常对象能调用常函数</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>return 0;</p>
+<ul>
+<li><p>因为this指针的本质是一个<strong>指针常量</strong>（Person * const this)指针的指向不可修改</p>
+</li>
+<li><p>所以加const后相当于变成<strong>常量指针常量</strong>(const Person * const this)值也不可以修改了</p>
+</li>
+</ul>
+<p><a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99%E5%A6%82%E4%B8%8B%EF%BC%9A"></a><strong>构造函数</strong>调用规则如下：   如果用户定义有参构造函数，c++不在提供默认无参构造，但是会提供默认拷贝构造</p>
+<p>如果用户定义拷贝构造函数，c++不会再提供其他构造函数</p>
+<p>示例：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>class Person &#123;<br>public:<br>&#x2F;&#x2F;无参（默认）构造函数<br>Person() &#123;<br>cout “无参构造函数!”<br>&#125;<br>&#x2F;&#x2F;有参构造函数<br>Person(int a) &#123;<br>age &#x3D; a;<br>cout “有参构造函数!”<br>&#125;<br>&#x2F;&#x2F;拷贝构造函数<br>Person(const Person&amp; p) &#123;<br>age &#x3D; p.age;<br>cout “拷贝构造函数!”<br>&#125;<br>&#x2F;&#x2F;析构函数<br>~Person() &#123;<br>cout “析构函数!”<br>&#125;<br>public:<br>int age;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>Person p1(18);<br>&#x2F;&#x2F;如果不写拷贝构造，编译器会自动添加拷贝构造，并且做浅拷贝操作<br>Person p2(p1);</p>
+<p>cout “p2的年龄为： “<br>&#125;</p>
+<p>void test02()<br>&#123;<br>&#x2F;&#x2F;如果用户提供有参构造，编译器不会提供默认构造，会提供拷贝构造<br>Person p1; &#x2F;&#x2F;此时如果用户自己没有提供默认构造，会出错<br>Person p2(10); &#x2F;&#x2F;用户提供的有参<br>Person p3(p2); &#x2F;&#x2F;此时如果用户没有提供拷贝构造，编译器会提供</p>
+<p>&#x2F;&#x2F;如果用户提供拷贝构造，编译器不会提供其他构造函数<br>Person p4; &#x2F;&#x2F;此时如果用户自己没有提供默认构造，会出错<br>Person p5(10); &#x2F;&#x2F;此时如果用户自己没有提供有参，会出错<br>Person p6(p5); &#x2F;&#x2F;用户自己提供拷贝构造<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<h2 id="拷贝构造函数调用时机"><a href="#拷贝构造函数调用时机" class="headerlink" title="拷贝构造函数调用时机"></a>拷贝构造函数调用时机</h2><p>C++中拷贝构造函数调用时机通常有三种情况</p>
+<ul>
+<li><p>使用一个已经创建完毕的对象来初始化一个新对象</p>
+</li>
+<li><p>值传递的方式给函数参数传值</p>
+</li>
+<li><p>以值方式返回局部对象</p>
+</li>
+</ul>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>class Person &#123;<br>public:<br>Person() &#123;<br>cout “无参构造函数!”<br>mAge &#x3D; 0;<br>&#125;<br>Person(int age) &#123;<br>cout “有参构造函数!”<br>mAge &#x3D; age;<br>&#125;<br>Person(const Person&amp; p) &#123;<br>cout “拷贝构造函数!”<br>mAge &#x3D; p.mAge;<br>&#125;<br>&#x2F;&#x2F;析构函数在释放内存之前调用<br>~Person() &#123;<br>cout “析构函数!”<br>&#125;<br>public:<br>int mAge;<br>&#125;;</p>
+<p>&#x2F;&#x2F;1. 使用一个已经创建完毕的对象来初始化一个新对象<br>void test01() &#123;</p>
+<p>Person man(100); &#x2F;&#x2F;p对象已经创建完毕<br>Person newman(man); &#x2F;&#x2F;调用拷贝构造函数<br>Person newman2 &#x3D; man; &#x2F;&#x2F;拷贝构造</p>
+<p>&#x2F;&#x2F;Person newman3;<br>&#x2F;&#x2F;newman3 &#x3D; man; &#x2F;&#x2F;不是调用拷贝构造函数，赋值操作<br>&#125;</p>
+<p>&#x2F;&#x2F;2. 值传递的方式给函数参数传值<br>&#x2F;&#x2F;相当于Person p1 &#x3D; p;<br>void doWork(Person p1) &#123;&#125;<br>void test02() &#123;<br>Person p; &#x2F;&#x2F;无参构造函数<br>doWork(p);<br>&#125;</p>
+<p>&#x2F;&#x2F;3. 以值方式返回局部对象<br>Person doWork2()<br>&#123;<br>Person p1;<br>cout int *)&amp;p1<br>return p1;<br>&#125;</p>
+<p>void test03()<br>&#123;<br>Person p &#x3D; doWork2();<br>cout int *)&amp;p<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();<br>&#x2F;&#x2F;test02();<br>test03();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<h2 id="从this指针理解拷贝构造函数"><a href="#从this指针理解拷贝构造函数" class="headerlink" title="从this指针理解拷贝构造函数"></a>从this指针理解拷贝构造函数</h2><p>this指针指向被调用的成员函数所属的对象</p>
+<p>this指针是隐含每一个非静态成员<strong>函数</strong>内的一种指针</p>
+<p>this指针不需要定义，直接使用即可</p>
+<p>this指针的用途：</p>
+<p>当形参和成员变量同名时，可用this指针来区分</p>
+<p>在类的非静态成员函数中返回对象本身，可使用return *this</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>class Person<br>&#123;<br>public:</p>
+<p>Person(int age)<br>&#123;<br>&#x2F;&#x2F;1、当形参和成员变量同名时，可用this指针来区分<br>this-&gt;age &#x3D; age;<br>&#125;</p>
+<p>Person&amp; PersonAddPerson(Person p)<br>&#x2F;&#x2F;若不加&amp;(返回引用改为返回值)<br>&#x2F;&#x2F; 相当于 值方式返回局部对象 不会返回传进来的对象，而是调用拷贝构造函数，拷贝一个新的对象返回<br>&#x2F;&#x2F; 这样链式编程后的结果p2的值为20而不是40，因为每次返回都是一个新的p2<br>&#123;<br>this-&gt;age +&#x3D; p.age;<br>&#x2F;&#x2F;返回对象本身<br>return *this;<br>&#125;</p>
+<p>int age;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>Person p1(10);<br>cout “p1.age &#x3D; “ </p>
+<p>Person p2(10);<br>&#x2F;&#x2F;链式编程<br>p2.PersonAddPerson(p1).PersonAddPerson(p1).PersonAddPerson(p1);<br>cout “p2.age &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>return 0;<br>&#125;</p>
+<p>赏</p>
+<p>好活当赏！</p>
+<p><img src="/assets/paywechat.jpg"><br>微信</p>
+<p><strong>本文作者：</strong><br>Alituofo</p>
+<p><strong>本文链接：</strong><br><a href="http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/">http://alituofo.github.io/2022/03/08/C++八股文/</a></p>
+<p>**版权声明： **</p>
+<p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://github.com/alituofo/hexo-theme-yilia-plus/blob/master/LICENSE">MIT</a> 许可协议。转载请注明出处！</p>
 
     
 
@@ -578,19 +737,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2022</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
             
             <div class="clearfix"></div>

@@ -10,18 +10,29 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="C++ 提高编程相关笔记内容。">
+  <meta name="description" content="C++提高编程  本阶段主要针对C++&#x3D;&#x3D;泛型编程&#x3D;&#x3D;和&#x3D;&#x3D;STL&#x3D;&#x3D;技术做详细讲解，探讨C++更深层的使用  1 模板1.1 模板的概念模板就是建立通用的模具，大大提高复用性 例如生活中的模板 一寸照片模板,PPT模板 模板的特点：  模板不可以直接使用，它只是一个框架  模板的通用并不是万能的   1.2 函数模板">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++提高编程">
 <meta property="og:url" content="http://alituofo.github.io/2022/03/04/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Alituofo">
-<meta property="og:description" content="C++ 提高编程相关笔记内容。">
+<meta property="og:description" content="C++提高编程  本阶段主要针对C++&#x3D;&#x3D;泛型编程&#x3D;&#x3D;和&#x3D;&#x3D;STL&#x3D;&#x3D;技术做详细讲解，探讨C++更深层的使用  1 模板1.1 模板的概念模板就是建立通用的模具，大大提高复用性 例如生活中的模板 一寸照片模板,PPT模板 模板的特点：  模板不可以直接使用，它只是一个框架  模板的通用并不是万能的   1.2 函数模板">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547547642923.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547547896341.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547604555425.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002.png">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547605111510.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547606475892.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/1547606785041.png">
+<meta property="og:image" content="http://alituofo.github.io/assets/clip_image002-1547608564071.jpg">
+<meta property="og:image" content="http://alituofo.github.io/assets/paywechat.jpg">
 <meta property="article:published_time" content="2022-03-03T17:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-28T11:57:01.090Z">
+<meta property="article:modified_time" content="2026-05-28T12:35:18.521Z">
 <meta property="article:author" content="Alituofo">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://alituofo.github.io/assets/clip_image002.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Alituofo" type="application/atom+xml">
   
@@ -230,7 +241,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">11字</span>
+      <span class="post-count">26.4k字</span>
     </span>
   </span>
 
@@ -239,7 +250,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">122分</span>
     </span>
   </span>
 </div>
@@ -250,7 +261,2867 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>C++ 提高编程相关笔记内容。</p>
+    <p><a href="#C-%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B"></a>C++提高编程</p>
+<ul>
+<li>本阶段主要针对C++&#x3D;&#x3D;泛型编程&#x3D;&#x3D;和&#x3D;&#x3D;STL&#x3D;&#x3D;技术做详细讲解，探讨C++更深层的使用</li>
+</ul>
+<h2 id="1-模板"><a href="#1-模板" class="headerlink" title="1 模板"></a>1 模板</h2><p><a href="#1-1-%E6%A8%A1%E6%9D%BF%E7%9A%84%E6%A6%82%E5%BF%B5"></a>1.1 模板的概念模板就是建立<strong>通用的模具</strong>，大大<strong>提高复用性</strong></p>
+<p>例如生活中的模板</p>
+<p>一寸照片模板,PPT模板</p>
+<p>模板的特点：</p>
+<ul>
+<li><p>模板不可以直接使用，它只是一个框架</p>
+</li>
+<li><p>模板的通用并不是万能的</p>
+</li>
+</ul>
+<p><a href="#1-2-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF"></a>1.2 函数模板</p>
+<ul>
+<li><p>C++另一种编程思想称为 &#x3D;&#x3D;泛型编程&#x3D;&#x3D; ，主要利用的技术就是模板</p>
+</li>
+<li><p>C++提供两种模板机制:<strong>函数模板</strong>和<strong>类模板</strong></p>
+</li>
+</ul>
+<p><a href="#1-2-1-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95"></a>1.2.1 函数模板语法函数模板作用：</p>
+<p>建立一个通用函数，其函数返回值类型和形参类型可以不具体制定，用一个<strong>虚拟的类型</strong>来代表。</p>
+<p><strong>语法：</strong> </p>
+<p>1<br>2<br>templatetypename T&gt;<br>函数声明或定义</p>
+<p><strong>解释：</strong></p>
+<p>template  —  声明创建模板</p>
+<p>typename  — 表面其后面的符号是一种数据类型，可以用class代替</p>
+<p>T    —   通用的数据类型，名称可以替换，通常为大写字母</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51</p>
+<p>&#x2F;&#x2F;交换整型函数<br>void swapInt(int&amp; a, int&amp; b) &#123;<br>int temp &#x3D; a;<br>a &#x3D; b;<br>b &#x3D; temp;<br>&#125;</p>
+<p>&#x2F;&#x2F;交换浮点型函数<br>void swapDouble(double&amp; a, double&amp; b) &#123;<br>double temp &#x3D; a;<br>a &#x3D; b;<br>b &#x3D; temp;<br>&#125;</p>
+<p>&#x2F;&#x2F;利用模板提供通用的交换函数<br>templatetypename T&gt;<br>void mySwap(T&amp; a, T&amp; b)<br>&#123;<br>T temp &#x3D; a;<br>a &#x3D; b;<br>b &#x3D; temp;<br>&#125;</p>
+<p>void test01()<br>&#123;<br>int a &#x3D; 10;<br>int b &#x3D; 20;</p>
+<p>&#x2F;&#x2F;swapInt(a, b);</p>
+<p>&#x2F;&#x2F;利用模板实现交换<br>&#x2F;&#x2F;1、自动类型推导<br>mySwap(a, b);</p>
+<p>&#x2F;&#x2F;2、显示指定类型<br>mySwapint&gt;(a, b);</p>
+<p>cout “a &#x3D; “<br>cout “b &#x3D; “ </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>函数模板利用关键字 template</p>
+</li>
+<li><p>使用函数模板有两种方式：自动类型推导、显示指定类型</p>
+</li>
+<li><p>模板的目的是为了提高复用性，将类型参数化</p>
+</li>
+</ul>
+<p><a href="#1-2-2-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"></a>1.2.2 函数模板注意事项注意事项：</p>
+<ul>
+<li><p>自动类型推导，必须推导出一致的数据类型T,才可以使用</p>
+</li>
+<li><p>模板必须要确定出T的数据类型，才可以使用</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>&#x2F;&#x2F;利用模板提供通用的交换函数<br>template<br>void mySwap(T&amp; a, T&amp; b)<br>&#123;<br>T temp &#x3D; a;<br>a &#x3D; b;<br>b &#x3D; temp;<br>&#125;</p>
+<p>&#x2F;&#x2F; 1、自动类型推导，必须推导出一致的数据类型T,才可以使用<br>void test01()<br>&#123;<br>int a &#x3D; 10;<br>int b &#x3D; 20;<br>char c &#x3D; &#x27;c&#x27;;</p>
+<p>mySwap(a, b); &#x2F;&#x2F; 正确，可以推导出一致的T<br>&#x2F;&#x2F;mySwap(a, c); &#x2F;&#x2F; 错误，推导不出一致的T类型<br>&#125;</p>
+<p>&#x2F;&#x2F; 2、模板必须要确定出T的数据类型，才可以使用<br>template<br>void func()<br>&#123;<br>cout “func 调用”<br>&#125;</p>
+<p>void test02()<br>&#123;<br>&#x2F;&#x2F;func(); &#x2F;&#x2F;错误，模板不能独立使用，必须确定出T的类型<br>funcint&gt;(); &#x2F;&#x2F;利用显示指定类型的方式，给T一个类型，才可以使用该模板<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();<br>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li>使用模板时必须确定出通用数据类型T，并且能够推导出一致的类型</li>
+</ul>
+<p><a href="#1-2-3-%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E6%A1%88%E4%BE%8B"></a>1.2.3 函数模板案例案例描述：</p>
+<ul>
+<li><p>利用函数模板封装一个排序的函数，可以对<strong>不同数据类型数组</strong>进行排序</p>
+</li>
+<li><p>排序规则从大到小，排序算法为<strong>选择排序</strong></p>
+</li>
+<li><p>分别利用<strong>char数组</strong>和<strong>int数组</strong>进行测试</p>
+</li>
+</ul>
+<p>示例：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>&#x2F;&#x2F;交换的函数模板<br>templatetypename T&gt;<br>void mySwap(T &amp;a, T&amp;b)<br>&#123;<br>T temp &#x3D; a;<br>a &#x3D; b;<br>b &#x3D; temp;<br>&#125;</p>
+<p>templateclass T&gt; &#x2F;&#x2F; 也可以替换成typename<br>&#x2F;&#x2F;利用选择排序，进行对数组从大到小的排序<br>void mySort(T arr[], int len)<br>&#123;<br>for (int i &#x3D; 0; i<br>&#123;<br>int max &#x3D; i; &#x2F;&#x2F;最大数的下标<br>for (int j &#x3D; i + 1; j<br>&#123;<br>if (arr[max]<br>&#123;<br>max &#x3D; j;<br>&#125;<br>&#125;<br>if (max !&#x3D; i) &#x2F;&#x2F;如果最大数的下标不是i，交换两者<br>&#123;<br>mySwap(arr[max], arr[i]);<br>&#125;<br>&#125;<br>&#125;<br>templatetypename T&gt;<br>void printArray(T arr[], int len) &#123;</p>
+<p>for (int i &#x3D; 0; i<br>cout “ “;<br>&#125;<br>cout<br>&#125;<br>void test01()<br>&#123;<br>&#x2F;&#x2F;测试char数组<br>char charArr[] &#x3D; “bdcfeagh”;<br>int num &#x3D; sizeof(charArr) &#x2F; sizeof(char);<br>mySort(charArr, num);<br>printArray(charArr, num);<br>&#125;</p>
+<p>void test02()<br>&#123;<br>&#x2F;&#x2F;测试int数组<br>int intArr[] &#x3D; &#123; 7, 5, 8, 1, 3, 9, 2, 4, 6 &#125;;<br>int num &#x3D; sizeof(intArr) &#x2F; sizeof(int);<br>mySort(intArr, num);<br>printArray(intArr, num);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();<br>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：模板可以提高代码复用，需要熟练掌握</p>
+<p><a href="#1-2-4-%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E7%9A%84%E5%8C%BA%E5%88%AB"></a>1.2.4 普通函数与函数模板的区别<strong>普通函数与函数模板区别：</strong></p>
+<ul>
+<li><p>普通函数调用时可以发生自动类型转换（隐式类型转换）</p>
+</li>
+<li><p>函数模板调用时，如果利用自动类型推导，不会发生隐式类型转换</p>
+</li>
+<li><p>如果利用显示指定类型的方式，可以发生隐式类型转换</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>&#x2F;&#x2F;普通函数<br>int myAdd01(int a, int b)<br>&#123;<br>return a + b;<br>&#125;</p>
+<p>&#x2F;&#x2F;函数模板<br>template<br>T myAdd02(T a, T b)<br>&#123;<br>return a + b;<br>&#125;</p>
+<p>&#x2F;&#x2F;使用函数模板时，如果用自动类型推导，不会发生自动类型转换,即隐式类型转换<br>void test01()<br>&#123;<br>int a &#x3D; 10;<br>int b &#x3D; 20;<br>char c &#x3D; &#x27;c&#x27;;</p>
+<p>cout myAdd01(a, c) &#x2F;&#x2F;正确，将char类型的&#x27;c&#x27;隐式转换为int类型  &#x27;c&#x27; 对应 ASCII码 99</p>
+<p>&#x2F;&#x2F;myAdd02(a, c); &#x2F;&#x2F; 报错，使用自动类型推导时，不会发生隐式类型转换</p>
+<p>myAdd02int&gt;(a, c); &#x2F;&#x2F;正确，如果用显示指定类型，可以发生隐式类型转换<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：建议使用显示指定类型的方式，调用函数模板，因为可以自己确定通用类型T</p>
+<p><a href="#1-2-5-%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E7%9A%84%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99"></a>1.2.5 普通函数与函数模板的调用规则调用规则如下：</p>
+<ul>
+<li><p>如果函数模板和普通函数都可以实现，优先调用普通函数</p>
+</li>
+<li><p>可以通过空模板参数列表来强制调用函数模板</p>
+</li>
+<li><p>函数模板也可以发生重载</p>
+</li>
+<li><p>如果函数模板可以产生更好的匹配,优先调用函数模板</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>&#x2F;&#x2F;普通函数与函数模板调用规则<br>void myPrint(int a, int b)<br>&#123;<br>cout “调用的普通函数”<br>&#125;</p>
+<p>templatetypename T&gt;<br>void myPrint(T a, T b)<br>&#123;<br>cout “调用的模板”<br>&#125;</p>
+<p>templatetypename T&gt;<br>void myPrint(T a, T b, T c)<br>&#123;<br>cout “调用重载的模板”<br>&#125;</p>
+<p>void test01()<br>&#123;<br>&#x2F;&#x2F;1、如果函数模板和普通函数都可以实现，优先调用普通函数<br>&#x2F;&#x2F; 注意 如果告诉编译器  普通函数是有的，但只是声明没有实现，或者不在当前文件内实现，就会报错找不到<br>int a &#x3D; 10;<br>int b &#x3D; 20;<br>myPrint(a, b); &#x2F;&#x2F;调用普通函数</p>
+<p>&#x2F;&#x2F;2、可以通过空模板参数列表来强制调用函数模板<br>myPrint(a, b); &#x2F;&#x2F;调用函数模板</p>
+<p>&#x2F;&#x2F;3、函数模板也可以发生重载<br>int c &#x3D; 30;<br>myPrint(a, b, c); &#x2F;&#x2F;调用重载的函数模板</p>
+<p>&#x2F;&#x2F;4、 如果函数模板可以产生更好的匹配,优先调用函数模板<br>char c1 &#x3D; &#x27;a&#x27;;<br>char c2 &#x3D; &#x27;b&#x27;;<br>myPrint(c1, c2); &#x2F;&#x2F;调用函数模板<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：既然提供了函数模板，最好就不要提供普通函数，否则容易出现二义性</p>
+<p><a href="#1-2-6-%E6%A8%A1%E6%9D%BF%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"></a>1.2.6 模板的局限性<strong>局限性：</strong></p>
+<ul>
+<li>模板的通用性并不是万能的</li>
+</ul>
+<p><strong>例如：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>template<br>void f(T a, T b)<br>&#123;<br>a &#x3D; b;<br>&#125;</p>
+<p>在上述代码中提供的赋值操作，如果传入的a和b是一个数组，就无法实现了</p>
+<p>再例如：</p>
+<p>1<br>2<br>3<br>4<br>5<br>template<br>void f(T a, T b)<br>&#123;<br>if(a &gt; b) &#123; … &#125;<br>&#125;</p>
+<p>在上述代码中，如果T的数据类型传入的是像Person这样的自定义数据类型，也无法正常运行</p>
+<p>因此C++为了解决这种问题，提供模板的重载，可以为这些<strong>特定的类型</strong>提供<strong>具体化的模板</strong></p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>#include<br>using namespace std;</p>
+<p>#include </p>
+<p>class Person<br>&#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;<br>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>&#x2F;&#x2F;普通函数模板<br>template<br>bool myCompare(T&amp; a, T&amp; b)<br>&#123;<br>if (a &#x3D;&#x3D; b)<br>&#123;<br>return true;<br>&#125;<br>else<br>&#123;<br>return false;<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;具体化，显示具体化的原型和定意思以template开头，并通过名称来指出类型<br>&#x2F;&#x2F;具体化优先于常规模板<br>template bool myCompare(Person &amp;p1, Person &amp;p2)<br>&#123;<br>if ( p1.m_Name  &#x3D;&#x3D; p2.m_Name &amp;&amp; p1.m_Age &#x3D;&#x3D; p2.m_Age)<br>&#123;<br>return true;<br>&#125;<br>else<br>&#123;<br>return false;<br>&#125;<br>&#125;</p>
+<p>void test01()<br>&#123;<br>int a &#x3D; 10;<br>int b &#x3D; 20;<br>&#x2F;&#x2F;内置数据类型可以直接使用通用的函数模板<br>bool ret &#x3D; myCompare(a, b);<br>if (ret)<br>&#123;<br>cout “a &#x3D;&#x3D; b “<br>&#125;<br>else<br>&#123;<br>cout “a !&#x3D; b “<br>&#125;<br>&#125;</p>
+<p>void test02()<br>&#123;<br>Person p1(“Tom”, 10);<br>Person p2(“Tom”, 10);<br>&#x2F;&#x2F;自定义数据类型，不会调用普通的函数模板<br>&#x2F;&#x2F;可以创建具体化的Person数据类型的模板，用于特殊处理这个类型<br>bool ret &#x3D; myCompare(p1, p2);<br>if (ret)<br>&#123;<br>cout “p1 &#x3D;&#x3D; p2 “<br>&#125;<br>else<br>&#123;<br>cout “p1 !&#x3D; p2 “<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>利用具体化的模板，可以解决自定义类型的通用化</p>
+</li>
+<li><p>学习模板并不是为了写模板，而是在STL能够运用系统提供的模板</p>
+</li>
+</ul>
+<p><a href="#1-3-%E7%B1%BB%E6%A8%A1%E6%9D%BF"></a>1.3 类模板<a href="#1-3-1-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95"></a>1.3.1 类模板语法类模板作用：</p>
+<ul>
+<li>建立一个通用类，类中的成员 数据类型可以不具体制定，用一个<strong>虚拟的类型</strong>来代表。</li>
+</ul>
+<p><strong>语法：</strong> </p>
+<p>1<br>2<br>templatetypename T&gt;<br>类</p>
+<p><strong>解释：</strong></p>
+<p>template  —  声明创建模板</p>
+<p>typename  — 表面其后面的符号是一种数据类型，可以用class代替</p>
+<p>T    —   通用的数据类型，名称可以替换，通常为大写字母</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>#include<br>&#x2F;&#x2F;类模板<br>templateclass NameType, class AgeType&gt;<br>class Person<br>&#123;<br>public:<br>Person(NameType name, AgeType age)<br>&#123;<br>this-&gt;mName &#x3D; name;<br>this-&gt;mAge &#x3D; age;<br>&#125;<br>void showPerson()<br>&#123;<br>cout “name: “ this-&gt;mName “ age: “ this-&gt;mAge<br>&#125;<br>public:<br>NameType mName;<br>AgeType mAge;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>&#x2F;&#x2F; 指定NameType 为string类型，AgeType 为 int类型<br>Personint&gt;P1(“孙悟空”, 999);<br>P1.showPerson();<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：类模板和函数模板语法相似，在声明模板template后面加类，此类称为类模板</p>
+<p><a href="#1-3-2-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%E5%8C%BA%E5%88%AB"></a>1.3.2 类模板与函数模板区别类模板与函数模板区别主要有两点：</p>
+<ul>
+<li><p>类模板没有自动类型推导的使用方式</p>
+</li>
+<li><p>类模板在模板参数列表中可以有默认参数</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>#include<br>&#x2F;&#x2F;类模板<br>templateclass NameType, class AgeType &#x3D; int&gt;<br>class Person<br>&#123;<br>public:<br>Person(NameType name, AgeType age)<br>&#123;<br>this-&gt;mName &#x3D; name;<br>this-&gt;mAge &#x3D; age;<br>&#125;<br>void showPerson()<br>&#123;<br>cout “name: “ this-&gt;mName “ age: “ this-&gt;mAge<br>&#125;<br>public:<br>NameType mName;<br>AgeType mAge;<br>&#125;;</p>
+<p>&#x2F;&#x2F;1、类模板没有自动类型推导的使用方式<br>void test01()<br>&#123;<br>&#x2F;&#x2F; Person p(“孙悟空”, 1000); &#x2F;&#x2F; 错误 类模板使用时候，不可以用自动类型推导<br>Person int&gt;p(“孙悟空”, 1000); &#x2F;&#x2F;必须使用显示指定类型的方式，使用类模板<br>p.showPerson();<br>&#125;</p>
+<p>&#x2F;&#x2F;2、类模板在模板参数列表中可以有默认参数<br>void test02()<br>&#123;<br>Person  p(“猪八戒”, 999); &#x2F;&#x2F;类模板中的模板参数列表 可以指定默认参数<br>p.showPerson();<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>类模板使用只能用显示指定类型方式</p>
+</li>
+<li><p>类模板中的模板参数列表可以有默认参数</p>
+</li>
+</ul>
+<p><a href="#1-3-3-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E4%B8%AD%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E6%97%B6%E6%9C%BA"></a>1.3.3 类模板中成员函数创建时机类模板中成员函数和普通类中成员函数创建时机是有区别的：</p>
+<ul>
+<li><p>普通类中的成员函数一开始就可以创建</p>
+</li>
+<li><p>类模板中的成员函数在调用时才创建</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>class Person1<br>&#123;<br>public:<br>void showPerson1()<br>&#123;<br>cout “Person1 show”<br>&#125;<br>&#125;;</p>
+<p>class Person2<br>&#123;<br>public:<br>void showPerson2()<br>&#123;<br>cout “Person2 show”<br>&#125;<br>&#125;;</p>
+<p>templateclass T&gt;<br>class MyClass<br>&#123;<br>public:<br>T obj;</p>
+<p>&#x2F;&#x2F;类模板中的成员函数，并不是一开始就创建的，而是在模板调用时再生成</p>
+<p>void fun1() &#123; obj.showPerson1(); &#125;<br>void fun2() &#123; obj.showPerson2(); &#125;</p>
+<p>&#125;;</p>
+<p>void test01()<br>&#123;<br>MyClass m;</p>
+<p>m.fun1();</p>
+<p>&#x2F;&#x2F;m.fun2();&#x2F;&#x2F;编译会出错，说明函数调用才会去创建成员函数<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：类模板中的成员函数并不是一开始就创建的，在调用时才去创建</p>
+<p><a href="#1-3-4-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E5%AF%B9%E8%B1%A1%E5%81%9A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"></a>1.3.4 类模板对象做函数参数学习目标：</p>
+<ul>
+<li>类模板实例化出的对象，向函数传参的方式</li>
+</ul>
+<p>一共有三种传入方式：</p>
+<ul>
+<li><p>指定传入的类型   — 直接显示对象的数据类型</p>
+</li>
+<li><p>参数模板化           — 将对象中的参数变为模板进行传递</p>
+</li>
+<li><p>整个类模板化       — 将这个对象类型 模板化进行传递</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>#include<br>&#x2F;&#x2F;类模板<br>templateclass NameType, class AgeType &#x3D; int&gt;<br>class Person<br>&#123;<br>public:<br>Person(NameType name, AgeType age)<br>&#123;<br>this-&gt;mName &#x3D; name;<br>this-&gt;mAge &#x3D; age;<br>&#125;<br>void showPerson()<br>&#123;<br>cout “name: “ this-&gt;mName “ age: “ this-&gt;mAge<br>&#125;<br>public:<br>NameType mName;<br>AgeType mAge;<br>&#125;;</p>
+<p>&#x2F;&#x2F;1、指定传入的类型<br>void printPerson1(Personint&gt; &amp;p)<br>&#123;<br>p.showPerson();<br>&#125;<br>void test01()<br>&#123;<br>Person int &gt;p(“孙悟空”, 100);<br>printPerson1(p);<br>&#125;</p>
+<p>&#x2F;&#x2F;2、参数模板化<br>template class T1, class T2&gt;<br>void printPerson2(Person&amp;p)<br>&#123;<br>p.showPerson();<br>cout “T1的类型为： “ typeid(T1).name()<br>cout “T2的类型为： “ typeid(T2).name()<br>&#125;<br>void test02()<br>&#123;<br>Person int &gt;p(“猪八戒”, 90);<br>printPerson2(p);<br>&#125;</p>
+<p>&#x2F;&#x2F;3、整个类模板化<br>template<br>void printPerson3(T &amp; p)<br>&#123;<br>cout “T的类型为： “ typeid(T).name()<br>p.showPerson();</p>
+<p>&#125;<br>void test03()<br>&#123;<br>Person int &gt;p(“唐僧”, 30);<br>printPerson3(p);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();<br>test02();<br>test03();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>通过类模板创建的对象，可以有三种方式向函数中进行传参</p>
+</li>
+<li><p>使用比较广泛是第一种：指定传入的类型</p>
+</li>
+</ul>
+<p><a href="#1-3-5-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E4%B8%8E%E7%BB%A7%E6%89%BF"></a>1.3.5 类模板与继承当类模板碰到继承时，需要注意一下几点：</p>
+<ul>
+<li><p>当子类继承的父类是一个类模板时，子类在声明的时候，要指定出父类中T的类型</p>
+</li>
+<li><p>如果不指定，编译器无法给子类分配内存</p>
+</li>
+<li><p>如果想灵活指定出父类中T的类型，子类也需变为类模板</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>templateclass T&gt;<br>class Base<br>&#123;<br>T m;<br>&#125;;</p>
+<p>&#x2F;&#x2F;class Son:public Base  &#x2F;&#x2F;错误，c++编译需要给子类分配内存，必须知道父类中T的类型才可以向下继承<br>class Son :public Baseint&gt; &#x2F;&#x2F;必须指定一个类型<br>&#123;<br>&#125;;<br>void test01()<br>&#123;<br>Son c;<br>&#125;</p>
+<p>&#x2F;&#x2F;类模板继承类模板 ,可以用T2指定父类中的T类型<br>templateclass T1, class T2&gt;<br>class Son2 :public Base<br>&#123;<br>public:<br>Son2()<br>&#123;<br>cout typeid(T1).name()<br>cout typeid(T2).name()<br>&#125;<br>&#125;;</p>
+<p>void test02()<br>&#123;<br>Son2int, char&gt; child1;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：如果父类是类模板，子类需要指定出父类中T的数据类型</p>
+<p><a href="#1-3-6-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E7%B1%BB%E5%A4%96%E5%AE%9E%E7%8E%B0"></a>1.3.6 类模板成员函数类外实现学习目标：能够掌握类模板中的成员函数类外实现</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>#include </p>
+<p>&#x2F;&#x2F;类模板中成员函数类外实现<br>templateclass T1, class T2&gt;<br>class Person &#123;<br>public:<br>&#x2F;&#x2F;成员函数类内声明<br>Person(T1 name, T2 age);<br>void showPerson();</p>
+<p>public:<br>T1 m_Name;<br>T2 m_Age;<br>&#125;;</p>
+<p>&#x2F;&#x2F;构造函数 类外实现<br>templateclass T1, class T2&gt;<br>Person::Person(T1 name, T2 age) &#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>&#x2F;&#x2F;成员函数 类外实现<br>templateclass T1, class T2&gt;<br>void Person::showPerson() &#123;<br>cout “姓名: “ this-&gt;m_Name “ 年龄:” this-&gt;m_Age<br>&#125;</p>
+<p>void test01()<br>&#123;<br>Personint&gt; p(“Tom”, 20);<br>p.showPerson();<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：类模板中成员函数类外实现时，需要加上模板参数列表</p>
+<p><a href="#1-3-7-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E5%88%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99"></a>1.3.7 类模板分文件编写学习目标：</p>
+<ul>
+<li>掌握类模板成员函数分文件编写产生的问题以及解决方式</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>类模板中成员函数创建时机是在调用阶段，导致分文件编写时链接不到</li>
+</ul>
+<p>解决：</p>
+<ul>
+<li><p>解决方式1：直接包含.cpp源文件</p>
+</li>
+<li><p>解决方式2：将声明和实现写到同一个文件中，并更改后缀名为.hpp，hpp是约定的名称，并不是强制</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>person.hpp中代码：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>#pragma once<br>#include<br>using namespace std;<br>#include </p>
+<p>templateclass T1, class T2&gt;<br>class Person &#123;<br>public:<br>Person(T1 name, T2 age);<br>void showPerson();<br>public:<br>T1 m_Name;<br>T2 m_Age;<br>&#125;;</p>
+<p>&#x2F;&#x2F;构造函数 类外实现<br>templateclass T1, class T2&gt;<br>Person::Person(T1 name, T2 age) &#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>&#x2F;&#x2F;成员函数 类外实现<br>templateclass T1, class T2&gt;<br>void Person::showPerson() &#123;<br>cout “姓名: “ this-&gt;m_Name “ 年龄:” this-&gt;m_Age<br>&#125;</p>
+<p>类模板分文件编写.cpp中代码</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>#include<br>using namespace std;</p>
+<p>&#x2F;&#x2F;#include “person.h”<br>#include “person.cpp” &#x2F;&#x2F;解决方式1，包含cpp源文件</p>
+<p>&#x2F;&#x2F;解决方式2，将声明和实现写到一起，文件后缀名改为.hpp<br>#include “person.hpp”<br>void test01()<br>&#123;<br>Personint&gt; p(“Tom”, 10);<br>p.showPerson();<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：主流的解决方式是第二种，将类模板成员函数写到一起，并将后缀名改为.hpp</p>
+<p><a href="#1-3-8-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%8F%8B%E5%85%83"></a>1.3.8 类模板与友元学习目标：</p>
+<ul>
+<li>掌握类模板配合友元函数的类内和类外实现</li>
+</ul>
+<p>全局函数类内实现 - 直接在类内声明友元即可</p>
+<p>全局函数类外实现 - 需要提前让编译器知道全局函数的存在</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>#include </p>
+<p>&#x2F;&#x2F;2、全局函数配合友元  类外实现 - 先做函数模板声明，下方在做函数模板定义，在做友元<br>templateclass T1, class T2&gt; class Person;</p>
+<p>&#x2F;&#x2F;如果声明了函数模板，可以将实现写到后面，否则需要将实现体写到类的前面让编译器提前看到<br>&#x2F;&#x2F;template void printPerson2(Person &amp; p); </p>
+<p>template<br>void printPerson2(Person &amp; p)<br>&#123;<br>cout “类外实现 —- 姓名： “ “ 年龄：”<br>&#125;</p>
+<p>templateclass T1, class T2&gt;<br>class Person<br>&#123;<br>&#x2F;&#x2F;1、全局函数配合友元   类内实现<br>friend void printPerson(Person &amp; p)<br>&#123;<br>cout “姓名： “ “ 年龄：”<br>&#125;</p>
+<p>&#x2F;&#x2F;全局函数配合友元  类外实现<br>friend void printPerson2(Person &amp; p);</p>
+<p>public:</p>
+<p>Person(T1 name, T2 age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>private:<br>T1 m_Name;<br>T2 m_Age;</p>
+<p>&#125;;</p>
+<p>&#x2F;&#x2F;1、全局函数在类内实现<br>void test01()<br>&#123;<br>Person int &gt;p(“Tom”, 20);<br>printPerson(p);<br>&#125;</p>
+<p>&#x2F;&#x2F;2、全局函数在类外实现<br>void test02()<br>&#123;<br>Person int &gt;p(“Jerry”, 30);<br>printPerson2(p);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：建议全局函数做类内实现，用法简单，而且编译器可以直接识别</p>
+<p><a href="#1-3-9-%E7%B1%BB%E6%A8%A1%E6%9D%BF%E6%A1%88%E4%BE%8B"></a>1.3.9 类模板案例案例描述:  实现一个通用的数组类，要求如下：</p>
+<ul>
+<li><p>可以对内置数据类型以及自定义数据类型的数据进行存储</p>
+</li>
+<li><p>将数组中的数据存储到堆区</p>
+</li>
+<li><p>构造函数中可以传入数组的容量</p>
+</li>
+<li><p>提供对应的拷贝构造函数以及operator&#x3D;防止浅拷贝问题</p>
+</li>
+<li><p>提供尾插法和尾删法对数组中的数据进行增加和删除</p>
+</li>
+<li><p>可以通过下标的方式访问数组中的元素</p>
+</li>
+<li><p>可以获取数组中当前元素个数和数组的容量</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>myArray.hpp中代码</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>#pragma once<br>#include<br>using namespace std;</p>
+<p>templateclass T&gt;<br>class MyArray<br>&#123;<br>public:</p>
+<p>&#x2F;&#x2F;构造函数<br>MyArray(int capacity)<br>&#123;<br>this-&gt;m_Capacity &#x3D; capacity;<br>this-&gt;m_Size &#x3D; 0;<br>pAddress &#x3D; new T[this-&gt;m_Capacity];<br>&#125;</p>
+<p>&#x2F;&#x2F;拷贝构造<br>MyArray(const MyArray &amp; arr)<br>&#123;<br>this-&gt;m_Capacity &#x3D; arr.m_Capacity;<br>this-&gt;m_Size &#x3D; arr.m_Size;<br>this-&gt;pAddress &#x3D; new T[this-&gt;m_Capacity];<br>for (int i &#x3D; 0; i this-&gt;m_Size; i++)<br>&#123;<br>&#x2F;&#x2F;如果T为对象，而且还包含指针，必须需要重载 &#x3D; 操作符，因为这个等号不是 构造 而是赋值，<br>&#x2F;&#x2F; 普通类型可以直接&#x3D; 但是指针类型需要深拷贝<br>this-&gt;pAddress[i] &#x3D; arr.pAddress[i];<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;重载&#x3D; 操作符  防止浅拷贝问题<br>MyArray&amp; operator&#x3D;(const MyArray&amp; myarray) &#123;</p>
+<p>if (this-&gt;pAddress !&#x3D; NULL) &#123;<br>delete[] this-&gt;pAddress;<br>this-&gt;m_Capacity &#x3D; 0;<br>this-&gt;m_Size &#x3D; 0;<br>&#125;</p>
+<p>this-&gt;m_Capacity &#x3D; myarray.m_Capacity;<br>this-&gt;m_Size &#x3D; myarray.m_Size;<br>this-&gt;pAddress &#x3D; new T[this-&gt;m_Capacity];<br>for (int i &#x3D; 0; i this-&gt;m_Size; i++) &#123;<br>this-&gt;pAddress[i] &#x3D; myarray[i];<br>&#125;<br>return *this;<br>&#125;</p>
+<p>&#x2F;&#x2F;重载[] 操作符  arr[0]<br>T&amp; operator [](int index)<br>&#123;<br>return this-&gt;pAddress[index]; &#x2F;&#x2F;不考虑越界，用户自己去处理<br>&#125;</p>
+<p>&#x2F;&#x2F;尾插法<br>void Push_back(const T &amp; val)<br>&#123;<br>if (this-&gt;m_Capacity &#x3D;&#x3D; this-&gt;m_Size)<br>&#123;<br>return;<br>&#125;<br>this-&gt;pAddress[this-&gt;m_Size] &#x3D; val;<br>this-&gt;m_Size++;<br>&#125;</p>
+<p>&#x2F;&#x2F;尾删法<br>void Pop_back()<br>&#123;<br>if (this-&gt;m_Size &#x3D;&#x3D; 0)<br>&#123;<br>return;<br>&#125;<br>this-&gt;m_Size–;<br>&#125;</p>
+<p>&#x2F;&#x2F;获取数组容量<br>int getCapacity()<br>&#123;<br>return this-&gt;m_Capacity;<br>&#125;</p>
+<p>&#x2F;&#x2F;获取数组大小<br>int	getSize()<br>&#123;<br>return this-&gt;m_Size;<br>&#125;</p>
+<p>&#x2F;&#x2F;析构<br>~MyArray()<br>&#123;<br>if (this-&gt;pAddress !&#x3D; NULL)<br>&#123;<br>delete[] this-&gt;pAddress;<br>this-&gt;pAddress &#x3D; NULL;<br>this-&gt;m_Capacity &#x3D; 0;<br>this-&gt;m_Size &#x3D; 0;<br>&#125;<br>&#125;</p>
+<p>private:<br>T * pAddress;  &#x2F;&#x2F;指向一个堆空间，这个空间存储真正的数据<br>int m_Capacity; &#x2F;&#x2F;容量<br>int m_Size;   &#x2F;&#x2F; 大小<br>&#125;;</p>
+<p>类模板案例—数组类封装.cpp中</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>#include “myArray.hpp”<br>#include </p>
+<p>void printIntArray(MyArrayint&gt;&amp; arr) &#123;<br>for (int i &#x3D; 0; i getSize(); i++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;测试内置数据类型<br>void test01()<br>&#123;<br>MyArrayint&gt; array1(10);<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>array1.Push_back(i);<br>&#125;<br>cout “array1打印输出：”<br>printIntArray(array1);<br>cout “array1的大小：” getSize()<br>cout “array1的容量：” getCapacity() </p>
+<p>cout “————————–” </p>
+<p>MyArrayint&gt; array2(array1);<br>array2.Pop_back();<br>cout “array2打印输出：”<br>printIntArray(array2);<br>cout “array2的大小：” getSize()<br>cout “array2的容量：” getCapacity()<br>&#125;</p>
+<p>&#x2F;&#x2F;测试自定义数据类型<br>class Person &#123;<br>public:<br>Person() &#123;&#125;<br>Person(string name, int age) &#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;<br>public:<br>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>void printPersonArray(MyArray&amp; personArr)<br>&#123;<br>for (int i &#x3D; 0; i getSize(); i++) &#123;<br>cout “姓名：” “ 年龄： “<br>&#125;</p>
+<p>&#125;</p>
+<p>void test02()<br>&#123;<br>&#x2F;&#x2F;创建数组<br>MyArray pArray(10);<br>Person p1(“孙悟空”, 30);<br>Person p2(“韩信”, 20);<br>Person p3(“妲己”, 18);<br>Person p4(“王昭君”, 15);<br>Person p5(“赵云”, 24);</p>
+<p>&#x2F;&#x2F;插入数据<br>pArray.Push_back(p1);<br>pArray.Push_back(p2);<br>pArray.Push_back(p3);<br>pArray.Push_back(p4);<br>pArray.Push_back(p5);</p>
+<p>printPersonArray(pArray);</p>
+<p>cout “pArray的大小：” getSize()<br>cout “pArray的容量：” getCapacity() </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<p>能够利用所学知识点实现通用的数组</p>
+<h2 id="2-STL初识"><a href="#2-STL初识" class="headerlink" title="2 STL初识"></a>2 STL初识</h2><p><a href="#2-1-STL%E7%9A%84%E8%AF%9E%E7%94%9F"></a>2.1 STL的诞生<br>长久以来，软件界一直希望建立一种可重复利用的东西</p>
+<p>C++的<strong>面向对象</strong>和<strong>泛型编程</strong>思想，目的就是<strong>复用性的提升</strong></p>
+<p>大多情况下，数据结构和算法都未能有一套标准,导致被迫从事大量重复工作</p>
+<p>为了建立数据结构和算法的一套标准,诞生了<strong>STL</strong></p>
+<p>​</p>
+<p><a href="#2-2-STL%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>2.2 STL基本概念</p>
+<ul>
+<li><p>STL(Standard Template Library,<strong>标准模板库</strong>)</p>
+</li>
+<li><p>STL 从广义上分为: <strong>容器(container) 算法(algorithm) 迭代器(iterator)</strong></p>
+</li>
+<li><p><strong>容器</strong>和<strong>算法</strong>之间通过<strong>迭代器</strong>进行无缝连接。</p>
+</li>
+<li><p>STL 几乎所有的代码都采用了模板类或者模板函数</p>
+</li>
+</ul>
+<p><a href="#2-3-STL%E5%85%AD%E5%A4%A7%E7%BB%84%E4%BB%B6"></a>2.3 STL六大组件STL大体分为六大组件，分别是:<strong>容器、算法、迭代器、仿函数、适配器（配接器）、空间配置器</strong></p>
+<ul>
+<li><p>容器：各种数据结构，如vector、list、deque、set、map等,用来存放数据。</p>
+</li>
+<li><p>算法：各种常用的算法，如sort、find、copy、for_each等</p>
+</li>
+<li><p>迭代器：扮演了容器与算法之间的胶合剂。</p>
+</li>
+<li><p>仿函数：行为类似函数，可作为算法的某种策略。</p>
+</li>
+<li><p>适配器：一种用来修饰容器或者仿函数或迭代器接口的东西。</p>
+</li>
+<li><p>空间配置器：负责空间的配置与管理。</p>
+</li>
+</ul>
+<p><a href="#2-4-STL%E4%B8%AD%E5%AE%B9%E5%99%A8%E3%80%81%E7%AE%97%E6%B3%95%E3%80%81%E8%BF%AD%E4%BB%A3%E5%99%A8"></a>2.4  STL中容器、算法、迭代器**容器：**置物之所也</p>
+<p>STL<strong>容器</strong>就是将运用<strong>最广泛的一些数据结构</strong>实现出来</p>
+<p>常用的数据结构：数组, 链表,树, 栈, 队列, 集合, 映射表 等</p>
+<p>这些容器分为<strong>序列式容器</strong>和<strong>关联式容器</strong>两种:</p>
+<p>​    <strong>序列式容器</strong>:强调值的排序，序列式容器中的每个元素均有固定的位置。<br><strong>关联式容器</strong>:二叉树结构，各元素之间没有严格的物理上的顺序关系</p>
+<p>**算法：**问题之解法也</p>
+<p>有限的步骤，解决逻辑或数学上的问题，这一门学科我们叫做算法(Algorithms)</p>
+<p>算法分为:<strong>质变算法</strong>和<strong>非质变算法</strong>。</p>
+<p>质变算法：是指运算过程中会更改区间内的元素的内容。例如拷贝，替换，删除等等</p>
+<p>非质变算法：是指运算过程中不会更改区间内的元素内容，例如查找、计数、遍历、寻找极值等等</p>
+<p>**迭代器：**容器和算法之间粘合剂</p>
+<p>提供一种方法，使之能够依序寻访某个容器所含的各个元素，而又无需暴露该容器的内部表示方式。</p>
+<p>每个容器都有自己专属的迭代器</p>
+<p>迭代器使用非常类似于指针，初学阶段我们可以先理解迭代器为指针</p>
+<p>迭代器种类：</p>
+<p>种类 |<br>功能 |<br>支持运算 |</p>
+<p>输入迭代器 |<br>对数据的只读访问 |<br>只读，支持++、&#x3D;&#x3D;、！&#x3D; |</p>
+<p>输出迭代器 |<br>对数据的只写访问 |<br>只写，支持++ |</p>
+<p>前向迭代器 |<br>读写操作，并能向前推进迭代器 |<br>读写，支持++、&#x3D;&#x3D;、！&#x3D; |</p>
+<p>双向迭代器 |<br>读写操作，并能向前和向后操作 |<br>读写，支持++、–， |</p>
+<p>随机访问迭代器 |<br>读写操作，可以以跳跃的方式访问任意数据，功能最强的迭代器 |<br>读写，支持++、–、[n]、-n、、&gt;&#x3D; |</p>
+<p>常用的容器中迭代器种类为双向迭代器，和随机访问迭代器</p>
+<p><a href="#2-5-%E5%AE%B9%E5%99%A8%E7%AE%97%E6%B3%95%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%88%9D%E8%AF%86"></a>2.5 容器算法迭代器初识了解STL中容器、算法、迭代器概念之后，我们利用代码感受STL的魅力</p>
+<p>STL中最常用的容器为Vector，可以理解为数组，下面我们将学习如何向这个容器中插入数据、并遍历这个容器</p>
+<p><a href="#2-5-1-vector%E5%AD%98%E6%94%BE%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"></a>2.5.1 vector存放内置数据类型容器：     <code>vector</code></p>
+<p>算法：     <code>for_each</code></p>
+<p>迭代器： <code>vector::iterator</code></p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>#include<br>#include </p>
+<p>void MyPrint(int val)<br>&#123;<br>cout<br>&#125;</p>
+<p>void test01() &#123;</p>
+<p>&#x2F;&#x2F;创建vector容器对象，并且通过模板参数指定容器中存放的数据的类型<br>vectorint&gt; v;<br>&#x2F;&#x2F;向容器中放数据<br>v.push_back(10);<br>v.push_back(20);<br>v.push_back(30);<br>v.push_back(40);</p>
+<p>&#x2F;&#x2F;每一个容器都有自己的迭代器，迭代器是用来遍历容器中的元素<br>&#x2F;&#x2F;v.begin()返回迭代器，这个迭代器指向容器中第一个数据<br>&#x2F;&#x2F;v.end()返回迭代器，这个迭代器指向容器元素的最后一个元素的下一个位置<br>&#x2F;&#x2F;vector::iterator 拿到vector这种容器的迭代器类型</p>
+<p>vectorint&gt;::iterator pBegin &#x3D; v.begin();<br>vectorint&gt;::iterator pEnd &#x3D; v.end();</p>
+<p>&#x2F;&#x2F;第一种遍历方式：<br>while (pBegin !&#x3D; pEnd) &#123;<br>cout<br>pBegin++;<br>&#125;</p>
+<p>&#x2F;&#x2F;第二种遍历方式：<br>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout<br>&#125;<br>cout </p>
+<p>&#x2F;&#x2F;第三种遍历方式：<br>&#x2F;&#x2F;使用STL提供标准遍历算法  头文件 algorithm<br>for_each(v.begin(), v.end(), MyPrint);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><a href="#2-5-2-Vector%E5%AD%98%E6%94%BE%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"></a>2.5.2 Vector存放自定义数据类型学习目标：vector中存放自定义数据类型，并打印输出</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>#include<br>#include </p>
+<p>&#x2F;&#x2F;自定义数据类型<br>class Person &#123;<br>public:<br>Person(string name, int age) &#123;<br>mName &#x3D; name;<br>mAge &#x3D; age;<br>&#125;<br>public:<br>string mName;<br>int mAge;<br>&#125;;<br>&#x2F;&#x2F;存放对象<br>void test01() &#123;</p>
+<p>vector v;</p>
+<p>&#x2F;&#x2F;创建数据<br>Person p1(“aaa”, 10);<br>Person p2(“bbb”, 20);<br>Person p3(“ccc”, 30);<br>Person p4(“ddd”, 40);<br>Person p5(“eee”, 50);</p>
+<p>v.push_back(p1);<br>v.push_back(p2);<br>v.push_back(p3);<br>v.push_back(p4);<br>v.push_back(p5);</p>
+<p>for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “Name:” “ Age:” </p>
+<p>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;放对象指针<br>void test02() &#123;</p>
+<p>vector v;</p>
+<p>&#x2F;&#x2F;创建数据<br>Person p1(“aaa”, 10);<br>Person p2(“bbb”, 20);<br>Person p3(“ccc”, 30);<br>Person p4(“ddd”, 40);<br>Person p5(“eee”, 50);</p>
+<p>v.push_back(&amp;p1);<br>v.push_back(&amp;p2);<br>v.push_back(&amp;p3);<br>v.push_back(&amp;p4);<br>v.push_back(&amp;p5);</p>
+<p>for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>Person * p &#x3D; (*it);<br>cout “Name:” mName “ Age:” mAge<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><a href="#2-5-3-Vector%E5%AE%B9%E5%99%A8%E5%B5%8C%E5%A5%97%E5%AE%B9%E5%99%A8"></a>2.5.3 Vector容器嵌套容器学习目标：容器中嵌套容器，我们将所有数据进行遍历输出</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>#include </p>
+<p>&#x2F;&#x2F;容器嵌套容器<br>void test01() &#123;</p>
+<p>vectorint&gt; &gt;  v;</p>
+<p>vectorint&gt; v1;<br>vectorint&gt; v2;<br>vectorint&gt; v3;<br>vectorint&gt; v4;</p>
+<p>for (int i &#x3D; 0; i 4; i++) &#123;<br>v1.push_back(i + 1);<br>v2.push_back(i + 2);<br>v3.push_back(i + 3);<br>v4.push_back(i + 4);<br>&#125;</p>
+<p>&#x2F;&#x2F;将容器元素插入到vector v中<br>v.push_back(v1);<br>v.push_back(v2);<br>v.push_back(v3);<br>v.push_back(v4);</p>
+<p>for (vectorint&gt;&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;</p>
+<p>for (vectorint&gt;::iterator vit &#x3D; (*it).begin(); vit !&#x3D; (*it).end(); vit++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<h2 id="3-STL-常用容器"><a href="#3-STL-常用容器" class="headerlink" title="3 STL- 常用容器"></a>3 STL- 常用容器</h2><p><a href="#3-1-string%E5%AE%B9%E5%99%A8"></a>3.1 string容器<a href="#3-1-1-string%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.1.1 string基本概念<strong>本质：</strong></p>
+<ul>
+<li>string是C++风格的字符串，而string本质上是一个类</li>
+</ul>
+<p><strong>string和char * 区别：</strong></p>
+<ul>
+<li><p>char * 是一个指针</p>
+</li>
+<li><p>string是一个类，类内部封装了char*，管理这个字符串，是一个char*型的容器。</p>
+</li>
+</ul>
+<p><strong>特点：</strong></p>
+<p>string 类内部封装了很多成员方法</p>
+<p>例如：查找find，拷贝copy，删除delete 替换replace，插入insert</p>
+<p>string管理char*所分配的内存，不用担心复制越界和取值越界等，由类内部进行负责</p>
+<p><a href="#3-1-2-string%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"></a>3.1.2 string构造函数构造函数原型：</p>
+<p><code>string();</code>                          &#x2F;&#x2F;创建一个空的字符串 例如: string str;<br><code>string(const char* s);</code>            &#x2F;&#x2F;使用字符串s初始化</p>
+<ul>
+<li><p><code>string(const string&amp; str);</code>    &#x2F;&#x2F;使用一个string对象初始化另一个string对象</p>
+</li>
+<li><p><code>string(int n, char c);</code>           &#x2F;&#x2F;使用n个字符c初始化</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>#include<br>&#x2F;&#x2F;string构造<br>void test01()<br>&#123;<br>string s1; &#x2F;&#x2F;创建空字符串，调用无参构造函数<br>cout “str1 &#x3D; “ </p>
+<p>const char* str &#x3D; “hello world”;<br>string s2(str); &#x2F;&#x2F;把c_string转换成了string</p>
+<p>cout “str2 &#x3D; “ </p>
+<p>string s3(s2); &#x2F;&#x2F;调用拷贝构造函数<br>cout “str3 &#x3D; “ </p>
+<p>string s4(10, &#x27;a&#x27;);<br>cout “str3 &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：string的多种构造方式没有可比性，灵活使用即可</p>
+<p><a href="#3-1-3-string%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C"></a>3.1.3 string赋值操作功能描述：</p>
+<ul>
+<li>给string字符串进行赋值</li>
+</ul>
+<p>赋值的函数原型：</p>
+<ul>
+<li><p><code>string&amp; operator=(const char* s);</code>             &#x2F;&#x2F;char*类型字符串 赋值给当前的字符串</p>
+</li>
+<li><p><code>string&amp; operator=(const string &amp;s);</code>         &#x2F;&#x2F;把字符串s赋给当前的字符串</p>
+</li>
+<li><p><code>string&amp; operator=(char c);</code>                          &#x2F;&#x2F;字符赋值给当前的字符串</p>
+</li>
+<li><p><code>string&amp; assign(const char *s);</code>                  &#x2F;&#x2F;把字符串s赋给当前的字符串</p>
+</li>
+<li><p><code>string&amp; assign(const char *s, int n);</code>     &#x2F;&#x2F;把字符串s的前n个字符赋给当前的字符串</p>
+</li>
+<li><p><code>string&amp; assign(const string &amp;s);</code>              &#x2F;&#x2F;把字符串s赋给当前字符串</p>
+</li>
+<li><p><code>string&amp; assign(int n, char c);</code>                  &#x2F;&#x2F;用n个字符c赋给当前字符串</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>&#x2F;&#x2F;赋值<br>void test01()<br>&#123;<br>string str1;<br>str1 &#x3D; “hello world”;<br>cout “str1 &#x3D; “ </p>
+<p>string str2;<br>str2 &#x3D; str1;<br>cout “str2 &#x3D; “ </p>
+<p>string str3;<br>str3 &#x3D; &#x27;a&#x27;;<br>cout “str3 &#x3D; “ </p>
+<p>string str4;<br>str4.assign(“hello c++”);<br>cout “str4 &#x3D; “ </p>
+<p>string str5;<br>str5.assign(“hello c++”,5);<br>cout “str5 &#x3D; “ </p>
+<p>string str6;<br>str6.assign(str5);<br>cout “str6 &#x3D; “ </p>
+<p>string str7;<br>str7.assign(5, &#x27;x&#x27;);<br>cout “str7 &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<p>​    string的赋值方式很多，<code>operator=</code>  这种方式是比较实用的</p>
+<p><a href="#3-1-4-string%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"></a>3.1.4 string字符串拼接<strong>功能描述：</strong></p>
+<ul>
+<li>实现在字符串末尾拼接字符串</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>string&amp; operator+=(const char* str);</code>                   &#x2F;&#x2F;重载+&#x3D;操作符</p>
+</li>
+<li><p><code>string&amp; operator+=(const char c);</code>                         &#x2F;&#x2F;重载+&#x3D;操作符</p>
+</li>
+<li><p><code>string&amp; operator+=(const string&amp; str);</code>                &#x2F;&#x2F;重载+&#x3D;操作符</p>
+</li>
+<li><p><code>string&amp; append(const char *s); </code>                               &#x2F;&#x2F;把字符串s连接到当前字符串结尾</p>
+</li>
+<li><p><code>string&amp; append(const char *s, int n);</code>                 &#x2F;&#x2F;把字符串s的前n个字符连接到当前字符串结尾</p>
+</li>
+<li><p><code>string&amp; append(const string &amp;s);</code>                           &#x2F;&#x2F;同operator+&#x3D;(const string&amp; str)</p>
+</li>
+<li><p><code>string&amp; append(const string &amp;s, int pos, int n);</code>&#x2F;&#x2F;字符串s中从pos开始的n个字符连接到字符串结尾</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>&#x2F;&#x2F;字符串拼接<br>void test01()<br>&#123;<br>string str1 &#x3D; “我”;</p>
+<p>str1 +&#x3D; “爱玩游戏”;</p>
+<p>cout “str1 &#x3D; “ </p>
+<p>str1 +&#x3D; &#x27;:&#x27;;</p>
+<p>cout “str1 &#x3D; “ </p>
+<p>string str2 &#x3D; “LOL DNF”;</p>
+<p>str1 +&#x3D; str2;</p>
+<p>cout “str1 &#x3D; “ </p>
+<p>string str3 &#x3D; “I”;<br>str3.append(“ love “);<br>str3.append(“game abcde”, 4);<br>&#x2F;&#x2F;str3.append(str2);<br>str3.append(str2, 4, 3); &#x2F;&#x2F; 从下标4位置开始 ，截取3个字符，拼接到字符串末尾<br>cout “str3 &#x3D; “<br>&#125;<br>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：字符串拼接的重载版本很多，初学阶段记住几种即可</p>
+<p><a href="#3-1-5-string%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2"></a>3.1.5 string查找和替换<strong>功能描述：</strong></p>
+<ul>
+<li><p>查找：查找指定字符串是否存在</p>
+</li>
+<li><p>替换：在指定的位置替换字符串</p>
+</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>int find(const string&amp; str, int pos = 0) const;</code>              &#x2F;&#x2F;查找str第一次出现位置,从pos开始查找</p>
+</li>
+<li><p><code>int find(const char* s, int pos = 0) const; </code>                     &#x2F;&#x2F;查找s第一次出现位置,从pos开始查找</p>
+</li>
+<li><p><code>int find(const char* s, int pos, int n) const; </code>               &#x2F;&#x2F;从pos位置查找s的前n个字符第一次位置</p>
+</li>
+<li><p><code>int find(const char c, int pos = 0) const; </code>                       &#x2F;&#x2F;查找字符c第一次出现位置</p>
+</li>
+<li><p><code>int rfind(const string&amp; str, int pos = npos) const;</code>      &#x2F;&#x2F;查找str最后一次位置,从pos开始查找</p>
+</li>
+<li><p><code>int rfind(const char* s, int pos = npos) const;</code>              &#x2F;&#x2F;查找s最后一次出现位置,从pos开始查找</p>
+</li>
+<li><p><code>int rfind(const char* s, int pos, int n) const;</code>              &#x2F;&#x2F;从pos查找s的前n个字符最后一次位置</p>
+</li>
+<li><p><code>int rfind(const char c, int pos = 0) const;  </code>                      &#x2F;&#x2F;查找字符c最后一次出现位置</p>
+</li>
+<li><p><code>string&amp; replace(int pos, int n, const string&amp; str); </code>       &#x2F;&#x2F;替换从pos开始n个字符为字符串str</p>
+</li>
+<li><p><code>string&amp; replace(int pos, int n,const char* s); </code>                 &#x2F;&#x2F;替换从pos开始的n个字符为字符串s</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>&#x2F;&#x2F;查找和替换<br>void test01()<br>&#123;<br>&#x2F;&#x2F;查找<br>string str1 &#x3D; “abcdefgde”;</p>
+<p>int pos &#x3D; str1.find(“de”);</p>
+<p>if (pos &#x3D;&#x3D; -1)<br>&#123;<br>cout “未找到”<br>&#125;<br>else<br>&#123;<br>cout “pos &#x3D; “<br>&#125;</p>
+<p>pos &#x3D; str1.rfind(“de”);</p>
+<p>cout “pos &#x3D; “ </p>
+<p>&#125;</p>
+<p>void test02()<br>&#123;<br>&#x2F;&#x2F;替换<br>string str1 &#x3D; “abcdefgde”;<br>str1.replace(1, 3, “1111”);</p>
+<p>cout “str1 &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();<br>&#x2F;&#x2F;test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>find查找是从左往后，rfind从右往左</p>
+</li>
+<li><p>find找到字符串后返回查找的第一个字符位置，找不到返回-1</p>
+</li>
+<li><p>replace在替换时，要指定从哪个位置起，多少个字符，替换成什么样的字符串</p>
+</li>
+</ul>
+<p><a href="#3-1-6-string%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"></a>3.1.6 string字符串比较<strong>功能描述：</strong></p>
+<ul>
+<li>字符串之间的比较</li>
+</ul>
+<p><strong>比较方式：</strong></p>
+<ul>
+<li>字符串比较是按字符的ASCII码进行对比</li>
+</ul>
+<p>&#x3D; 返回   0</p>
+<blockquote>
+<p>返回   1 </p>
+</blockquote>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>&#x2F;&#x2F;字符串比较<br>void test01()<br>&#123;</p>
+<p>string s1 &#x3D; “hello”;<br>string s2 &#x3D; “aello”;</p>
+<p>int ret &#x3D; s1.compare(s2);</p>
+<p>if (ret &#x3D;&#x3D; 0) &#123;<br>cout “s1 等于 s2”<br>&#125;<br>else if (ret &gt; 0)<br>&#123;<br>cout “s1 大于 s2”<br>&#125;<br>else<br>&#123;<br>cout “s1 小于 s2”<br>&#125;</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：字符串对比主要是用于比较两个字符串是否相等，判断谁大谁小的意义并不是很大</p>
+<p><a href="#3-1-7-string%E5%AD%97%E7%AC%A6%E5%AD%98%E5%8F%96"></a>3.1.7 string字符存取string中单个字符存取方式有两种</p>
+<ul>
+<li><p><code>char&amp; operator[](int n); </code>     &#x2F;&#x2F;通过[]方式取字符</p>
+</li>
+<li><p><code>char&amp; at(int n);   </code>                    &#x2F;&#x2F;通过at方法获取字符</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>void test01()<br>&#123;<br>string str &#x3D; “hello world”;</p>
+<p>for (int i &#x3D; 0; i size(); i++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>for (int i &#x3D; 0; i size(); i++)<br>&#123;<br>cout at(i) “ “;<br>&#125;<br>cout </p>
+<p>&#x2F;&#x2F;字符修改<br>str[0] &#x3D; &#x27;x&#x27;;<br>str.at(1) &#x3D; &#x27;x&#x27;;<br>cout </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：string字符串中单个字符存取有两种方式，利用 [ ] 或 at</p>
+<p><a href="#3-1-8-string%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.1.8 string插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>对string字符串进行插入和删除字符操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>string&amp; insert(int pos, const char* s);  </code>                &#x2F;&#x2F;插入字符串</p>
+</li>
+<li><p><code>string&amp; insert(int pos, const string&amp; str); </code>        &#x2F;&#x2F;插入字符串</p>
+</li>
+<li><p><code>string&amp; insert(int pos, int n, char c);</code>                &#x2F;&#x2F;在指定位置插入n个字符c</p>
+</li>
+<li><p><code>string&amp; erase(int pos, int n = npos);</code>                    &#x2F;&#x2F;删除从Pos开始的n个字符</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>&#x2F;&#x2F;字符串插入和删除<br>void test01()<br>&#123;<br>string str &#x3D; “hello”;<br>str.insert(1, “111”);<br>cout </p>
+<p>str.erase(1, 3);  &#x2F;&#x2F;从1号位置开始3个字符<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**插入和删除的起始下标都是从0开始</p>
+<p><a href="#3-1-9-string%E5%AD%90%E4%B8%B2"></a>3.1.9 string子串<strong>功能描述：</strong></p>
+<ul>
+<li>从字符串中获取想要的子串</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><code>string substr(int pos = 0, int n = npos) const;</code>   &#x2F;&#x2F;返回由pos开始的n个字符组成的字符串</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>&#x2F;&#x2F;子串<br>void test01()<br>&#123;</p>
+<p>string str &#x3D; “abcdefg”;<br>string subStr &#x3D; str.substr(1, 3);<br>cout “subStr &#x3D; “ </p>
+<p>string email &#x3D; “<a href="mailto:&#104;&#101;&#108;&#x6c;&#111;&#64;&#x73;&#105;&#110;&#x61;&#46;&#99;&#111;&#109;">hello@sina.com</a>“;<br>int pos &#x3D; email.find(“@”);<br>string username &#x3D; email.substr(0, pos);<br>cout “username: “ </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**灵活的运用求子串功能，可以在实际开发中获取有效的信息</p>
+<p><a href="#3-2-vector%E5%AE%B9%E5%99%A8"></a>3.2 vector容器<a href="#3-2-1-vector%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.2.1 vector基本概念<strong>功能：</strong></p>
+<ul>
+<li>vector数据结构和<strong>数组非常相似</strong>，也称为<strong>单端数组</strong></li>
+</ul>
+<p><strong>vector与普通数组区别：</strong></p>
+<ul>
+<li>不同之处在于数组是静态空间，而vector可以<strong>动态扩展</strong></li>
+</ul>
+<p><strong>动态扩展：</strong></p>
+<ul>
+<li>并不是在原空间之后续接新空间，而是找更大的内存空间，然后将原数据拷贝新空间，释放原空间</li>
+</ul>
+<p><img src="/assets/clip_image002.jpg"></p>
+<ul>
+<li>vector容器的迭代器是支持随机访问的迭代器</li>
+</ul>
+<p><a href="#3-2-2-vector%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"></a>3.2.2 vector构造函数<strong>功能描述：</strong></p>
+<ul>
+<li>创建vector容器</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>vector v; </code>                            &#x2F;&#x2F;采用模板实现类实现，默认构造函数</p>
+</li>
+<li><p><code>vector(v.begin(), v.end());   </code>       &#x2F;&#x2F;将v[begin(), end())区间中的元素拷贝给本身。</p>
+</li>
+<li><p><code>vector(n, elem);</code>                            &#x2F;&#x2F;构造函数将n个elem拷贝给本身。</p>
+</li>
+<li><p><code>vector(const vector &amp;vec);</code>         &#x2F;&#x2F;拷贝构造函数。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>#include </p>
+<p>void printVector(vectorint&gt;&amp; v) &#123;</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1; &#x2F;&#x2F;无参构造<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>&#125;<br>printVector(v1);</p>
+<p>vectorint&gt; v2(v1.begin(), v1.end());<br>printVector(v2);</p>
+<p>vectorint&gt; v3(10, 100);<br>printVector(v3);</p>
+<p>vectorint&gt; v4(v3);<br>printVector(v4);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**vector的多种构造方式没有可比性，灵活使用即可</p>
+<p><a href="#3-2-3-vector%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C"></a>3.2.3 vector赋值操作<strong>功能描述：</strong></p>
+<ul>
+<li>给vector容器进行赋值</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>vector&amp; operator=(const vector &amp;vec);</code>&#x2F;&#x2F;重载等号操作符</p>
+</li>
+<li><p><code>assign(beg, end);</code>       &#x2F;&#x2F;将[beg, end)区间中的数据拷贝赋值给本身。</p>
+</li>
+<li><p><code>assign(n, elem);</code>        &#x2F;&#x2F;将n个elem拷贝赋值给本身。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>#include </p>
+<p>void printVector(vectorint&gt;&amp; v) &#123;</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;赋值操作<br>void test01()<br>&#123;<br>vectorint&gt; v1; &#x2F;&#x2F;无参构造<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>&#125;<br>printVector(v1);</p>
+<p>vectorint&gt;v2;<br>v2 &#x3D; v1;<br>printVector(v2);</p>
+<p>vectorint&gt;v3;<br>v3.assign(v1.begin(), v1.end());<br>printVector(v3);</p>
+<p>vectorint&gt;v4;<br>v4.assign(10, 100);<br>printVector(v4);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结： vector赋值方式比较简单，使用operator&#x3D;，或者assign都可以</p>
+<p><a href="#3-2-4-vector%E5%AE%B9%E9%87%8F%E5%92%8C%E5%A4%A7%E5%B0%8F"></a>3.2.4  vector容量和大小<strong>功能描述：</strong></p>
+<ul>
+<li>对vector容器的容量和大小操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>empty(); </code>                            &#x2F;&#x2F;判断容器是否为空</p>
+<p><code>capacity();</code>                      &#x2F;&#x2F;容器的容量</p>
+<p><code>size();</code>                              &#x2F;&#x2F;返回容器中元素的个数</p>
+<p><code>resize(int num);</code>             &#x2F;&#x2F;重新指定容器的长度为num，若容器变长，则以默认值填充新位置。</p>
+<p>​                          &#x2F;&#x2F;如果容器变短，则末尾超出容器长度的元素被删除。</p>
+<p><code>resize(int num, elem);</code>  &#x2F;&#x2F;重新指定容器的长度为num，若容器变长，则以elem值填充新位置。</p>
+<p>​                              &#x2F;&#x2F;如果容器变短，则末尾超出容器长度的元素被删除</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>#include </p>
+<p>void printVector(vectorint&gt;&amp; v) &#123;</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>&#125;<br>printVector(v1);<br>if (v1.empty())<br>&#123;<br>cout “v1为空”<br>&#125;<br>else<br>&#123;<br>cout “v1不为空”<br>cout “v1的容量 &#x3D; “ capacity()<br>cout “v1的大小 &#x3D; “ size()<br>&#125;</p>
+<p>&#x2F;&#x2F;resize 重新指定大小 ，若指定的更大，默认用0填充新位置，可以利用重载版本替换默认填充<br>v1.resize(15,10);<br>printVector(v1);</p>
+<p>&#x2F;&#x2F;resize 重新指定大小 ，若指定的更小，超出部分元素被删除<br>v1.resize(5);<br>printVector(v1);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>判断是否为空  — empty</p>
+</li>
+<li><p>返回元素个数  — size</p>
+</li>
+<li><p>返回容器容量  — capacity</p>
+</li>
+<li><p>重新指定大小  —  resize</p>
+</li>
+</ul>
+<p><a href="#3-2-5-vector%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.2.5 vector插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>对vector容器进行插入、删除操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>push_back(ele);</code>                                         &#x2F;&#x2F;尾部插入元素ele</p>
+</li>
+<li><p><code>pop_back();</code>                                                &#x2F;&#x2F;删除最后一个元素</p>
+</li>
+<li><p><code>insert(const_iterator pos, ele);</code>        &#x2F;&#x2F;迭代器指向位置pos插入元素ele</p>
+</li>
+<li><p><code>insert(const_iterator pos, int count,ele);</code>&#x2F;&#x2F;迭代器指向位置pos插入count个元素ele</p>
+</li>
+<li><p><code>erase(const_iterator pos);</code>                     &#x2F;&#x2F;删除迭代器指向的元素</p>
+</li>
+<li><p><code>erase(const_iterator start, const_iterator end);</code>&#x2F;&#x2F;删除迭代器从start到end之间的元素</p>
+</li>
+<li><p><code>clear();</code>                                                        &#x2F;&#x2F;删除容器中所有元素</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50</p>
+<p>#include </p>
+<p>void printVector(vectorint&gt;&amp; v) &#123;</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;插入和删除<br>void test01()<br>&#123;<br>vectorint&gt; v1;<br>&#x2F;&#x2F;尾插<br>v1.push_back(10);<br>v1.push_back(20);<br>v1.push_back(30);<br>v1.push_back(40);<br>v1.push_back(50);<br>printVector(v1);<br>&#x2F;&#x2F;尾删<br>v1.pop_back();<br>printVector(v1);<br>&#x2F;&#x2F;插入<br>v1.insert(v1.begin(), 100);<br>printVector(v1);</p>
+<p>v1.insert(v1.begin(), 2, 1000);<br>printVector(v1);</p>
+<p>&#x2F;&#x2F;删除<br>v1.erase(v1.begin());<br>printVector(v1);</p>
+<p>&#x2F;&#x2F;清空<br>v1.erase(v1.begin(), v1.end());<br>v1.clear();<br>printVector(v1);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>尾插  — push_back</p>
+</li>
+<li><p>尾删  — pop_back</p>
+</li>
+<li><p>插入  — insert    (位置迭代器)</p>
+</li>
+<li><p>删除  — erase  （位置迭代器）</p>
+</li>
+<li><p>清空  —  clear</p>
+</li>
+</ul>
+<p><a href="#3-2-6-vector%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96"></a>3.2.6 vector数据存取<strong>功能描述：</strong></p>
+<ul>
+<li>对vector中的数据的存取操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>at(int idx); </code>     &#x2F;&#x2F;返回索引idx所指的数据</p>
+</li>
+<li><p><code>operator[]; </code>       &#x2F;&#x2F;返回索引idx所指的数据</p>
+</li>
+<li><p><code>front(); </code>            &#x2F;&#x2F;返回容器中第一个数据元素</p>
+</li>
+<li><p><code>back();</code>              &#x2F;&#x2F;返回容器中最后一个数据元素</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>#include </p>
+<p>void test01()<br>&#123;<br>vectorint&gt;v1;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>&#125;</p>
+<p>for (int i &#x3D; 0; i size(); i++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>for (int i &#x3D; 0; i size(); i++)<br>&#123;<br>cout at(i) “ “;<br>&#125;<br>cout </p>
+<p>cout “v1的第一个元素为： “ front()<br>cout “v1的最后一个元素为： “ back()<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>除了用迭代器获取vector容器中元素，[ ]和at也可以</p>
+</li>
+<li><p>front返回容器第一个元素</p>
+</li>
+<li><p>back返回容器最后一个元素</p>
+</li>
+</ul>
+<p><a href="#3-2-7-vector%E4%BA%92%E6%8D%A2%E5%AE%B9%E5%99%A8"></a>3.2.7 vector互换容器<strong>功能描述：</strong></p>
+<ul>
+<li>实现两个容器内元素进行互换</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><code>swap(vec);</code>  &#x2F;&#x2F; 将vec与本身的元素互换</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>#include </p>
+<p>void printVector(vectorint&gt;&amp; v) &#123;</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt;v1;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>&#125;<br>printVector(v1);</p>
+<p>vectorint&gt;v2;<br>for (int i &#x3D; 10; i &gt; 0; i–)<br>&#123;<br>v2.push_back(i);<br>&#125;<br>printVector(v2);</p>
+<p>&#x2F;&#x2F;互换容器<br>cout “互换后”<br>v1.swap(v2);<br>printVector(v1);<br>printVector(v2);<br>&#125;</p>
+<p>void test02()<br>&#123;<br>vectorint&gt; v;<br>for (int i &#x3D; 0; i 100000; i++) &#123;<br>v.push_back(i);<br>&#125;</p>
+<p>cout “v的容量为：” capacity()<br>cout “v的大小为：” size() </p>
+<p>v.resize(3);</p>
+<p>cout “v的容量为：” capacity()<br>cout “v的大小为：” size() </p>
+<p>&#x2F;&#x2F;收缩内存<br>vectorint&gt;(v).swap(v); &#x2F;&#x2F;匿名对象</p>
+<p>cout “v的容量为：” capacity()<br>cout “v的大小为：” size()<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：swap可以使两个容器互换，可以达到实用的收缩内存效果</p>
+<p><a href="#3-2-8-vector%E9%A2%84%E7%95%99%E7%A9%BA%E9%97%B4"></a>3.2.8 vector预留空间<strong>功能描述：</strong></p>
+<ul>
+<li>减少vector在动态扩展容量时的扩展次数</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>reserve(int len);</code>&#x2F;&#x2F;容器预留len个元素长度，预留位置不初始化，元素不可访问。</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>#include </p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;</p>
+<p>&#x2F;&#x2F;预留空间<br>v.reserve(100000);</p>
+<p>int num &#x3D; 0;<br>int* p &#x3D; NULL;<br>for (int i &#x3D; 0; i 100000; i++) &#123;<br>v.push_back(i);<br>if (p !&#x3D; &amp;v[0]) &#123;<br>p &#x3D; &amp;v[0];<br>num++;<br>&#125;<br>&#125;</p>
+<p>cout “num:”<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：如果数据量较大，可以一开始利用reserve预留空间</p>
+<p><a href="#3-3-deque%E5%AE%B9%E5%99%A8"></a>3.3 deque容器<a href="#3-3-1-deque%E5%AE%B9%E5%99%A8%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.3.1 deque容器基本概念<strong>功能：</strong></p>
+<ul>
+<li>双端数组，可以对头端进行插入删除操作</li>
+</ul>
+<p><strong>deque与vector区别：</strong></p>
+<ul>
+<li><p>vector对于头部的插入删除效率低，数据量越大，效率越低</p>
+</li>
+<li><p>deque相对而言，对头部的插入删除速度回比vector快</p>
+</li>
+<li><p>vector访问元素时的速度会比deque快,这和两者内部实现有关</p>
+</li>
+</ul>
+<p><img src="/assets/clip_image002-1547547642923.jpg"></p>
+<p>deque内部工作原理:</p>
+<p>deque内部有个<strong>中控器</strong>，维护每段缓冲区中的内容，缓冲区中存放真实数据</p>
+<p>中控器维护的是每个缓冲区的地址，使得使用deque时像一片连续的内存空间</p>
+<p><img src="/assets/clip_image002-1547547896341.jpg"></p>
+<ul>
+<li>deque容器的迭代器也是支持随机访问的</li>
+</ul>
+<p><a href="#3-3-2-deque%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"></a>3.3.2 deque构造函数<strong>功能描述：</strong></p>
+<ul>
+<li>deque容器构造</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>deque</code> deqT;                      &#x2F;&#x2F;默认构造形式</p>
+</li>
+<li><p><code>deque(beg, end);</code>                  &#x2F;&#x2F;构造函数将[beg, end)区间中的元素拷贝给本身。</p>
+</li>
+<li><p><code>deque(n, elem);</code>                    &#x2F;&#x2F;构造函数将n个elem拷贝给本身。</p>
+</li>
+<li><p><code>deque(const deque &amp;deq);</code>   &#x2F;&#x2F;拷贝构造函数</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;<br>&#x2F;&#x2F;deque构造<br>void test01() &#123;</p>
+<p>dequeint&gt; d1; &#x2F;&#x2F;无参构造函数<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>d1.push_back(i);<br>&#125;<br>printDeque(d1);<br>dequeint&gt; d2(d1.begin(),d1.end());<br>printDeque(d2);</p>
+<p>dequeint&gt;d3(10,100);<br>printDeque(d3);</p>
+<p>dequeint&gt;d4 &#x3D; d3;<br>printDeque(d4);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**deque容器和vector容器的构造方式几乎一致，灵活使用即可</p>
+<p><a href="#3-3-3-deque%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C"></a>3.3.3 deque赋值操作<strong>功能描述：</strong></p>
+<ul>
+<li>给deque容器进行赋值</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>deque&amp; operator=(const deque &amp;deq); </code>         &#x2F;&#x2F;重载等号操作符</p>
+</li>
+<li><p><code>assign(beg, end);</code>                                           &#x2F;&#x2F;将[beg, end)区间中的数据拷贝赋值给本身。</p>
+</li>
+<li><p><code>assign(n, elem);</code>                                             &#x2F;&#x2F;将n个elem拷贝赋值给本身。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;<br>&#x2F;&#x2F;赋值操作<br>void test01()<br>&#123;<br>dequeint&gt; d1;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>d1.push_back(i);<br>&#125;<br>printDeque(d1);</p>
+<p>dequeint&gt;d2;<br>d2 &#x3D; d1;<br>printDeque(d2);</p>
+<p>dequeint&gt;d3;<br>d3.assign(d1.begin(), d1.end());<br>printDeque(d3);</p>
+<p>dequeint&gt;d4;<br>d4.assign(10, 100);<br>printDeque(d4);</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：deque赋值操作也与vector相同，需熟练掌握</p>
+<p><a href="#3-3-4-deque%E5%A4%A7%E5%B0%8F%E6%93%8D%E4%BD%9C"></a>3.3.4 deque大小操作<strong>功能描述：</strong></p>
+<ul>
+<li>对deque容器的大小进行操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>deque.empty();</code>                       &#x2F;&#x2F;判断容器是否为空</p>
+<p><code>deque.size();</code>                         &#x2F;&#x2F;返回容器中元素的个数</p>
+<p><code>deque.resize(num);</code>                &#x2F;&#x2F;重新指定容器的长度为num,若容器变长，则以默认值填充新位置。</p>
+<p>​                                         &#x2F;&#x2F;如果容器变短，则末尾超出容器长度的元素被删除。</p>
+<p><code>deque.resize(num, elem);</code>     &#x2F;&#x2F;重新指定容器的长度为num,若容器变长，则以elem值填充新位置。</p>
+<p>​                                                     &#x2F;&#x2F;如果容器变短，则末尾超出容器长度的元素被删除。</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;大小操作<br>void test01()<br>&#123;<br>dequeint&gt; d1;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>d1.push_back(i);<br>&#125;<br>printDeque(d1);</p>
+<p>&#x2F;&#x2F;判断容器是否为空<br>if (d1.empty()) &#123;<br>cout “d1为空!”<br>&#125;<br>else &#123;<br>cout “d1不为空!”<br>&#x2F;&#x2F;统计大小<br>cout “d1的大小为：” size()<br>&#125;</p>
+<p>&#x2F;&#x2F;重新指定大小<br>d1.resize(15, 1);<br>printDeque(d1);</p>
+<p>d1.resize(5);<br>printDeque(d1);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>deque没有容量的概念</p>
+</li>
+<li><p>判断是否为空   — empty</p>
+</li>
+<li><p>返回元素个数   — size</p>
+</li>
+<li><p>重新指定个数   — resize</p>
+</li>
+</ul>
+<p><a href="#3-3-5-deque-%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.3.5 deque 插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>向deque容器中插入和删除数据</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p>两端插入操作：</p>
+<ul>
+<li><p><code>push_back(elem);</code>          &#x2F;&#x2F;在容器尾部添加一个数据</p>
+</li>
+<li><p><code>push_front(elem);</code>        &#x2F;&#x2F;在容器头部插入一个数据</p>
+</li>
+<li><p><code>pop_back();</code>                   &#x2F;&#x2F;删除容器最后一个数据</p>
+</li>
+<li><p><code>pop_front();</code>                 &#x2F;&#x2F;删除容器第一个数据</p>
+</li>
+</ul>
+<p>指定位置操作：</p>
+<p><code>insert(pos,elem);</code>         &#x2F;&#x2F;在pos位置插入一个elem元素的拷贝，返回新数据的位置。</p>
+<p><code>insert(pos,n,elem);</code>     &#x2F;&#x2F;在pos位置插入n个elem数据，无返回值。</p>
+<p><code>insert(pos,beg,end);</code>    &#x2F;&#x2F;在pos位置插入[beg,end)区间的数据，无返回值。</p>
+<p><code>clear();</code>                           &#x2F;&#x2F;清空容器的所有数据</p>
+<p><code>erase(beg,end);</code>             &#x2F;&#x2F;删除[beg,end)区间的数据，返回下一个数据的位置。</p>
+<p><code>erase(pos);</code>                    &#x2F;&#x2F;删除pos位置的数据，返回下一个数据的位置。</p>
+<p>​</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;<br>&#x2F;&#x2F;两端操作<br>void test01()<br>&#123;<br>dequeint&gt; d;<br>&#x2F;&#x2F;尾插<br>d.push_back(10);<br>d.push_back(20);<br>&#x2F;&#x2F;头插<br>d.push_front(100);<br>d.push_front(200);</p>
+<p>printDeque(d);</p>
+<p>&#x2F;&#x2F;尾删<br>d.pop_back();<br>&#x2F;&#x2F;头删<br>d.pop_front();<br>printDeque(d);<br>&#125;</p>
+<p>&#x2F;&#x2F;插入<br>void test02()<br>&#123;<br>dequeint&gt; d;<br>d.push_back(10);<br>d.push_back(20);<br>d.push_front(100);<br>d.push_front(200);<br>printDeque(d);</p>
+<p>d.insert(d.begin(), 1000);<br>printDeque(d);</p>
+<p>d.insert(d.begin(), 2,10000);<br>printDeque(d);</p>
+<p>dequeint&gt;d2;<br>d2.push_back(1);<br>d2.push_back(2);<br>d2.push_back(3);</p>
+<p>d.insert(d.begin(), d2.begin(), d2.end());<br>printDeque(d);</p>
+<p>&#125;</p>
+<p>&#x2F;&#x2F;删除<br>void test03()<br>&#123;<br>dequeint&gt; d;<br>d.push_back(10);<br>d.push_back(20);<br>d.push_front(100);<br>d.push_front(200);<br>printDeque(d);</p>
+<p>d.erase(d.begin());<br>printDeque(d);</p>
+<p>d.erase(d.begin(), d.end());<br>d.clear();<br>printDeque(d);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>&#x2F;&#x2F;test02();</p>
+<p>test03();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>插入和删除提供的位置是迭代器！</p>
+</li>
+<li><p>尾插   —  push_back</p>
+</li>
+<li><p>尾删   —  pop_back</p>
+</li>
+<li><p>头插   —  push_front</p>
+</li>
+<li><p>头删   —  pop_front</p>
+</li>
+</ul>
+<p><a href="#3-3-6-deque-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96"></a>3.3.6 deque 数据存取<strong>功能描述：</strong></p>
+<ul>
+<li>对deque 中的数据的存取操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>at(int idx); </code>     &#x2F;&#x2F;返回索引idx所指的数据</p>
+</li>
+<li><p><code>operator[]; </code>      &#x2F;&#x2F;返回索引idx所指的数据</p>
+</li>
+<li><p><code>front(); </code>            &#x2F;&#x2F;返回容器中第一个数据元素</p>
+</li>
+<li><p><code>back();</code>              &#x2F;&#x2F;返回容器中最后一个数据元素</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;数据存取<br>void test01()<br>&#123;</p>
+<p>dequeint&gt; d;<br>d.push_back(10);<br>d.push_back(20);<br>d.push_front(100);<br>d.push_front(200);</p>
+<p>for (int i &#x3D; 0; i size(); i++) &#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>for (int i &#x3D; 0; i size(); i++) &#123;<br>cout at(i) “ “;<br>&#125;<br>cout </p>
+<p>cout “front:” front() </p>
+<p>cout “back:” back() </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>除了用迭代器获取deque容器中元素，[ ]和at也可以</p>
+</li>
+<li><p>front返回容器第一个元素</p>
+</li>
+<li><p>back返回容器最后一个元素</p>
+</li>
+</ul>
+<p><a href="#3-3-7-deque-%E6%8E%92%E5%BA%8F"></a>3.3.7  deque 排序<strong>功能描述：</strong></p>
+<ul>
+<li>利用算法实现对deque容器进行排序</li>
+</ul>
+<p><strong>算法：</strong></p>
+<ul>
+<li><code>sort(iterator beg, iterator end)</code>  &#x2F;&#x2F;对beg和end区间内元素进行排序</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>#include<br>#include </p>
+<p>void printDeque(const dequeint&gt;&amp; d)<br>&#123;<br>for (dequeint&gt;::const_iterator it &#x3D; d.begin(); it !&#x3D; d.end(); it++) &#123;<br>cout “ “;</p>
+<p>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;</p>
+<p>dequeint&gt; d;<br>d.push_back(10);<br>d.push_back(20);<br>d.push_front(100);<br>d.push_front(200);</p>
+<p>printDeque(d);<br>sort(d.begin(), d.end());<br>printDeque(d);</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：sort算法非常实用，使用时包含头文件 algorithm即可</p>
+<p><a href="#3-4-%E6%A1%88%E4%BE%8B-%E8%AF%84%E5%A7%94%E6%89%93%E5%88%86"></a>3.4 案例-评委打分<a href="#3-4-1-%E6%A1%88%E4%BE%8B%E6%8F%8F%E8%BF%B0"></a>3.4.1 案例描述有5名选手：选手ABCDE，10个评委分别对每一名选手打分，去除最高分，去除评委中最低分，取平均分。</p>
+<p><a href="#3-4-2-%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"></a>3.4.2 实现步骤</p>
+<ul>
+<li><p>创建五名选手，放到vector中</p>
+</li>
+<li><p>遍历vector容器，取出来每一个选手，执行for循环，可以把10个评分打分存到deque容器中</p>
+</li>
+<li><p>sort算法对deque容器中分数排序，去除最高和最低分</p>
+</li>
+<li><p>deque容器遍历一遍，累加总分</p>
+</li>
+<li><p>获取平均分</p>
+</li>
+</ul>
+<p><strong>示例代码：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>&#x2F;&#x2F;选手类<br>class Person<br>&#123;<br>public:<br>Person(string name, int score)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Score &#x3D; score;<br>&#125;</p>
+<p>string m_Name; &#x2F;&#x2F;姓名<br>int m_Score;  &#x2F;&#x2F;平均分<br>&#125;;</p>
+<p>void createPerson(vector&amp;v)<br>&#123;<br>string nameSeed &#x3D; “ABCDE”;<br>for (int i &#x3D; 0; i 5; i++)<br>&#123;<br>string name &#x3D; “选手”;<br>name +&#x3D; nameSeed[i];</p>
+<p>int score &#x3D; 0;</p>
+<p>Person p(name, score);</p>
+<p>&#x2F;&#x2F;将创建的person对象 放入到容器中<br>v.push_back(p);<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;打分<br>void setScore(vector&amp;v)<br>&#123;<br>for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#123;<br>&#x2F;&#x2F;将评委的分数 放入到deque容器中<br>dequeint&gt;d;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>int score &#x3D; rand() % 41 + 60;  &#x2F;&#x2F; 60 ~ 100<br>d.push_back(score);<br>&#125;</p>
+<p>&#x2F;&#x2F;cout m_Name<br>&#x2F;&#x2F;for (deque::iterator dit &#x3D; d.begin(); dit !&#x3D; d.end(); dit++)<br>&#x2F;&#x2F;&#123;<br>&#x2F;&#x2F;	cout<br>&#x2F;&#x2F;&#125;<br>&#x2F;&#x2F;cout </p>
+<p>&#x2F;&#x2F;排序<br>sort(d.begin(), d.end());</p>
+<p>&#x2F;&#x2F;去除最高和最低分<br>d.pop_back();<br>d.pop_front();</p>
+<p>&#x2F;&#x2F;取平均分<br>int sum &#x3D; 0;<br>for (dequeint&gt;::iterator dit &#x3D; d.begin(); dit !&#x3D; d.end(); dit++)<br>&#123;<br>sum +&#x3D; *dit; &#x2F;&#x2F;累加每个评委的分数<br>&#125;</p>
+<p>int avg &#x3D; sum &#x2F; d.size();</p>
+<p>&#x2F;&#x2F;将平均分 赋值给选手身上<br>it-&gt;m_Score &#x3D; avg;<br>&#125;</p>
+<p>&#125;</p>
+<p>void showScore(vector&amp;v)<br>&#123;<br>for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#123;<br>cout “姓名： “ m_Name “ 平均分： “ m_Score<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;随机数种子<br>srand((unsigned int)time(NULL));</p>
+<p>&#x2F;&#x2F;1、创建5名选手<br>vectorv;  &#x2F;&#x2F;存放选手容器<br>createPerson(v);</p>
+<p>&#x2F;&#x2F;测试<br>&#x2F;&#x2F;for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#x2F;&#x2F;&#123;<br>&#x2F;&#x2F;	cout<br>&#x2F;&#x2F;&#125;</p>
+<p>&#x2F;&#x2F;2、给5名选手打分<br>setScore(v);</p>
+<p>&#x2F;&#x2F;3、显示最后得分<br>showScore(v);</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> 选取不同的容器操作数据，可以提升代码的效率</p>
+<p><a href="#3-5-stack%E5%AE%B9%E5%99%A8"></a>3.5 stack容器<a href="#3-5-1-stack-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.5.1 stack 基本概念<strong>概念：<strong>stack是一种</strong>先进后出</strong>(First In Last Out,FILO)的数据结构，它只有一个出口</p>
+<p><img src="/assets/clip_image002-1547604555425.jpg"></p>
+<p>栈中只有顶端的元素才可以被外界使用，因此栈不允许有遍历行为</p>
+<p>栈中进入数据称为  — <strong>入栈</strong>  <code>push</code></p>
+<p>栈中弹出数据称为  — <strong>出栈</strong>  <code>pop</code></p>
+<p>生活中的栈：</p>
+<p><img src="/assets/clip_image002.png"></p>
+<p><img src="/assets/clip_image002-1547605111510.jpg"></p>
+<p><a href="#3-5-2-stack-%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3"></a>3.5.2 stack 常用接口功能描述：栈容器常用的对外接口</p>
+<p>构造函数：</p>
+<ul>
+<li><p><code>stack stk;</code>                                 &#x2F;&#x2F;stack采用模板类实现， stack对象的默认构造形式</p>
+</li>
+<li><p><code>stack(const stack &amp;stk);</code>            &#x2F;&#x2F;拷贝构造函数</p>
+</li>
+</ul>
+<p>赋值操作：</p>
+<ul>
+<li><code>stack&amp; operator=(const stack &amp;stk);</code>           &#x2F;&#x2F;重载等号操作符</li>
+</ul>
+<p>数据存取：</p>
+<ul>
+<li><p><code>push(elem);</code>      &#x2F;&#x2F;向栈顶添加元素</p>
+</li>
+<li><p><code>pop();</code>                &#x2F;&#x2F;从栈顶移除第一个元素</p>
+</li>
+<li><p><code>top(); </code>                &#x2F;&#x2F;返回栈顶元素</p>
+</li>
+</ul>
+<p>大小操作：</p>
+<ul>
+<li><p><code>empty();</code>            &#x2F;&#x2F;判断堆栈是否为空</p>
+</li>
+<li><p><code>size(); </code>              &#x2F;&#x2F;返回栈的大小</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>#include </p>
+<p>&#x2F;&#x2F;栈容器常用接口<br>void test01()<br>&#123;<br>&#x2F;&#x2F;创建栈容器 栈容器必须符合先进后出<br>stackint&gt; s;</p>
+<p>&#x2F;&#x2F;向栈中添加元素，叫做 压栈 入栈<br>s.push(10);<br>s.push(20);<br>s.push(30);</p>
+<p>while (!s.empty()) &#123;<br>&#x2F;&#x2F;输出栈顶元素<br>cout “栈顶元素为： “ top()<br>&#x2F;&#x2F;弹出栈顶元素<br>s.pop();<br>&#125;<br>cout “栈的大小为：” size() </p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>入栈   — push</p>
+</li>
+<li><p>出栈   — pop</p>
+</li>
+<li><p>返回栈顶   — top</p>
+</li>
+<li><p>判断栈是否为空   — empty</p>
+</li>
+<li><p>返回栈大小   — size</p>
+</li>
+</ul>
+<p><a href="#3-6-queue-%E5%AE%B9%E5%99%A8"></a>3.6 queue 容器<a href="#3-6-1-queue-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.6.1 queue 基本概念<strong>概念：<strong>Queue是一种</strong>先进先出</strong>(First In First Out,FIFO)的数据结构，它有两个出口</p>
+<p><img src="/assets/clip_image002-1547606475892.jpg"></p>
+<p>队列容器允许从一端新增元素，从另一端移除元素</p>
+<p>队列中只有队头和队尾才可以被外界使用，因此队列不允许有遍历行为</p>
+<p>队列中进数据称为 — <strong>入队</strong>    <code>push</code></p>
+<p>队列中出数据称为 — <strong>出队</strong>    <code>pop</code></p>
+<p>生活中的队列：</p>
+<p><img src="/assets/1547606785041.png"></p>
+<p><a href="#3-6-2-queue-%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3"></a>3.6.2 queue 常用接口功能描述：栈容器常用的对外接口</p>
+<p>构造函数：</p>
+<ul>
+<li><p><code>queue que;</code>                                 &#x2F;&#x2F;queue采用模板类实现，queue对象的默认构造形式</p>
+</li>
+<li><p><code>queue(const queue &amp;que);</code>            &#x2F;&#x2F;拷贝构造函数</p>
+</li>
+</ul>
+<p>赋值操作：</p>
+<ul>
+<li><code>queue&amp; operator=(const queue &amp;que);</code>           &#x2F;&#x2F;重载等号操作符</li>
+</ul>
+<p>数据存取：</p>
+<ul>
+<li><p><code>push(elem);</code>                             &#x2F;&#x2F;往队尾添加元素</p>
+</li>
+<li><p><code>pop();</code>                                      &#x2F;&#x2F;从队头移除第一个元素</p>
+</li>
+<li><p><code>back();</code>                                    &#x2F;&#x2F;返回最后一个元素</p>
+</li>
+<li><p><code>front(); </code>                                  &#x2F;&#x2F;返回第一个元素</p>
+</li>
+</ul>
+<p>大小操作：</p>
+<ul>
+<li><p><code>empty();</code>            &#x2F;&#x2F;判断堆栈是否为空</p>
+</li>
+<li><p><code>size(); </code>              &#x2F;&#x2F;返回栈的大小</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>#include<br>#include<br>class Person<br>&#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>void test01() &#123;</p>
+<p>&#x2F;&#x2F;创建队列<br>queue q;</p>
+<p>&#x2F;&#x2F;准备数据<br>Person p1(“唐僧”, 30);<br>Person p2(“孙悟空”, 1000);<br>Person p3(“猪八戒”, 900);<br>Person p4(“沙僧”, 800);</p>
+<p>&#x2F;&#x2F;向队列中添加元素  入队操作<br>q.push(p1);<br>q.push(p2);<br>q.push(p3);<br>q.push(p4);</p>
+<p>&#x2F;&#x2F;队列不提供迭代器，更不支持随机访问	<br>while (!q.empty()) &#123;<br>&#x2F;&#x2F;输出队头元素<br>cout “队头元素– 姓名： “ front().m_Name<br>“ 年龄： “front().m_Age </p>
+<p>cout “队尾元素– 姓名： “ back().m_Name<br>“ 年龄： “ back().m_Age </p>
+<p>cout<br>&#x2F;&#x2F;弹出队头元素<br>q.pop();<br>&#125;</p>
+<p>cout “队列大小为：” size()<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>入队   — push</p>
+</li>
+<li><p>出队   — pop</p>
+</li>
+<li><p>返回队头元素   — front</p>
+</li>
+<li><p>返回队尾元素   — back</p>
+</li>
+<li><p>判断队是否为空   — empty</p>
+</li>
+<li><p>返回队列大小   — size</p>
+</li>
+</ul>
+<p><a href="#3-7-list%E5%AE%B9%E5%99%A8"></a>3.7 list容器<a href="#3-7-1-list%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.7.1 list基本概念**功能：**将数据进行链式存储</p>
+<p><strong>链表</strong>（list）是一种物理存储单元上非连续的存储结构，数据元素的逻辑顺序是通过链表中的指针链接实现的</p>
+<p>链表的组成：链表由一系列<strong>结点</strong>组成</p>
+<p>结点的组成：一个是存储数据元素的<strong>数据域</strong>，另一个是存储下一个结点地址的<strong>指针域</strong></p>
+<p>STL中的链表是一个双向循环链表</p>
+<p><img src="/assets/clip_image002-1547608564071.jpg"></p>
+<p>由于链表的存储方式并不是连续的内存空间，因此链表list中的迭代器只支持前移和后移，属于<strong>双向迭代器</strong></p>
+<p>list的优点：</p>
+<ul>
+<li><p>采用动态存储分配，不会造成内存浪费和溢出</p>
+</li>
+<li><p>链表执行插入和删除操作十分方便，修改指针即可，不需要移动大量元素</p>
+</li>
+</ul>
+<p>list的缺点：</p>
+<ul>
+<li>链表灵活，但是空间(指针域) 和 时间（遍历）额外耗费较大</li>
+</ul>
+<p>List有一个重要的性质，插入操作和删除操作都不会造成原有list迭代器的失效，这在vector是不成立的。</p>
+<p>总结：STL中<strong>List和vector是两个最常被使用的容器</strong>，各有优缺点</p>
+<p><a href="#3-7-2-list%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"></a>3.7.2  list构造函数<strong>功能描述：</strong></p>
+<ul>
+<li>创建list容器</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>list lst;</code>                               &#x2F;&#x2F;list采用采用模板类实现,对象的默认构造形式：</p>
+</li>
+<li><p><code>list(beg,end);</code>                           &#x2F;&#x2F;构造函数将[beg, end)区间中的元素拷贝给本身。</p>
+</li>
+<li><p><code>list(n,elem);</code>                             &#x2F;&#x2F;构造函数将n个elem拷贝给本身。</p>
+</li>
+<li><p><code>list(const list &amp;lst);</code>            &#x2F;&#x2F;拷贝构造函数。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>#include </p>
+<p>void printList(const listint&gt;&amp; L) &#123;</p>
+<p>for (listint&gt;::const_iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>listint&gt;L1;<br>L1.push_back(10);<br>L1.push_back(20);<br>L1.push_back(30);<br>L1.push_back(40);</p>
+<p>printList(L1);</p>
+<p>listint&gt;L2(L1.begin(),L1.end());<br>printList(L2);</p>
+<p>listint&gt;L3(L2);<br>printList(L3);</p>
+<p>listint&gt;L4(10, 1000);<br>printList(L4);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：list构造方式同其他几个STL常用容器，熟练掌握即可</p>
+<p><a href="#3-7-3-list-%E8%B5%8B%E5%80%BC%E5%92%8C%E4%BA%A4%E6%8D%A2"></a>3.7.3 list 赋值和交换<strong>功能描述：</strong></p>
+<ul>
+<li>给list容器进行赋值，以及交换list容器</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>assign(beg, end);</code>            &#x2F;&#x2F;将[beg, end)区间中的数据拷贝赋值给本身。</p>
+</li>
+<li><p><code>assign(n, elem);</code>              &#x2F;&#x2F;将n个elem拷贝赋值给本身。</p>
+</li>
+<li><p><code>list&amp; operator=(const list &amp;lst);</code>         &#x2F;&#x2F;重载等号操作符</p>
+</li>
+<li><p><code>swap(lst);</code>                         &#x2F;&#x2F;将lst与本身的元素互换。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>#include </p>
+<p>void printList(const listint&gt;&amp; L) &#123;</p>
+<p>for (listint&gt;::const_iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;赋值和交换<br>void test01()<br>&#123;<br>listint&gt;L1;<br>L1.push_back(10);<br>L1.push_back(20);<br>L1.push_back(30);<br>L1.push_back(40);<br>printList(L1);</p>
+<p>&#x2F;&#x2F;赋值<br>listint&gt;L2;<br>L2 &#x3D; L1;<br>printList(L2);</p>
+<p>listint&gt;L3;<br>L3.assign(L2.begin(), L2.end());<br>printList(L3);</p>
+<p>listint&gt;L4;<br>L4.assign(10, 100);<br>printList(L4);</p>
+<p>&#125;</p>
+<p>&#x2F;&#x2F;交换<br>void test02()<br>&#123;</p>
+<p>listint&gt;L1;<br>L1.push_back(10);<br>L1.push_back(20);<br>L1.push_back(30);<br>L1.push_back(40);</p>
+<p>listint&gt;L2;<br>L2.assign(10, 100);</p>
+<p>cout “交换前： “<br>printList(L1);<br>printList(L2);</p>
+<p>cout </p>
+<p>L1.swap(L2);</p>
+<p>cout “交换后： “<br>printList(L1);<br>printList(L2);</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：list赋值和交换操作能够灵活运用即可</p>
+<p><a href="#3-7-4-list-%E5%A4%A7%E5%B0%8F%E6%93%8D%E4%BD%9C"></a>3.7.4 list 大小操作<strong>功能描述：</strong></p>
+<ul>
+<li>对list容器的大小进行操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>size(); </code>                             &#x2F;&#x2F;返回容器中元素的个数</p>
+<p><code>empty(); </code>                           &#x2F;&#x2F;判断容器是否为空</p>
+<p><code>resize(num);</code>                   &#x2F;&#x2F;重新指定容器的长度为num，若容器变长，则以默认值填充新位置。</p>
+<p>​                        &#x2F;&#x2F;如果容器变短，则末尾超出容器长度的元素被删除。</p>
+<p><code>resize(num, elem); </code>       &#x2F;&#x2F;重新指定容器的长度为num，若容器变长，则以elem值填充新位置。</p>
+<p><code>                  ​                        //如果容器变短，则末尾超出容器长度的元素被删除。</code></p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>#include </p>
+<p>void printList(const listint&gt;&amp; L) &#123;</p>
+<p>for (listint&gt;::const_iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;大小操作<br>void test01()<br>&#123;<br>listint&gt;L1;<br>L1.push_back(10);<br>L1.push_back(20);<br>L1.push_back(30);<br>L1.push_back(40);</p>
+<p>if (L1.empty())<br>&#123;<br>cout “L1为空”<br>&#125;<br>else<br>&#123;<br>cout “L1不为空”<br>cout “L1的大小为： “ size()<br>&#125;</p>
+<p>&#x2F;&#x2F;重新指定大小<br>L1.resize(10);<br>printList(L1);</p>
+<p>L1.resize(2);<br>printList(L1);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>判断是否为空   — empty</p>
+</li>
+<li><p>返回元素个数   — size</p>
+</li>
+<li><p>重新指定个数   — resize</p>
+</li>
+</ul>
+<p><a href="#3-7-5-list-%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.7.5 list 插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>对list容器进行数据的插入和删除</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p>push_back(elem);&#x2F;&#x2F;在容器尾部加入一个元素</p>
+</li>
+<li><p>pop_back();&#x2F;&#x2F;删除容器中最后一个元素</p>
+</li>
+<li><p>push_front(elem);&#x2F;&#x2F;在容器开头插入一个元素</p>
+</li>
+<li><p>pop_front();&#x2F;&#x2F;从容器开头移除第一个元素</p>
+</li>
+<li><p>insert(pos,elem);&#x2F;&#x2F;在pos位置插elem元素的拷贝，返回新数据的位置。</p>
+</li>
+<li><p>insert(pos,n,elem);&#x2F;&#x2F;在pos位置插入n个elem数据，无返回值。</p>
+</li>
+<li><p>insert(pos,beg,end);&#x2F;&#x2F;在pos位置插入[beg,end)区间的数据，无返回值。</p>
+</li>
+<li><p>clear();&#x2F;&#x2F;移除容器的所有数据</p>
+</li>
+<li><p>erase(beg,end);&#x2F;&#x2F;删除[beg,end)区间的数据，返回下一个数据的位置。</p>
+</li>
+<li><p>erase(pos);&#x2F;&#x2F;删除pos位置的数据，返回下一个数据的位置。</p>
+</li>
+<li><p>remove(elem);&#x2F;&#x2F;删除容器中所有与elem值匹配的元素。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>#include </p>
+<p>void printList(const listint&gt;&amp; L) &#123;</p>
+<p>for (listint&gt;::const_iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;插入和删除<br>void test01()<br>&#123;<br>listint&gt; L;<br>&#x2F;&#x2F;尾插<br>L.push_back(10);<br>L.push_back(20);<br>L.push_back(30);<br>&#x2F;&#x2F;头插<br>L.push_front(100);<br>L.push_front(200);<br>L.push_front(300);</p>
+<p>printList(L);</p>
+<p>&#x2F;&#x2F;尾删<br>L.pop_back();<br>printList(L);</p>
+<p>&#x2F;&#x2F;头删<br>L.pop_front();<br>printList(L);</p>
+<p>&#x2F;&#x2F;插入<br>listint&gt;::iterator it &#x3D; L.begin();<br>L.insert(++it, 1000);<br>printList(L);</p>
+<p>&#x2F;&#x2F;删除<br>it &#x3D; L.begin();<br>L.erase(++it);<br>printList(L);</p>
+<p>&#x2F;&#x2F;移除<br>L.push_back(10000);<br>L.push_back(10000);<br>L.push_back(10000);<br>printList(L);<br>L.remove(10000);<br>printList(L);</p>
+<p>&#x2F;&#x2F;清空<br>L.clear();<br>printList(L);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>尾插   — push_back</p>
+</li>
+<li><p>尾删   — pop_back</p>
+</li>
+<li><p>头插   — push_front</p>
+</li>
+<li><p>头删   — pop_front</p>
+</li>
+<li><p>插入   — insert</p>
+</li>
+<li><p>删除   — erase</p>
+</li>
+<li><p>移除   — remove</p>
+</li>
+<li><p>清空   — clear</p>
+</li>
+</ul>
+<p><a href="#3-7-6-list-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96"></a>3.7.6 list 数据存取<strong>功能描述：</strong></p>
+<ul>
+<li>对list容器中数据进行存取</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>front();</code>        &#x2F;&#x2F;返回第一个元素。</p>
+</li>
+<li><p><code>back();</code>         &#x2F;&#x2F;返回最后一个元素。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>#include </p>
+<p>&#x2F;&#x2F;数据存取<br>void test01()<br>&#123;<br>listint&gt;L1;<br>L1.push_back(10);<br>L1.push_back(20);<br>L1.push_back(30);<br>L1.push_back(40);</p>
+<p>&#x2F;&#x2F;cout<br>&#x2F;&#x2F;cout<br>cout “第一个元素为： “ front()<br>cout “最后一个元素为： “ back() </p>
+<p>&#x2F;&#x2F;list容器的迭代器是双向迭代器，不支持随机访问<br>listint&gt;::iterator it &#x3D; L1.begin();<br>&#x2F;&#x2F;it &#x3D; it + 1;&#x2F;&#x2F;错误，不可以跳跃访问，即使是+1<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>list容器中不可以通过[]或者at方式访问数据</p>
+</li>
+<li><p>返回第一个元素   — front</p>
+</li>
+<li><p>返回最后一个元素   — back</p>
+</li>
+</ul>
+<p><a href="#3-7-7-list-%E5%8F%8D%E8%BD%AC%E5%92%8C%E6%8E%92%E5%BA%8F"></a>3.7.7 list 反转和排序<strong>功能描述：</strong></p>
+<ul>
+<li>将容器中的元素反转，以及将容器中的数据进行排序</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>reverse();</code>   &#x2F;&#x2F;反转链表</p>
+</li>
+<li><p><code>sort();</code>        &#x2F;&#x2F;链表排序</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>void printList(const listint&gt;&amp; L) &#123;</p>
+<p>for (listint&gt;::const_iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>bool myCompare(int val1 , int val2)<br>&#123;<br>return val1 &gt; val2;<br>&#125;</p>
+<p>&#x2F;&#x2F;反转和排序<br>void test01()<br>&#123;<br>listint&gt; L;<br>L.push_back(90);<br>L.push_back(30);<br>L.push_back(20);<br>L.push_back(70);<br>printList(L);</p>
+<p>&#x2F;&#x2F;反转容器的元素<br>L.reverse();<br>printList(L);</p>
+<p>&#x2F;&#x2F;排序<br>L.sort(); &#x2F;&#x2F;默认的排序规则 从小到大<br>printList(L);</p>
+<p>L.sort(myCompare); &#x2F;&#x2F;指定规则，从大到小<br>printList(L);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>反转   — reverse</p>
+</li>
+<li><p>排序   — sort （成员函数）</p>
+</li>
+</ul>
+<p><a href="#3-7-8-%E6%8E%92%E5%BA%8F%E6%A1%88%E4%BE%8B"></a>3.7.8 排序案例案例描述：将Person自定义数据类型进行排序，Person中属性有姓名、年龄、身高</p>
+<p>排序规则：按照年龄进行升序，如果年龄相同按照身高进行降序</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>#include<br>#include<br>class Person &#123;<br>public:<br>Person(string name, int age , int height) &#123;<br>m_Name &#x3D; name;<br>m_Age &#x3D; age;<br>m_Height &#x3D; height;<br>&#125;</p>
+<p>public:<br>string m_Name;  &#x2F;&#x2F;姓名<br>int m_Age;      &#x2F;&#x2F;年龄<br>int m_Height;   &#x2F;&#x2F;身高<br>&#125;;</p>
+<p>bool ComparePerson(Person&amp; p1, Person&amp; p2) &#123;</p>
+<p>if (p1.m_Age &#x3D;&#x3D; p2.m_Age) &#123;<br>return p1.m_Height  &gt; p2.m_Height;<br>&#125;<br>else<br>&#123;<br>return  p1.m_Age<br>&#125;</p>
+<p>&#125;</p>
+<p>void test01() &#123;</p>
+<p>list L;</p>
+<p>Person p1(“刘备”, 35 , 175);<br>Person p2(“曹操”, 45 , 180);<br>Person p3(“孙权”, 40 , 170);<br>Person p4(“赵云”, 25 , 190);<br>Person p5(“张飞”, 35 , 160);<br>Person p6(“关羽”, 35 , 200);</p>
+<p>L.push_back(p1);<br>L.push_back(p2);<br>L.push_back(p3);<br>L.push_back(p4);<br>L.push_back(p5);<br>L.push_back(p6);</p>
+<p>for (list::iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “姓名： “ m_Name “ 年龄： “ m_Age<br>“ 身高： “ m_Height<br>&#125;</p>
+<p>cout “———————————“<br>L.sort(ComparePerson); &#x2F;&#x2F;排序</p>
+<p>for (list::iterator it &#x3D; L.begin(); it !&#x3D; L.end(); it++) &#123;<br>cout “姓名： “ m_Name “ 年龄： “ m_Age<br>“ 身高： “ m_Height<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>对于自定义数据类型，必须要指定排序规则，否则编译器不知道如何进行排序</p>
+</li>
+<li><p>高级排序只是在排序规则上再进行一次逻辑规则制定，并不复杂</p>
+</li>
+</ul>
+<p><a href="#3-8-set-multiset-%E5%AE%B9%E5%99%A8"></a>3.8 set&#x2F; multiset 容器<a href="#3-8-1-set%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.8.1 set基本概念<strong>简介：</strong></p>
+<ul>
+<li>所有元素都会在插入时自动被排序</li>
+</ul>
+<p><strong>本质：</strong></p>
+<ul>
+<li>set&#x2F;multiset属于<strong>关联式容器</strong>，底层结构是用<strong>二叉树</strong>实现。</li>
+</ul>
+<p><strong>set和multiset区别</strong>：</p>
+<ul>
+<li><p>set不允许容器中有重复的元素</p>
+</li>
+<li><p>multiset允许容器中有重复的元素</p>
+</li>
+</ul>
+<p><a href="#3-8-2-set%E6%9E%84%E9%80%A0%E5%92%8C%E8%B5%8B%E5%80%BC"></a>3.8.2 set构造和赋值功能描述：创建set容器以及赋值</p>
+<p>构造：</p>
+<ul>
+<li><p><code>set st;</code>                        &#x2F;&#x2F;默认构造函数：</p>
+</li>
+<li><p><code>set(const set &amp;st);</code>       &#x2F;&#x2F;拷贝构造函数</p>
+</li>
+</ul>
+<p>赋值：</p>
+<ul>
+<li><code>set&amp; operator=(const set &amp;st);</code>    &#x2F;&#x2F;重载等号操作符</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>#include </p>
+<p>void printSet(setint&gt; &amp; s)<br>&#123;<br>for (setint&gt;::iterator it &#x3D; s.begin(); it !&#x3D; s.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;构造和赋值<br>void test01()<br>&#123;<br>setint&gt; s1;</p>
+<p>s1.insert(10);<br>s1.insert(30);<br>s1.insert(20);<br>s1.insert(40);<br>printSet(s1);</p>
+<p>&#x2F;&#x2F;拷贝构造<br>setint&gt;s2(s1);<br>printSet(s2);</p>
+<p>&#x2F;&#x2F;赋值<br>setint&gt;s3;<br>s3 &#x3D; s2;<br>printSet(s3);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>set容器插入数据时用insert</p>
+</li>
+<li><p>set容器插入数据的数据会自动排序</p>
+</li>
+</ul>
+<p><a href="#3-8-3-set%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%BA%A4%E6%8D%A2"></a>3.8.3 set大小和交换<strong>功能描述：</strong></p>
+<ul>
+<li>统计set容器大小以及交换set容器</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>size();</code>          &#x2F;&#x2F;返回容器中元素的数目</p>
+</li>
+<li><p><code>empty();</code>        &#x2F;&#x2F;判断容器是否为空</p>
+</li>
+<li><p><code>swap(st);</code>      &#x2F;&#x2F;交换两个集合容器</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>#include </p>
+<p>void printSet(setint&gt; &amp; s)<br>&#123;<br>for (setint&gt;::iterator it &#x3D; s.begin(); it !&#x3D; s.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;大小<br>void test01()<br>&#123;</p>
+<p>setint&gt; s1;</p>
+<p>s1.insert(10);<br>s1.insert(30);<br>s1.insert(20);<br>s1.insert(40);</p>
+<p>if (s1.empty())<br>&#123;<br>cout “s1为空”<br>&#125;<br>else<br>&#123;<br>cout “s1不为空”<br>cout “s1的大小为： “ size()<br>&#125;</p>
+<p>&#125;</p>
+<p>&#x2F;&#x2F;交换<br>void test02()<br>&#123;<br>setint&gt; s1;</p>
+<p>s1.insert(10);<br>s1.insert(30);<br>s1.insert(20);<br>s1.insert(40);</p>
+<p>setint&gt; s2;</p>
+<p>s2.insert(100);<br>s2.insert(300);<br>s2.insert(200);<br>s2.insert(400);</p>
+<p>cout “交换前”<br>printSet(s1);<br>printSet(s2);<br>cout </p>
+<p>cout “交换后”<br>s1.swap(s2);<br>printSet(s1);<br>printSet(s2);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>统计大小   — size</p>
+</li>
+<li><p>判断是否为空   — empty</p>
+</li>
+<li><p>交换容器   — swap</p>
+</li>
+</ul>
+<p><a href="#3-8-4-set%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.8.4 set插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>set容器进行插入数据和删除数据</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>insert(elem);</code>           &#x2F;&#x2F;在容器中插入元素。</p>
+</li>
+<li><p><code>clear();</code>                    &#x2F;&#x2F;清除所有元素</p>
+</li>
+<li><p><code>erase(pos);</code>              &#x2F;&#x2F;删除pos迭代器所指的元素，返回下一个元素的迭代器。</p>
+</li>
+<li><p><code>erase(beg, end);</code>    &#x2F;&#x2F;删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器。</p>
+</li>
+<li><p><code>erase(elem);</code>            &#x2F;&#x2F;删除容器中值为elem的元素。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>#include </p>
+<p>void printSet(setint&gt; &amp; s)<br>&#123;<br>for (setint&gt;::iterator it &#x3D; s.begin(); it !&#x3D; s.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>&#x2F;&#x2F;插入和删除<br>void test01()<br>&#123;<br>setint&gt; s1;<br>&#x2F;&#x2F;插入<br>s1.insert(10);<br>s1.insert(30);<br>s1.insert(20);<br>s1.insert(40);<br>printSet(s1);</p>
+<p>&#x2F;&#x2F;删除<br>s1.erase(s1.begin());<br>printSet(s1);</p>
+<p>s1.erase(30);<br>printSet(s1);</p>
+<p>&#x2F;&#x2F;清空<br>&#x2F;&#x2F;s1.erase(s1.begin(), s1.end());<br>s1.clear();<br>printSet(s1);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>插入   — insert</p>
+</li>
+<li><p>删除   — erase</p>
+</li>
+<li><p>清空   — clear</p>
+</li>
+</ul>
+<p><a href="#3-8-5-set%E6%9F%A5%E6%89%BE%E5%92%8C%E7%BB%9F%E8%AE%A1"></a>3.8.5 set查找和统计<strong>功能描述：</strong></p>
+<ul>
+<li>对set容器进行查找数据以及统计数据</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>find(key);</code>                  &#x2F;&#x2F;查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
+</li>
+<li><p><code>count(key);</code>                &#x2F;&#x2F;统计key的元素个数</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>#include </p>
+<p>&#x2F;&#x2F;查找和统计<br>void test01()<br>&#123;<br>setint&gt; s1;<br>&#x2F;&#x2F;插入<br>s1.insert(10);<br>s1.insert(30);<br>s1.insert(20);<br>s1.insert(40);</p>
+<p>&#x2F;&#x2F;查找<br>setint&gt;::iterator pos &#x3D; s1.find(30);</p>
+<p>if (pos !&#x3D; s1.end())<br>&#123;<br>cout “找到了元素 ： “<br>&#125;<br>else<br>&#123;<br>cout “未找到元素”<br>&#125;</p>
+<p>&#x2F;&#x2F;统计<br>int num &#x3D; s1.count(30);<br>cout “num &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>查找   —  find    （返回的是迭代器）</p>
+</li>
+<li><p>统计   —  count  （对于set，结果为0或者1）</p>
+</li>
+</ul>
+<p><a href="#3-8-6-set%E5%92%8Cmultiset%E5%8C%BA%E5%88%AB"></a>3.8.6 set和multiset区别<strong>学习目标：</strong></p>
+<ul>
+<li>掌握set和multiset的区别</li>
+</ul>
+<p><strong>区别：</strong></p>
+<ul>
+<li><p>set不可以插入重复数据，而multiset可以</p>
+</li>
+<li><p>set插入数据的同时会返回插入结果，表示插入是否成功</p>
+</li>
+<li><p>multiset不会检测数据，因此可以插入重复数据</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>#include </p>
+<p>&#x2F;&#x2F;set和multiset区别<br>void test01()<br>&#123;<br>setint&gt; s;<br>pairint&gt;::iterator, bool&gt;  ret &#x3D; s.insert(10);<br>if (ret.second) &#123;<br>cout “第一次插入成功!”<br>&#125;<br>else &#123;<br>cout “第一次插入失败!”<br>&#125;</p>
+<p>ret &#x3D; s.insert(10);<br>if (ret.second) &#123;<br>cout “第二次插入成功!”<br>&#125;<br>else &#123;<br>cout “第二次插入失败!”<br>&#125;</p>
+<p>&#x2F;&#x2F;multiset<br>multisetint&gt; ms;<br>ms.insert(10);<br>ms.insert(10);</p>
+<p>for (multisetint&gt;::iterator it &#x3D; ms.begin(); it !&#x3D; ms.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>如果不允许插入重复数据可以利用set</p>
+</li>
+<li><p>如果需要插入重复数据利用multiset</p>
+</li>
+</ul>
+<p><a href="#3-8-7-pair%E5%AF%B9%E7%BB%84%E5%88%9B%E5%BB%BA"></a>3.8.7 pair对组创建<strong>功能描述：</strong></p>
+<ul>
+<li>成对出现的数据，利用对组可以返回两个数据</li>
+</ul>
+<p><strong>两种创建方式：</strong></p>
+<ul>
+<li><p><code>pair p ( value1, value2 );</code></p>
+</li>
+<li><p><code>pair p = make_pair( value1, value2 );</code></p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>#include </p>
+<p>&#x2F;&#x2F;对组创建<br>void test01()<br>&#123;<br>pairint&gt; p(string(“Tom”), 20);<br>cout “姓名： “ “ 年龄： “ </p>
+<p>pairint&gt; p2 &#x3D; make_pair(“Jerry”, 10);<br>cout “姓名： “ “ 年龄： “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<p>两种方式都可以创建对组，记住一种即可</p>
+<p><a href="#3-8-8-set%E5%AE%B9%E5%99%A8%E6%8E%92%E5%BA%8F"></a>3.8.8 set容器排序学习目标：</p>
+<ul>
+<li>set容器默认排序规则为从小到大，掌握如何改变排序规则</li>
+</ul>
+<p>主要技术点：</p>
+<ul>
+<li>利用仿函数，可以改变排序规则</li>
+</ul>
+<p><strong>示例一</strong>   set存放内置数据类型</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>#include </p>
+<p>class MyCompare<br>&#123;<br>public:<br>bool operator()(int v1, int v2) &#123;<br>return v1 &gt; v2;<br>&#125;<br>&#125;;<br>void test01()<br>&#123;<br>setint&gt; s1;<br>s1.insert(10);<br>s1.insert(40);<br>s1.insert(20);<br>s1.insert(30);<br>s1.insert(50);</p>
+<p>&#x2F;&#x2F;默认从小到大<br>for (setint&gt;::iterator it &#x3D; s1.begin(); it !&#x3D; s1.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>&#x2F;&#x2F;指定排序规则<br>setint,MyCompare&gt; s2;<br>s2.insert(10);<br>s2.insert(40);<br>s2.insert(20);<br>s2.insert(30);<br>s2.insert(50);</p>
+<p>for (setint, MyCompare&gt;::iterator it &#x3D; s2.begin(); it !&#x3D; s2.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：利用仿函数可以指定set容器的排序规则</p>
+<p><strong>示例二</strong> set存放自定义数据类型</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>#include<br>#include </p>
+<p>class Person<br>&#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>string m_Name;<br>int m_Age;</p>
+<p>&#125;;<br>class comparePerson<br>&#123;<br>public:<br>bool operator()(const Person&amp; p1, const Person &amp;p2)<br>&#123;<br>&#x2F;&#x2F;按照年龄进行排序  降序<br>return p1.m_Age &gt; p2.m_Age;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>set s;</p>
+<p>Person p1(“刘备”, 23);<br>Person p2(“关羽”, 27);<br>Person p3(“张飞”, 25);<br>Person p4(“赵云”, 21);</p>
+<p>s.insert(p1);<br>s.insert(p2);<br>s.insert(p3);<br>s.insert(p4);</p>
+<p>for (set::iterator it &#x3D; s.begin(); it !&#x3D; s.end(); it++)<br>&#123;<br>cout “姓名： “ m_Name “ 年龄： “ m_Age<br>&#125;<br>&#125;<br>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<p>对于自定义数据类型，set必须指定排序规则才可以插入数据</p>
+<p><a href="#3-9-map-multimap%E5%AE%B9%E5%99%A8"></a>3.9 map&#x2F; multimap容器<a href="#3-9-1-map%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"></a>3.9.1 map基本概念<strong>简介：</strong></p>
+<ul>
+<li><p>map中所有元素都是pair</p>
+</li>
+<li><p>pair中第一个元素为key（键值），起到索引作用，第二个元素为value（实值）</p>
+</li>
+<li><p>所有元素都会根据元素的键值自动排序</p>
+</li>
+</ul>
+<p><strong>本质：</strong></p>
+<ul>
+<li>map&#x2F;multimap属于<strong>关联式容器</strong>，底层结构是用二叉树实现。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>可以根据key值快速找到value值</li>
+</ul>
+<p>map和multimap<strong>区别</strong>：</p>
+<ul>
+<li><p>map不允许容器中有重复key值元素</p>
+</li>
+<li><p>multimap允许容器中有重复key值元素</p>
+</li>
+</ul>
+<p><a href="#3-9-2-map%E6%9E%84%E9%80%A0%E5%92%8C%E8%B5%8B%E5%80%BC"></a>3.9.2  map构造和赋值<strong>功能描述：</strong></p>
+<ul>
+<li>对map容器进行构造和赋值操作</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><strong>构造：</strong></p>
+<ul>
+<li><p><code>map mp;</code>                     &#x2F;&#x2F;map默认构造函数: </p>
+</li>
+<li><p><code>map(const map &amp;mp);</code>             &#x2F;&#x2F;拷贝构造函数</p>
+</li>
+</ul>
+<p><strong>赋值：</strong></p>
+<ul>
+<li><code>map&amp; operator=(const map &amp;mp);</code>    &#x2F;&#x2F;重载等号操作符</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>#include </p>
+<p>void printMap(mapint,int&gt;&amp;m)<br>&#123;<br>for (mapint, int&gt;::iterator it &#x3D; m.begin(); it !&#x3D; m.end(); it++)<br>&#123;<br>cout “key &#x3D; “ first “ value &#x3D; “ second<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>mapint,int&gt;m; &#x2F;&#x2F;默认构造<br>m.insert(pairint, int&gt;(1, 10));<br>m.insert(pairint, int&gt;(2, 20));<br>m.insert(pairint, int&gt;(3, 30));<br>printMap(m);</p>
+<p>mapint, int&gt;m2(m); &#x2F;&#x2F;拷贝构造<br>printMap(m2);</p>
+<p>mapint, int&gt;m3;<br>m3 &#x3D; m2; &#x2F;&#x2F;赋值<br>printMap(m3);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：map中所有元素都是成对出现，插入数据时候要使用对组</p>
+<p><a href="#3-9-3-map%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%BA%A4%E6%8D%A2"></a>3.9.3 map大小和交换<strong>功能描述：</strong></p>
+<ul>
+<li>统计map容器大小以及交换map容器</li>
+</ul>
+<p>函数原型：</p>
+<ul>
+<li><p><code>size();</code>          &#x2F;&#x2F;返回容器中元素的数目</p>
+</li>
+<li><p><code>empty();</code>        &#x2F;&#x2F;判断容器是否为空</p>
+</li>
+<li><p><code>swap(st);</code>      &#x2F;&#x2F;交换两个集合容器</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>#include </p>
+<p>void printMap(mapint,int&gt;&amp;m)<br>&#123;<br>for (mapint, int&gt;::iterator it &#x3D; m.begin(); it !&#x3D; m.end(); it++)<br>&#123;<br>cout “key &#x3D; “ first “ value &#x3D; “ second<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>mapint, int&gt;m;<br>m.insert(pairint, int&gt;(1, 10));<br>m.insert(pairint, int&gt;(2, 20));<br>m.insert(pairint, int&gt;(3, 30));</p>
+<p>if (m.empty())<br>&#123;<br>cout “m为空”<br>&#125;<br>else<br>&#123;<br>cout “m不为空”<br>cout “m的大小为： “ size()<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;交换<br>void test02()<br>&#123;<br>mapint, int&gt;m;<br>m.insert(pairint, int&gt;(1, 10));<br>m.insert(pairint, int&gt;(2, 20));<br>m.insert(pairint, int&gt;(3, 30));</p>
+<p>mapint, int&gt;m2;<br>m2.insert(pairint, int&gt;(4, 100));<br>m2.insert(pairint, int&gt;(5, 200));<br>m2.insert(pairint, int&gt;(6, 300));</p>
+<p>cout “交换前”<br>printMap(m);<br>printMap(m2);</p>
+<p>cout “交换后”<br>m.swap(m2);<br>printMap(m);<br>printMap(m2);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>统计大小   — size</p>
+</li>
+<li><p>判断是否为空   — empty</p>
+</li>
+<li><p>交换容器   — swap</p>
+</li>
+</ul>
+<p><a href="#3-9-4-map%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"></a>3.9.4 map插入和删除<strong>功能描述：</strong></p>
+<ul>
+<li>map容器进行插入数据和删除数据</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>insert(elem);</code>           &#x2F;&#x2F;在容器中插入元素。</p>
+</li>
+<li><p><code>clear();</code>                    &#x2F;&#x2F;清除所有元素</p>
+</li>
+<li><p><code>erase(pos);</code>              &#x2F;&#x2F;删除pos迭代器所指的元素，返回下一个元素的迭代器。</p>
+</li>
+<li><p><code>erase(beg, end);</code>    &#x2F;&#x2F;删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器。</p>
+</li>
+<li><p><code>erase(key);</code>            &#x2F;&#x2F;删除容器中值为key的元素。</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>#include </p>
+<p>void printMap(mapint,int&gt;&amp;m)<br>&#123;<br>for (mapint, int&gt;::iterator it &#x3D; m.begin(); it !&#x3D; m.end(); it++)<br>&#123;<br>cout “key &#x3D; “ first “ value &#x3D; “ second<br>&#125;<br>cout<br>&#125;</p>
+<p>void test01()<br>&#123;<br>&#x2F;&#x2F;插入<br>mapint, int&gt; m;<br>&#x2F;&#x2F;第一种插入方式<br>m.insert(pairint, int&gt;(1, 10));<br>&#x2F;&#x2F;第二种插入方式<br>m.insert(make_pair(2, 20));<br>&#x2F;&#x2F;第三种插入方式<br>m.insert(mapint, int&gt;::value_type(3, 30));<br>&#x2F;&#x2F;第四种插入方式<br>m[4] &#x3D; 40;<br>printMap(m);</p>
+<p>&#x2F;&#x2F;删除<br>m.erase(m.begin());<br>printMap(m);</p>
+<p>m.erase(3);<br>printMap(m);</p>
+<p>&#x2F;&#x2F;清空<br>m.erase(m.begin(),m.end());<br>m.clear();<br>printMap(m);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>map插入方式很多，记住其一即可</p>
+</li>
+<li><p>插入   — insert </p>
+</li>
+<li><p>删除   — erase</p>
+</li>
+<li><p>清空   — clear</p>
+</li>
+</ul>
+<p><a href="#3-9-5-map%E6%9F%A5%E6%89%BE%E5%92%8C%E7%BB%9F%E8%AE%A1"></a>3.9.5 map查找和统计<strong>功能描述：</strong></p>
+<ul>
+<li>对map容器进行查找数据以及统计数据</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>find(key);</code>                  &#x2F;&#x2F;查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
+</li>
+<li><p><code>count(key);</code>                &#x2F;&#x2F;统计key的元素个数</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>#include </p>
+<p>&#x2F;&#x2F;查找和统计<br>void test01()<br>&#123;<br>mapint, int&gt;m;<br>m.insert(pairint, int&gt;(1, 10));<br>m.insert(pairint, int&gt;(2, 20));<br>m.insert(pairint, int&gt;(3, 30));</p>
+<p>&#x2F;&#x2F;查找<br>mapint, int&gt;::iterator pos &#x3D; m.find(3);</p>
+<p>if (pos !&#x3D; m.end())<br>&#123;<br>cout “找到了元素 key &#x3D; “ “ value &#x3D; “<br>&#125;<br>else<br>&#123;<br>cout “未找到元素”<br>&#125;</p>
+<p>&#x2F;&#x2F;统计<br>int num &#x3D; m.count(3);<br>cout “num &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>查找   —  find    （返回的是迭代器）</p>
+</li>
+<li><p>统计   —  count  （对于map，结果为0或者1）</p>
+</li>
+</ul>
+<p><a href="#3-9-6-map%E5%AE%B9%E5%99%A8%E6%8E%92%E5%BA%8F"></a>3.9.6 map容器排序<strong>学习目标：</strong></p>
+<ul>
+<li>map容器默认排序规则为 按照key值进行 从小到大排序，掌握如何改变排序规则</li>
+</ul>
+<p><strong>主要技术点:</strong></p>
+<ul>
+<li>利用仿函数，可以改变排序规则</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>#include </p>
+<p>class MyCompare &#123;<br>public:<br>bool operator()(int v1, int v2) &#123;<br>return v1 &gt; v2;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>&#x2F;&#x2F;默认从小到大排序<br>&#x2F;&#x2F;利用仿函数实现从大到小排序<br>mapint, int, MyCompare&gt; m;</p>
+<p>m.insert(make_pair(1, 10));<br>m.insert(make_pair(2, 20));<br>m.insert(make_pair(3, 30));<br>m.insert(make_pair(4, 40));<br>m.insert(make_pair(5, 50));</p>
+<p>for (mapint, int, MyCompare&gt;::iterator it &#x3D; m.begin(); it !&#x3D; m.end(); it++) &#123;<br>cout “key:” first “ value:” second<br>&#125;<br>&#125;<br>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li><p>利用仿函数可以指定map容器的排序规则</p>
+</li>
+<li><p>对于自定义数据类型，map必须要指定排序规则,同set容器</p>
+</li>
+</ul>
+<p><a href="#3-10-%E6%A1%88%E4%BE%8B-%E5%91%98%E5%B7%A5%E5%88%86%E7%BB%84"></a>3.10 案例-员工分组<a href="#3-10-1-%E6%A1%88%E4%BE%8B%E6%8F%8F%E8%BF%B0"></a>3.10.1 案例描述</p>
+<ul>
+<li><p>公司今天招聘了10个员工（ABCDEFGHIJ），10名员工进入公司之后，需要指派员工在那个部门工作</p>
+</li>
+<li><p>员工信息有: 姓名  工资组成；部门分为：策划、美术、研发</p>
+</li>
+<li><p>随机给10名员工分配部门和工资</p>
+</li>
+<li><p>通过multimap进行信息的插入  key(部门编号) value(员工)</p>
+</li>
+<li><p>分部门显示员工信息</p>
+</li>
+</ul>
+<p><a href="#3-10-2-%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"></a>3.10.2 实现步骤</p>
+<ul>
+<li><p>创建10名员工，放到vector中</p>
+</li>
+<li><p>遍历vector容器，取出每个员工，进行随机分组</p>
+</li>
+<li><p>分组后，将员工部门编号作为key，具体员工作为value，放入到multimap容器中</p>
+</li>
+<li><p>分部门显示员工信息</p>
+</li>
+</ul>
+<p><strong>案例代码：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br>116<br>#include<br>using namespace std;<br>#include<br>#include<br>#include<br>#include </p>
+<p>&#x2F;*</p>
+<ul>
+<li>公司今天招聘了10个员工（ABCDEFGHIJ），10名员工进入公司之后，需要指派员工在那个部门工作</li>
+<li>员工信息有: 姓名  工资组成；部门分为：策划、美术、研发</li>
+<li>随机给10名员工分配部门和工资</li>
+<li>通过multimap进行信息的插入  key(部门编号) value(员工)</li>
+<li>分部门显示员工信息<br>*&#x2F;</li>
+</ul>
+<p>#define CEHUA  0<br>#define MEISHU 1<br>#define YANFA  2</p>
+<p>class Worker<br>&#123;<br>public:<br>string m_Name;<br>int m_Salary;<br>&#125;;</p>
+<p>void createWorker(vector&amp;v)<br>&#123;<br>string nameSeed &#x3D; “ABCDEFGHIJ”;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>Worker worker;<br>worker.m_Name &#x3D; “员工”;<br>worker.m_Name +&#x3D; nameSeed[i];</p>
+<p>worker.m_Salary &#x3D; rand() % 10000 + 10000; &#x2F;&#x2F; 10000 ~ 19999<br>&#x2F;&#x2F;将员工放入到容器中<br>v.push_back(worker);<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;员工分组<br>void setGroup(vector&amp;v,multimapint,Worker&gt;&amp;m)<br>&#123;<br>for (vector::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#123;<br>&#x2F;&#x2F;产生随机部门编号<br>int deptId &#x3D; rand() % 3; &#x2F;&#x2F; 0 1 2 </p>
+<p>&#x2F;&#x2F;将员工插入到分组中<br>&#x2F;&#x2F;key部门编号，value具体员工<br>m.insert(make_pair(deptId, *it));<br>&#125;<br>&#125;</p>
+<p>void showWorkerByGourp(multimapint,Worker&gt;&amp;m)<br>&#123;<br>&#x2F;&#x2F; 0  A  B  C   1  D  E   2  F G …<br>cout “策划部门：” </p>
+<p>multimapint,Worker&gt;::iterator pos &#x3D; m.find(CEHUA);<br>int count &#x3D; m.count(CEHUA); &#x2F;&#x2F; 统计具体人数<br>int index &#x3D; 0;<br>for (; pos !&#x3D; m.end() &amp;&amp; index<br>&#123;<br>cout “姓名： “ second.m_Name “ 工资： “ second.m_Salary<br>&#125;</p>
+<p>cout “———————-“<br>cout “美术部门： “<br>pos &#x3D; m.find(MEISHU);<br>count &#x3D; m.count(MEISHU); &#x2F;&#x2F; 统计具体人数<br>index &#x3D; 0;<br>for (; pos !&#x3D; m.end() &amp;&amp; index<br>&#123;<br>cout “姓名： “ second.m_Name “ 工资： “ second.m_Salary<br>&#125;</p>
+<p>cout “———————-“<br>cout “研发部门： “<br>pos &#x3D; m.find(YANFA);<br>count &#x3D; m.count(YANFA); &#x2F;&#x2F; 统计具体人数<br>index &#x3D; 0;<br>for (; pos !&#x3D; m.end() &amp;&amp; index<br>&#123;<br>cout “姓名： “ second.m_Name “ 工资： “ second.m_Salary<br>&#125;</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>srand((unsigned int)time(NULL));</p>
+<p>&#x2F;&#x2F;1、创建员工<br>vectorvWorker;<br>createWorker(vWorker);</p>
+<p>&#x2F;&#x2F;2、员工分组<br>multimapint, Worker&gt;mWorker;<br>setGroup(vWorker, mWorker);</p>
+<p>&#x2F;&#x2F;3、分组显示员工<br>showWorkerByGourp(mWorker);</p>
+<p>&#x2F;&#x2F;&#x2F;&#x2F;测试<br>&#x2F;&#x2F;for (vector::iterator it &#x3D; vWorker.begin(); it !&#x3D; vWorker.end(); it++)<br>&#x2F;&#x2F;&#123;<br>&#x2F;&#x2F;	cout m_Name m_Salary<br>&#x2F;&#x2F;&#125;</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li>当数据以键值对形式存在，可以考虑用map 或 multimap</li>
+</ul>
+<h2 id="4-STL-函数对象"><a href="#4-STL-函数对象" class="headerlink" title="4 STL- 函数对象"></a>4 STL- 函数对象</h2><p><a href="#4-1-%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1"></a>4.1 函数对象<a href="#4-1-1-%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E6%A6%82%E5%BF%B5"></a>4.1.1 函数对象概念<strong>概念：</strong></p>
+<ul>
+<li><p>重载<strong>函数调用操作符</strong>的类，其对象常称为<strong>函数对象</strong></p>
+</li>
+<li><p><strong>函数对象</strong>使用重载的()时，行为类似函数调用，也叫<strong>仿函数</strong></p>
+</li>
+</ul>
+<p><strong>本质：</strong></p>
+<p>函数对象(仿函数)是一个<strong>类</strong>，不是一个函数</p>
+<p><a href="#4-1-2-%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E4%BD%BF%E7%94%A8"></a>4.1.2  函数对象使用<strong>特点：</strong></p>
+<ul>
+<li><p>函数对象在使用时，可以像普通函数那样调用, 可以有参数，可以有返回值</p>
+</li>
+<li><p>函数对象超出普通函数的概念，函数对象可以有自己的状态</p>
+</li>
+<li><p>函数对象可以作为参数传递</p>
+</li>
+</ul>
+<p><strong>示例:</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>#include </p>
+<p>&#x2F;&#x2F;1、函数对象在使用时，可以像普通函数那样调用, 可以有参数，可以有返回值<br>class MyAdd<br>&#123;<br>public :<br>int operator()(int v1,int v2)<br>&#123;<br>return v1 + v2;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>MyAdd myAdd;<br>cout myAdd(10, 10)<br>&#125;</p>
+<p>&#x2F;&#x2F;2、函数对象可以有自己的状态<br>class MyPrint<br>&#123;<br>public:<br>MyPrint()<br>&#123;<br>count &#x3D; 0;<br>&#125;<br>void operator()(string test)<br>&#123;<br>cout<br>count++; &#x2F;&#x2F;统计使用次数<br>&#125;</p>
+<p>int count; &#x2F;&#x2F;内部自己的状态<br>&#125;;<br>void test02()<br>&#123;<br>MyPrint myPrint;<br>myPrint(“hello world”);<br>myPrint(“hello world”);<br>myPrint(“hello world”);<br>cout “myPrint调用次数为： “<br>&#125;</p>
+<p>&#x2F;&#x2F;3、函数对象可以作为参数传递<br>void doPrint(MyPrint &amp;mp , string test)<br>&#123;<br>mp(test);<br>&#125;</p>
+<p>void test03()<br>&#123;<br>MyPrint myPrint;<br>doPrint(myPrint, “Hello C++”);<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();<br>&#x2F;&#x2F;test02();<br>test03();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：</p>
+<ul>
+<li>仿函数写法非常灵活，可以作为参数进行传递。</li>
+</ul>
+<p><a href="#4-2-%E8%B0%93%E8%AF%8D"></a>4.2  谓词<a href="#4-2-1-%E8%B0%93%E8%AF%8D%E6%A6%82%E5%BF%B5"></a>4.2.1 谓词概念<strong>概念：</strong></p>
+<ul>
+<li><p>返回bool类型的仿函数称为<strong>谓词</strong></p>
+</li>
+<li><p>如果operator()接受一个参数，那么叫做一元谓词</p>
+</li>
+<li><p>如果operator()接受两个参数，那么叫做二元谓词</p>
+</li>
+</ul>
+<p><a href="#4-2-2-%E4%B8%80%E5%85%83%E8%B0%93%E8%AF%8D"></a>4.2.2 一元谓词<strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>#include<br>#include </p>
+<p>&#x2F;&#x2F;1.一元谓词<br>struct GreaterFive&#123;<br>bool operator()(int val) &#123;<br>return val &gt; 5;<br>&#125;<br>&#125;;</p>
+<p>void test01() &#123;</p>
+<p>vectorint&gt; v;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v.push_back(i);<br>&#125;</p>
+<p>vectorint&gt;::iterator it &#x3D; find_if(v.begin(), v.end(), GreaterFive());<br>if (it &#x3D;&#x3D; v.end()) &#123;<br>cout “没找到!”<br>&#125;<br>else &#123;<br>cout “找到:”<br>&#125;</p>
+<p>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：参数只有一个的谓词，称为一元谓词</p>
+<p><a href="#4-2-3-%E4%BA%8C%E5%85%83%E8%B0%93%E8%AF%8D"></a>4.2.3 二元谓词<strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>#include<br>#include<br>&#x2F;&#x2F;二元谓词<br>class MyCompare<br>&#123;<br>public:<br>bool operator()(int num1, int num2)<br>&#123;<br>return num1 &gt; num2;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(10);<br>v.push_back(40);<br>v.push_back(20);<br>v.push_back(30);<br>v.push_back(50);</p>
+<p>&#x2F;&#x2F;默认从小到大<br>sort(v.begin(), v.end());<br>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>cout “—————————-“ </p>
+<p>&#x2F;&#x2F;使用函数对象改变算法策略，排序从大到小<br>sort(v.begin(), v.end(), MyCompare());<br>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：参数只有两个的谓词，称为二元谓词</p>
+<p><a href="#4-3-%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1"></a>4.3 内建函数对象<a href="#4-3-1-%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1%E6%84%8F%E4%B9%89"></a>4.3.1 内建函数对象意义<strong>概念：</strong></p>
+<ul>
+<li>STL内建了一些函数对象</li>
+</ul>
+<p><strong>分类:</strong></p>
+<p>算术仿函数</p>
+<p>关系仿函数</p>
+<p>逻辑仿函数</p>
+<p><strong>用法：</strong></p>
+<ul>
+<li><p>这些仿函数所产生的对象，用法和一般函数完全相同</p>
+</li>
+<li><p>使用内建函数对象，需要引入头文件 <code>#include</code></p>
+</li>
+</ul>
+<p><a href="#4-3-2-%E7%AE%97%E6%9C%AF%E4%BB%BF%E5%87%BD%E6%95%B0"></a>4.3.2 算术仿函数<strong>功能描述：</strong></p>
+<ul>
+<li><p>实现四则运算</p>
+</li>
+<li><p>其中negate是一元运算，其他都是二元运算</p>
+</li>
+</ul>
+<p><strong>仿函数原型：</strong></p>
+<ul>
+<li><p><code>template T plus</code>                &#x2F;&#x2F;加法仿函数</p>
+</li>
+<li><p><code>template T minus</code>              &#x2F;&#x2F;减法仿函数</p>
+</li>
+<li><p><code>template T multiplies</code>    &#x2F;&#x2F;乘法仿函数</p>
+</li>
+<li><p><code>template T divides</code>         &#x2F;&#x2F;除法仿函数</p>
+</li>
+<li><p><code>template T modulus</code>         &#x2F;&#x2F;取模仿函数</p>
+</li>
+<li><p><code>template T negate</code>           &#x2F;&#x2F;取反仿函数</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>#include<br>&#x2F;&#x2F;negate<br>void test01()<br>&#123;<br>negateint&gt; n;<br>cout n(50)<br>&#125;</p>
+<p>&#x2F;&#x2F;plus<br>void test02()<br>&#123;<br>plusint&gt; p;<br>cout p(10, 20)<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();<br>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：使用内建函数对象时，需要引入头文件 <code>#include </code></p>
+<p><a href="#4-3-3-%E5%85%B3%E7%B3%BB%E4%BB%BF%E5%87%BD%E6%95%B0"></a>4.3.3 关系仿函数<strong>功能描述：</strong></p>
+<ul>
+<li>实现关系对比</li>
+</ul>
+<p><strong>仿函数原型：</strong></p>
+<ul>
+<li><p><code>template bool equal_to</code>                    &#x2F;&#x2F;等于</p>
+</li>
+<li><p><code>template bool not_equal_to</code>            &#x2F;&#x2F;不等于</p>
+</li>
+<li><p><code>template bool greater</code>                      &#x2F;&#x2F;大于</p>
+</li>
+<li><p><code>template bool greater_equal</code>          &#x2F;&#x2F;大于等于</p>
+</li>
+<li><p><code>template bool less</code>                           &#x2F;&#x2F;小于</p>
+</li>
+<li><p><code>template bool less_equal</code>               &#x2F;&#x2F;小于等于</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>#include<br>#include<br>#include </p>
+<p>class MyCompare<br>&#123;<br>public:<br>bool operator()(int v1,int v2)<br>&#123;<br>return v1 &gt; v2;<br>&#125;<br>&#125;;<br>void test01()<br>&#123;<br>vectorint&gt; v;</p>
+<p>v.push_back(10);<br>v.push_back(30);<br>v.push_back(50);<br>v.push_back(40);<br>v.push_back(20);</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>&#x2F;&#x2F;自己实现仿函数<br>&#x2F;&#x2F;sort(v.begin(), v.end(), MyCompare());<br>&#x2F;&#x2F;STL内建仿函数  大于仿函数<br>sort(v.begin(), v.end(), greaterint&gt;());</p>
+<p>for (vectorint&gt;::iterator it &#x3D; v.begin(); it !&#x3D; v.end(); it++) &#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：关系仿函数中最常用的就是greater大于</p>
+<p><a href="#4-3-4-%E9%80%BB%E8%BE%91%E4%BB%BF%E5%87%BD%E6%95%B0"></a>4.3.4 逻辑仿函数<strong>功能描述：</strong></p>
+<ul>
+<li>实现逻辑运算</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><p><code>template bool logical_and</code>              &#x2F;&#x2F;逻辑与</p>
+</li>
+<li><p><code>template bool logical_or</code>                &#x2F;&#x2F;逻辑或</p>
+</li>
+<li><p><code>template bool logical_not</code>              &#x2F;&#x2F;逻辑非</p>
+</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>#include<br>#include<br>#include<br>void test01()<br>&#123;<br>vectorbool&gt; v;<br>v.push_back(true);<br>v.push_back(false);<br>v.push_back(true);<br>v.push_back(false);</p>
+<p>for (vectorbool&gt;::iterator it &#x3D; v.begin();it!&#x3D; v.end();it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout </p>
+<p>&#x2F;&#x2F;逻辑非  将v容器搬运到v2中，并执行逻辑非运算<br>vectorbool&gt; v2;<br>v2.resize(v.size());<br>transform(v.begin(), v.end(),  v2.begin(), logical_notbool&gt;());<br>for (vectorbool&gt;::iterator it &#x3D; v2.begin(); it !&#x3D; v2.end(); it++)<br>&#123;<br>cout “ “;<br>&#125;<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：逻辑仿函数实际应用较少，了解即可</p>
+<h2 id="5-STL-常用算法"><a href="#5-STL-常用算法" class="headerlink" title="5 STL- 常用算法"></a>5 STL- 常用算法</h2><p><strong>概述</strong>:</p>
+<ul>
+<li><p>算法主要是由头文件<code> </code> &#96;&#96;组成。</p>
+</li>
+<li><p>&#96;&#96;是所有STL头文件中最大的一个，范围涉及到比较、 交换、查找、遍历操作、复制、修改等等</p>
+</li>
+<li><p>&#96;&#96;体积很小，只包括几个在序列上面进行简单数学运算的模板函数</p>
+</li>
+<li><p>&#96;&#96;定义了一些模板类,用以声明函数对象。</p>
+</li>
+</ul>
+<p><a href="#5-1-%E5%B8%B8%E7%94%A8%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95"></a>5.1 常用遍历算法<strong>学习目标：</strong></p>
+<ul>
+<li>掌握常用的遍历算法</li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<ul>
+<li><p><code>for_each</code>     &#x2F;&#x2F;遍历容器</p>
+</li>
+<li><p><code>transform</code>   &#x2F;&#x2F;搬运容器到另一个容器中</p>
+</li>
+</ul>
+<p><a href="#5-1-1-for-each"></a>5.1.1 for_each<strong>功能描述：</strong></p>
+<ul>
+<li>实现遍历容器</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>for_each(iterator beg, iterator end, _func);  </code></p>
+<p>&#x2F;&#x2F; 遍历算法 遍历容器元素</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; _func 函数或者函数对象</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>#include<br>#include </p>
+<p>&#x2F;&#x2F;普通函数<br>void print01(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#x2F;&#x2F;函数对象<br>class print02<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>&#x2F;&#x2F;for_each算法基本用法<br>void test01() &#123;</p>
+<p>vectorint&gt; v;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v.push_back(i);<br>&#125;</p>
+<p>&#x2F;&#x2F;遍历算法<br>for_each(v.begin(), v.end(), print01);<br>cout </p>
+<p>for_each(v.begin(), v.end(), print02());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**for_each在实际开发中是最常用遍历算法，需要熟练掌握</p>
+<p><a href="#5-1-2-transform"></a>5.1.2 transform<strong>功能描述：</strong></p>
+<ul>
+<li>搬运容器到另一个容器中</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<ul>
+<li><code>transform(iterator beg1, iterator end1, iterator beg2, _func);</code></li>
+</ul>
+<p>&#x2F;&#x2F;beg1 源容器开始迭代器</p>
+<p>&#x2F;&#x2F;end1 源容器结束迭代器</p>
+<p>&#x2F;&#x2F;beg2 目标容器开始迭代器</p>
+<p>&#x2F;&#x2F;_func 函数或者函数对象</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>#include<br>#include</p>
+<p>&#x2F;&#x2F;常用遍历算法  搬运 transform</p>
+<p>class TransForm<br>&#123;<br>public:<br>int operator()(int val)<br>&#123;<br>return val;<br>&#125;</p>
+<p>&#125;;</p>
+<p>class MyPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt;v;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v.push_back(i);<br>&#125;</p>
+<p>vectorint&gt;vTarget; &#x2F;&#x2F;目标容器</p>
+<p>vTarget.resize(v.size()); &#x2F;&#x2F; 目标容器需要提前开辟空间</p>
+<p>transform(v.begin(), v.end(), vTarget.begin(), TransForm());</p>
+<p>for_each(vTarget.begin(), vTarget.end(), MyPrint());<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> 搬运的目标容器必须要提前开辟空间，否则无法正常搬运</p>
+<p><a href="#5-2-%E5%B8%B8%E7%94%A8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95"></a>5.2 常用查找算法学习目标：</p>
+<ul>
+<li>掌握常用的查找算法</li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<ul>
+<li><p><code>find</code>                     &#x2F;&#x2F;查找元素</p>
+</li>
+<li><p><code>find_if</code>               &#x2F;&#x2F;按条件查找元素</p>
+</li>
+<li><p><code>adjacent_find</code>    &#x2F;&#x2F;查找相邻重复元素</p>
+</li>
+<li><p><code>binary_search</code>    &#x2F;&#x2F;二分查找法</p>
+</li>
+<li><p><code>count</code>                   &#x2F;&#x2F;统计元素个数</p>
+</li>
+<li><p><code>count_if</code>             &#x2F;&#x2F;按条件统计元素个数</p>
+</li>
+</ul>
+<p><a href="#5-2-1-find"></a>5.2.1 find<strong>功能描述：</strong></p>
+<ul>
+<li>查找指定元素，找到返回指定元素的迭代器，找不到返回结束迭代器end()</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>find(iterator beg, iterator end, value);  </code></p>
+<p>&#x2F;&#x2F; 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; value 查找的元素</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>#include<br>#include<br>#include<br>void test01() &#123;</p>
+<p>vectorint&gt; v;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v.push_back(i + 1);<br>&#125;<br>&#x2F;&#x2F;查找容器中是否有 5 这个元素<br>vectorint&gt;::iterator it &#x3D; find(v.begin(), v.end(), 5);<br>if (it &#x3D;&#x3D; v.end())<br>&#123;<br>cout “没有找到!”<br>&#125;<br>else<br>&#123;<br>cout “找到:”<br>&#125;<br>&#125;</p>
+<p>class Person &#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;<br>&#x2F;&#x2F;重载&#x3D;&#x3D;<br>bool operator&#x3D;&#x3D;(const Person&amp; p)<br>&#123;<br>if (this-&gt;m_Name &#x3D;&#x3D; p.m_Name &amp;&amp; this-&gt;m_Age &#x3D;&#x3D; p.m_Age)<br>&#123;<br>return true;<br>&#125;<br>return false;<br>&#125;</p>
+<p>public:<br>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>void test02() &#123;</p>
+<p>vector v;</p>
+<p>&#x2F;&#x2F;创建数据<br>Person p1(“aaa”, 10);<br>Person p2(“bbb”, 20);<br>Person p3(“ccc”, 30);<br>Person p4(“ddd”, 40);</p>
+<p>v.push_back(p1);<br>v.push_back(p2);<br>v.push_back(p3);<br>v.push_back(p4);</p>
+<p>vector::iterator it &#x3D; find(v.begin(), v.end(), p2);<br>if (it &#x3D;&#x3D; v.end())<br>&#123;<br>cout “没有找到!”<br>&#125;<br>else<br>&#123;<br>cout “找到姓名:” m_Name “ 年龄: “ m_Age<br>&#125;<br>&#125;</p>
+<p>总结： 利用find可以在容器中找指定的元素，返回值是<strong>迭代器</strong></p>
+<p><a href="#5-2-2-find-if"></a>5.2.2 find_if<strong>功能描述：</strong></p>
+<ul>
+<li>按条件查找元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>find_if(iterator beg, iterator end, _Pred);  </code></p>
+<p>&#x2F;&#x2F; 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; _Pred 函数或者谓词（返回bool类型的仿函数）</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>88<br>89<br>#include<br>#include<br>#include </p>
+<p>&#x2F;&#x2F;内置数据类型<br>class GreaterFive<br>&#123;<br>public:<br>bool operator()(int val)<br>&#123;<br>return val &gt; 5;<br>&#125;<br>&#125;;</p>
+<p>void test01() &#123;</p>
+<p>vectorint&gt; v;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v.push_back(i + 1);<br>&#125;</p>
+<p>vectorint&gt;::iterator it &#x3D; find_if(v.begin(), v.end(), GreaterFive());<br>if (it &#x3D;&#x3D; v.end()) &#123;<br>cout “没有找到!”<br>&#125;<br>else &#123;<br>cout “找到大于5的数字:”<br>&#125;<br>&#125;</p>
+<p>&#x2F;&#x2F;自定义数据类型<br>class Person &#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;<br>public:<br>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>class Greater20<br>&#123;<br>public:<br>bool operator()(Person &amp;p)<br>&#123;<br>return p.m_Age &gt; 20;<br>&#125;</p>
+<p>&#125;;</p>
+<p>void test02() &#123;</p>
+<p>vector v;</p>
+<p>&#x2F;&#x2F;创建数据<br>Person p1(“aaa”, 10);<br>Person p2(“bbb”, 20);<br>Person p3(“ccc”, 30);<br>Person p4(“ddd”, 40);</p>
+<p>v.push_back(p1);<br>v.push_back(p2);<br>v.push_back(p3);<br>v.push_back(p4);</p>
+<p>vector::iterator it &#x3D; find_if(v.begin(), v.end(), Greater20());<br>if (it &#x3D;&#x3D; v.end())<br>&#123;<br>cout “没有找到!”<br>&#125;<br>else<br>&#123;<br>cout “找到姓名:” m_Name “ 年龄: “ m_Age<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>总结：find_if按条件查找使查找更加灵活，提供的仿函数可以改变不同的策略</p>
+<p><a href="#5-2-3-adjacent-find"></a>5.2.3 adjacent_find<strong>功能描述：</strong></p>
+<ul>
+<li>查找相邻重复元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>adjacent_find(iterator beg, iterator end);  </code></p>
+<p>&#x2F;&#x2F; 查找相邻重复元素,返回相邻元素的第一个位置的迭代器</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>#include<br>#include </p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(1);<br>v.push_back(2);<br>v.push_back(5);<br>v.push_back(2);<br>v.push_back(4);<br>v.push_back(4);<br>v.push_back(3);</p>
+<p>&#x2F;&#x2F;查找相邻重复元素<br>vectorint&gt;::iterator it &#x3D; adjacent_find(v.begin(), v.end());<br>if (it &#x3D;&#x3D; v.end()) &#123;<br>cout “找不到!”<br>&#125;<br>else &#123;<br>cout “找到相邻重复元素为:”<br>&#125;<br>&#125;</p>
+<p>总结：面试题中如果出现查找相邻重复元素，记得用STL中的adjacent_find算法</p>
+<p><a href="#5-2-4-binary-search"></a>5.2.4 binary_search<strong>功能描述：</strong></p>
+<ul>
+<li>查找指定元素是否存在</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>bool binary_search(iterator beg, iterator end, value);  </code></p>
+<p>&#x2F;&#x2F; 查找指定的元素，查到 返回true  否则false</p>
+<p>&#x2F;&#x2F; 注意: 在<strong>无序序列中不可用</strong></p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; value 查找的元素</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>#include<br>#include </p>
+<p>void test01()<br>&#123;<br>vectorint&gt;v;</p>
+<p>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v.push_back(i);<br>&#125;<br>&#x2F;&#x2F;二分查找<br>bool ret &#x3D; binary_search(v.begin(), v.end(),2);<br>if (ret)<br>&#123;<br>cout “找到了”<br>&#125;<br>else<br>&#123;<br>cout “未找到”<br>&#125;<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**二分查找法查找效率很高，值得注意的是查找的容器中元素必须的有序序列</p>
+<p><a href="#5-2-5-count"></a>5.2.5 count<strong>功能描述：</strong></p>
+<ul>
+<li>统计元素个数</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>count(iterator beg, iterator end, value);  </code></p>
+<p>&#x2F;&#x2F; 统计元素出现次数</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; value 统计的元素</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>#include<br>#include </p>
+<p>&#x2F;&#x2F;内置数据类型<br>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(1);<br>v.push_back(2);<br>v.push_back(4);<br>v.push_back(5);<br>v.push_back(3);<br>v.push_back(4);<br>v.push_back(4);</p>
+<p>int num &#x3D; count(v.begin(), v.end(), 4);</p>
+<p>cout “4的个数为： “<br>&#125;</p>
+<p>&#x2F;&#x2F;自定义数据类型<br>class Person<br>&#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;<br>bool operator&#x3D;&#x3D;(const Person &amp; p)<br>&#123;<br>if (this-&gt;m_Age &#x3D;&#x3D; p.m_Age)<br>&#123;<br>return true;<br>&#125;<br>else<br>&#123;<br>return false;<br>&#125;<br>&#125;<br>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>void test02()<br>&#123;<br>vector v;</p>
+<p>Person p1(“刘备”, 35);<br>Person p2(“关羽”, 35);<br>Person p3(“张飞”, 35);<br>Person p4(“赵云”, 30);<br>Person p5(“曹操”, 25);</p>
+<p>v.push_back(p1);<br>v.push_back(p2);<br>v.push_back(p3);<br>v.push_back(p4);<br>v.push_back(p5);</p>
+<p>Person p(“诸葛亮”,35);</p>
+<p>int num &#x3D; count(v.begin(), v.end(), p);<br>cout “num &#x3D; “<br>&#125;<br>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> 统计自定义数据类型时候，需要配合重载 <code>operator==</code></p>
+<p><a href="#5-2-6-count-if"></a>5.2.6 count_if<strong>功能描述：</strong></p>
+<ul>
+<li>按条件统计元素个数</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>count_if(iterator beg, iterator end, _Pred);  </code></p>
+<p>&#x2F;&#x2F; 按条件统计元素出现次数</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; _Pred 谓词</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>81<br>82<br>#include<br>#include </p>
+<p>class Greater4<br>&#123;<br>public:<br>bool operator()(int val)<br>&#123;<br>return val &gt;&#x3D; 4;<br>&#125;<br>&#125;;</p>
+<p>&#x2F;&#x2F;内置数据类型<br>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(1);<br>v.push_back(2);<br>v.push_back(4);<br>v.push_back(5);<br>v.push_back(3);<br>v.push_back(4);<br>v.push_back(4);</p>
+<p>int num &#x3D; count_if(v.begin(), v.end(), Greater4());</p>
+<p>cout “大于4的个数为： “<br>&#125;</p>
+<p>&#x2F;&#x2F;自定义数据类型<br>class Person<br>&#123;<br>public:<br>Person(string name, int age)<br>&#123;<br>this-&gt;m_Name &#x3D; name;<br>this-&gt;m_Age &#x3D; age;<br>&#125;</p>
+<p>string m_Name;<br>int m_Age;<br>&#125;;</p>
+<p>class AgeLess35<br>&#123;<br>public:<br>bool operator()(const Person &amp;p)<br>&#123;<br>return p.m_Age 35;<br>&#125;<br>&#125;;<br>void test02()<br>&#123;<br>vector v;</p>
+<p>Person p1(“刘备”, 35);<br>Person p2(“关羽”, 35);<br>Person p3(“张飞”, 35);<br>Person p4(“赵云”, 30);<br>Person p5(“曹操”, 25);</p>
+<p>v.push_back(p1);<br>v.push_back(p2);<br>v.push_back(p3);<br>v.push_back(p4);<br>v.push_back(p5);</p>
+<p>int num &#x3D; count_if(v.begin(), v.end(), AgeLess35());<br>cout “小于35岁的个数：”<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>&#x2F;&#x2F;test01();</p>
+<p>test02();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**按值统计用count，按条件统计用count_if</p>
+<p><a href="#5-3-%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"></a>5.3 常用排序算法<strong>学习目标：</strong></p>
+<ul>
+<li>掌握常用的排序算法</li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<ul>
+<li><p><code>sort</code>             &#x2F;&#x2F;对容器内元素进行排序</p>
+</li>
+<li><p><code>random_shuffle</code>   &#x2F;&#x2F;洗牌   指定范围内的元素随机调整次序</p>
+</li>
+<li><p><code>merge </code>           &#x2F;&#x2F; 容器元素合并，并存储到另一容器中</p>
+</li>
+<li><p><code>reverse</code>       &#x2F;&#x2F; 反转指定范围的元素</p>
+</li>
+</ul>
+<p><a href="#5-3-1-sort"></a>5.3.1 sort<strong>功能描述：</strong></p>
+<ul>
+<li>对容器内元素进行排序</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>sort(iterator beg, iterator end, _Pred);  </code></p>
+<p>&#x2F;&#x2F; 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置</p>
+<p>&#x2F;&#x2F;  beg    开始迭代器</p>
+<p>&#x2F;&#x2F;  end    结束迭代器</p>
+<p>&#x2F;&#x2F; _Pred  谓词</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>#include<br>#include </p>
+<p>void myPrint(int val)<br>&#123;<br>cout “ “;<br>&#125;</p>
+<p>void test01() &#123;<br>vectorint&gt; v;<br>v.push_back(10);<br>v.push_back(30);<br>v.push_back(50);<br>v.push_back(20);<br>v.push_back(40);</p>
+<p>&#x2F;&#x2F;sort默认从小到大排序<br>sort(v.begin(), v.end());<br>for_each(v.begin(), v.end(), myPrint);<br>cout </p>
+<p>&#x2F;&#x2F;从大到小排序<br>sort(v.begin(), v.end(), greaterint&gt;());<br>for_each(v.begin(), v.end(), myPrint);<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**sort属于开发中最常用的算法之一，需熟练掌握</p>
+<p><a href="#5-3-2-random-shuffle"></a>5.3.2 random_shuffle<strong>功能描述：</strong></p>
+<ul>
+<li>洗牌   指定范围内的元素随机调整次序</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>random_shuffle(iterator beg, iterator end);  </code></p>
+<p>&#x2F;&#x2F; 指定范围内的元素随机调整次序</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>#include<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>srand((unsigned int)time(NULL));<br>vectorint&gt; v;<br>for(int i &#x3D; 0 ; i 10;i++)<br>&#123;<br>v.push_back(i);<br>&#125;<br>for_each(v.begin(), v.end(), myPrint());<br>cout </p>
+<p>&#x2F;&#x2F;打乱顺序<br>random_shuffle(v.begin(), v.end());<br>for_each(v.begin(), v.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**random_shuffle洗牌算法比较实用，使用时记得加随机数种子</p>
+<p><a href="#5-3-3-merge"></a>5.3.3 merge<strong>功能描述：</strong></p>
+<ul>
+<li>两个容器元素合并，并存储到另一容器中</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>merge(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);  </code></p>
+<p>&#x2F;&#x2F; 容器元素合并，并存储到另一容器中</p>
+<p>&#x2F;&#x2F; 注意: 两个容器必须是<strong>有序的</strong></p>
+<p>&#x2F;&#x2F; beg1   容器1开始迭代器<br>&#x2F;&#x2F; end1   容器1结束迭代器<br>&#x2F;&#x2F; beg2   容器2开始迭代器<br>&#x2F;&#x2F; end2   容器2结束迭代器<br>&#x2F;&#x2F; dest    目标容器开始迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>vectorint&gt; v2;<br>for (int i &#x3D; 0; i 10 ; i++)<br>&#123;<br>v1.push_back(i);<br>v2.push_back(i + 1);<br>&#125;</p>
+<p>vectorint&gt; vtarget;<br>&#x2F;&#x2F;目标容器需要提前开辟空间<br>vtarget.resize(v1.size() + v2.size());<br>&#x2F;&#x2F;合并  需要两个有序序列<br>merge(v1.begin(), v1.end(), v2.begin(), v2.end(), vtarget.begin());<br>for_each(vtarget.begin(), vtarget.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**merge合并的两个容器必须的有序序列</p>
+<p><a href="#5-3-4-reverse"></a>5.3.4 reverse<strong>功能描述：</strong></p>
+<ul>
+<li>将容器内元素进行反转</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>reverse(iterator beg, iterator end);  </code></p>
+<p>&#x2F;&#x2F; 反转指定范围的元素</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(10);<br>v.push_back(30);<br>v.push_back(50);<br>v.push_back(20);<br>v.push_back(40);</p>
+<p>cout “反转前： “<br>for_each(v.begin(), v.end(), myPrint());<br>cout </p>
+<p>cout “反转后： “ </p>
+<p>reverse(v.begin(), v.end());<br>for_each(v.begin(), v.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**reverse反转区间内元素，面试题可能涉及到</p>
+<p><a href="#5-4-%E5%B8%B8%E7%94%A8%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95"></a>5.4 常用拷贝和替换算法<strong>学习目标：</strong></p>
+<ul>
+<li>掌握常用的拷贝和替换算法</li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<ul>
+<li><p><code>copy</code>                      &#x2F;&#x2F; 容器内指定范围的元素拷贝到另一容器中</p>
+</li>
+<li><p><code>replace</code>                &#x2F;&#x2F; 将容器内指定范围的旧元素修改为新元素</p>
+</li>
+<li><p><code>replace_if </code>          &#x2F;&#x2F; 容器内指定范围满足条件的元素替换为新元素</p>
+</li>
+<li><p><code>swap</code>                     &#x2F;&#x2F; 互换两个容器的元素</p>
+</li>
+</ul>
+<p><a href="#5-4-1-copy"></a>5.4.1 copy<strong>功能描述：</strong></p>
+<ul>
+<li>容器内指定范围的元素拷贝到另一容器中</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>copy(iterator beg, iterator end, iterator dest);  </code></p>
+<p>&#x2F;&#x2F; 按值查找元素，找到返回指定位置迭代器，找不到返回结束迭代器位置</p>
+<p>&#x2F;&#x2F; beg  开始迭代器</p>
+<p>&#x2F;&#x2F; end  结束迭代器</p>
+<p>&#x2F;&#x2F; dest 目标起始迭代器</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v1.push_back(i + 1);<br>&#125;<br>vectorint&gt; v2;<br>v2.resize(v1.size());<br>copy(v1.begin(), v1.end(), v2.begin());</p>
+<p>for_each(v2.begin(), v2.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**利用copy算法在拷贝时，目标容器记得提前开辟空间</p>
+<p><a href="#5-4-2-replace"></a>5.4.2 replace<strong>功能描述：</strong></p>
+<ul>
+<li>将容器内指定范围的旧元素修改为新元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>replace(iterator beg, iterator end, oldvalue, newvalue);  </code></p>
+<p>&#x2F;&#x2F; 将区间内旧元素 替换成 新元素</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; oldvalue 旧元素</p>
+<p>&#x2F;&#x2F; newvalue 新元素</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(20);<br>v.push_back(30);<br>v.push_back(20);<br>v.push_back(40);<br>v.push_back(50);<br>v.push_back(10);<br>v.push_back(20);</p>
+<p>cout “替换前：”<br>for_each(v.begin(), v.end(), myPrint());<br>cout </p>
+<p>&#x2F;&#x2F;将容器中的20 替换成 2000<br>cout “替换后：”<br>replace(v.begin(), v.end(), 20,2000);<br>for_each(v.begin(), v.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**replace会替换区间内满足条件的元素</p>
+<p><a href="#5-4-3-replace-if"></a>5.4.3 replace_if<strong>功能描述:</strong>  </p>
+<ul>
+<li>将区间内满足条件的元素，替换成指定元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>replace_if(iterator beg, iterator end, _pred, newvalue);  </code></p>
+<p>&#x2F;&#x2F; 按条件替换元素，满足条件的替换成指定元素</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; _pred 谓词</p>
+<p>&#x2F;&#x2F; newvalue 替换的新元素</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>class ReplaceGreater30<br>&#123;<br>public:<br>bool operator()(int val)<br>&#123;<br>return val &gt;&#x3D; 30;<br>&#125;</p>
+<p>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v;<br>v.push_back(20);<br>v.push_back(30);<br>v.push_back(20);<br>v.push_back(40);<br>v.push_back(50);<br>v.push_back(10);<br>v.push_back(20);</p>
+<p>cout “替换前：”<br>for_each(v.begin(), v.end(), myPrint());<br>cout </p>
+<p>&#x2F;&#x2F;将容器中大于等于的30 替换成 3000<br>cout “替换后：”<br>replace_if(v.begin(), v.end(), ReplaceGreater30(), 3000);<br>for_each(v.begin(), v.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**replace_if按条件查找，可以利用仿函数灵活筛选满足的条件</p>
+<p><a href="#5-4-4-swap"></a>5.4.4 swap<strong>功能描述：</strong></p>
+<ul>
+<li>互换两个容器的元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>swap(container c1, container c2);  </code></p>
+<p>&#x2F;&#x2F; 互换两个容器的元素</p>
+<p>&#x2F;&#x2F; c1容器1</p>
+<p>&#x2F;&#x2F; c2容器2</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>vectorint&gt; v2;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v1.push_back(i);<br>v2.push_back(i+100);<br>&#125;</p>
+<p>cout “交换前： “<br>for_each(v1.begin(), v1.end(), myPrint());<br>cout<br>for_each(v2.begin(), v2.end(), myPrint());<br>cout </p>
+<p>cout “交换后： “<br>swap(v1, v2);<br>for_each(v1.begin(), v1.end(), myPrint());<br>cout<br>for_each(v2.begin(), v2.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**swap交换容器时，注意交换的容器要同种类型</p>
+<p><a href="#5-5-%E5%B8%B8%E7%94%A8%E7%AE%97%E6%9C%AF%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95"></a>5.5 常用算术生成算法<strong>学习目标：</strong></p>
+<ul>
+<li>掌握常用的算术生成算法</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li>算术生成算法属于小型算法，使用时包含的头文件为 <code>#include </code></li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<p><code>accumulate</code>      &#x2F;&#x2F; 计算容器元素累计总和</p>
+<p><code>fill</code>                 &#x2F;&#x2F; 向容器中添加元素</p>
+<p>​</p>
+<p><a href="#5-5-1-accumulate"></a>5.5.1 accumulate<strong>功能描述：</strong></p>
+<ul>
+<li>计算区间内 容器元素累计总和</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>accumulate(iterator beg, iterator end, value);  </code></p>
+<p>&#x2F;&#x2F; 计算容器元素累计总和</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; value 起始值</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>#include<br>#include<br>void test01()<br>&#123;<br>vectorint&gt; v;<br>for (int i &#x3D; 0; i 100; i++) &#123;<br>v.push_back(i);<br>&#125;</p>
+<p>int total &#x3D; accumulate(v.begin(), v.end(), 0);</p>
+<p>cout “total &#x3D; “<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**accumulate使用时头文件注意是 numeric，这个算法很实用</p>
+<p><a href="#5-5-2-fill"></a>5.5.2 fill<strong>功能描述：</strong></p>
+<ul>
+<li>向容器中填充指定的元素</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>fill(iterator beg, iterator end, value);  </code></p>
+<p>&#x2F;&#x2F; 向容器中填充元素</p>
+<p>&#x2F;&#x2F; beg 开始迭代器</p>
+<p>&#x2F;&#x2F; end 结束迭代器</p>
+<p>&#x2F;&#x2F; value 填充的值</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>#include<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;</p>
+<p>vectorint&gt; v;<br>v.resize(10);<br>&#x2F;&#x2F;填充<br>fill(v.begin(), v.end(), 100);</p>
+<p>for_each(v.begin(), v.end(), myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p>**总结：**利用fill可以将容器区间内元素填充为 指定的值</p>
+<p><a href="#5-6-%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88%E7%AE%97%E6%B3%95"></a>5.6 常用集合算法<strong>学习目标：</strong></p>
+<ul>
+<li>掌握常用的集合算法</li>
+</ul>
+<p><strong>算法简介：</strong></p>
+<p><code>set_intersection</code>          &#x2F;&#x2F; 求两个容器的交集</p>
+<p><code>set_union</code>                       &#x2F;&#x2F; 求两个容器的并集</p>
+<p><code>set_difference </code>              &#x2F;&#x2F; 求两个容器的差集</p>
+<p>​</p>
+<p><a href="#5-6-1-set-intersection"></a>5.6.1 set_intersection<strong>功能描述：</strong></p>
+<ul>
+<li>求两个容器的交集</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>set_intersection(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);  </code></p>
+<p>&#x2F;&#x2F; 求两个集合的交集</p>
+<p>&#x2F;&#x2F; <strong>注意:两个集合必须是有序序列</strong></p>
+<p>&#x2F;&#x2F; beg1 容器1开始迭代器<br>&#x2F;&#x2F; end1 容器1结束迭代器<br>&#x2F;&#x2F; beg2 容器2开始迭代器<br>&#x2F;&#x2F; end2 容器2结束迭代器<br>&#x2F;&#x2F; dest 目标容器开始迭代器</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>vectorint&gt; v2;<br>for (int i &#x3D; 0; i 10; i++)<br>&#123;<br>v1.push_back(i);<br>v2.push_back(i+5);<br>&#125;</p>
+<p>vectorint&gt; vTarget;<br>&#x2F;&#x2F;取两个里面较小的值给目标容器开辟空间<br>vTarget.resize(min(v1.size(), v2.size()));</p>
+<p>&#x2F;&#x2F;返回目标容器的最后一个元素的迭代器地址<br>vectorint&gt;::iterator itEnd &#x3D;<br>set_intersection(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());</p>
+<p>for_each(vTarget.begin(), itEnd, myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> </p>
+<ul>
+<li><p>求交集的两个集合必须的有序序列</p>
+</li>
+<li><p>目标容器开辟空间需要从<strong>两个容器中取小值</strong></p>
+</li>
+<li><p>set_intersection返回值既是交集中最后一个元素的位置</p>
+</li>
+</ul>
+<p><a href="#5-6-2-set-union"></a>5.6.2 set_union<strong>功能描述：</strong></p>
+<ul>
+<li>求两个集合的并集</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>set_union(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);  </code></p>
+<p>&#x2F;&#x2F; 求两个集合的并集</p>
+<p>&#x2F;&#x2F; <strong>注意:两个集合必须是有序序列</strong></p>
+<p>&#x2F;&#x2F; beg1 容器1开始迭代器<br>&#x2F;&#x2F; end1 容器1结束迭代器<br>&#x2F;&#x2F; beg2 容器2开始迭代器<br>&#x2F;&#x2F; end2 容器2结束迭代器<br>&#x2F;&#x2F; dest 目标容器开始迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>vectorint&gt; v2;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v1.push_back(i);<br>v2.push_back(i+5);<br>&#125;</p>
+<p>vectorint&gt; vTarget;<br>&#x2F;&#x2F;取两个容器的和给目标容器开辟空间<br>vTarget.resize(v1.size() + v2.size());</p>
+<p>&#x2F;&#x2F;返回目标容器的最后一个元素的迭代器地址<br>vectorint&gt;::iterator itEnd &#x3D;<br>set_union(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());</p>
+<p>for_each(vTarget.begin(), itEnd, myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> </p>
+<ul>
+<li><p>求并集的两个集合必须的有序序列</p>
+</li>
+<li><p>目标容器开辟空间需要<strong>两个容器相加</strong></p>
+</li>
+<li><p>set_union返回值既是并集中最后一个元素的位置</p>
+</li>
+</ul>
+<p><a href="#5-6-3-set-difference"></a>5.6.3  set_difference<strong>功能描述：</strong></p>
+<ul>
+<li>求两个集合的差集</li>
+</ul>
+<p><strong>函数原型：</strong></p>
+<p><code>set_difference(iterator beg1, iterator end1, iterator beg2, iterator end2, iterator dest);  </code></p>
+<p>&#x2F;&#x2F; 求两个集合的差集</p>
+<p>&#x2F;&#x2F; <strong>注意:两个集合必须是有序序列</strong></p>
+<p>&#x2F;&#x2F; beg1 容器1开始迭代器<br>&#x2F;&#x2F; end1 容器1结束迭代器<br>&#x2F;&#x2F; beg2 容器2开始迭代器<br>&#x2F;&#x2F; end2 容器2结束迭代器<br>&#x2F;&#x2F; dest 目标容器开始迭代器</p>
+<p>​</p>
+<p><strong>示例：</strong></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>#include<br>#include </p>
+<p>class myPrint<br>&#123;<br>public:<br>void operator()(int val)<br>&#123;<br>cout “ “;<br>&#125;<br>&#125;;</p>
+<p>void test01()<br>&#123;<br>vectorint&gt; v1;<br>vectorint&gt; v2;<br>for (int i &#x3D; 0; i 10; i++) &#123;<br>v1.push_back(i);<br>v2.push_back(i+5);<br>&#125;</p>
+<p>vectorint&gt; vTarget;<br>&#x2F;&#x2F;取两个里面较大的值给目标容器开辟空间<br>vTarget.resize( max(v1.size() , v2.size()));</p>
+<p>&#x2F;&#x2F;返回目标容器的最后一个元素的迭代器地址<br>cout “v1与v2的差集为： “<br>vectorint&gt;::iterator itEnd &#x3D;<br>set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());<br>for_each(vTarget.begin(), itEnd, myPrint());<br>cout </p>
+<p>cout “v2与v1的差集为： “<br>itEnd &#x3D; set_difference(v2.begin(), v2.end(), v1.begin(), v1.end(), vTarget.begin());<br>for_each(vTarget.begin(), itEnd, myPrint());<br>cout<br>&#125;</p>
+<p>int main() &#123;</p>
+<p>test01();</p>
+<p>system(“pause”);</p>
+<p>return 0;<br>&#125;</p>
+<p><strong>总结：</strong> </p>
+<ul>
+<li><p>求差集的两个集合必须的有序序列</p>
+</li>
+<li><p>目标容器开辟空间需要从<strong>两个容器取较大值</strong></p>
+</li>
+<li><p>set_difference返回值既是差集中最后一个元素的位置</p>
+</li>
+</ul>
+<p>赏</p>
+<p>好活当赏！</p>
+<p><img src="/assets/paywechat.jpg"><br>微信</p>
+<p><strong>本文作者：</strong><br>Alituofo</p>
+<p><strong>本文链接：</strong><br><a href="http://alituofo.github.io/2022/03/04/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/">http://alituofo.github.io/2022/03/04/C++提高编程/</a></p>
+<p>**版权声明： **</p>
+<p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://github.com/alituofo/hexo-theme-yilia-plus/blob/master/LICENSE">MIT</a> 许可协议。转载请注明出处！</p>
 
     
 
@@ -578,19 +3449,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">OS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color3">OS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2022</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
             
             <div class="clearfix"></div>
