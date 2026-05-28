@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Alituofo</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <id>http://alituofo.github.io/</id>
+  <link href="http://alituofo.github.io/" rel="alternate"/>
+  <link href="http://alituofo.github.io/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Alituofo</rights>
+  <title>Alituofo</title>
+  <updated>2026-05-28T11:57:01.093Z</updated>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="OS" scheme="http://alituofo.github.io/categories/OS/"/>
+    <category term="OS" scheme="http://alituofo.github.io/tags/OS/"/>
+    <content>
+      <![CDATA[<p>操作系统相关学习笔记。</p>]]>
+    </content>
+    <id>http://alituofo.github.io/2022/03/08/OS/</id>
+    <link href="http://alituofo.github.io/2022/03/08/OS/"/>
+    <published>2022-03-08T06:42:56.000Z</published>
+    <summary>
+      <![CDATA[<p>操作系统相关学习笔记。</p>]]>
+    </summary>
+    <title>OS</title>
+    <updated>2026-05-28T11:57:01.093Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="C++" scheme="http://alituofo.github.io/categories/C/"/>
+    <category term="C++" scheme="http://alituofo.github.io/tags/C/"/>
+    <content>
+      <![CDATA[<p>C++ 八股文知识点整理。</p>]]>
+    </content>
+    <id>http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/</id>
+    <link href="http://alituofo.github.io/2022/03/08/C++%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    <published>2022-03-08T06:15:28.000Z</published>
+    <summary>
+      <![CDATA[<p>C++ 八股文知识点整理。</p>]]>
+    </summary>
+    <title>C++提高编程</title>
+    <updated>2026-05-28T11:57:01.091Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="C++" scheme="http://alituofo.github.io/categories/C/"/>
+    <category term="C++" scheme="http://alituofo.github.io/tags/C/"/>
+    <content>
+      <![CDATA[<p>C++ 提高编程相关笔记内容。</p>]]>
+    </content>
+    <id>http://alituofo.github.io/2022/03/04/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/</id>
+    <link href="http://alituofo.github.io/2022/03/04/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B/"/>
+    <published>2022-03-03T17:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>C++ 提高编程相关笔记内容。</p>]]>
+    </summary>
+    <title>C++提高编程</title>
+    <updated>2026-05-28T11:57:01.090Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="2022" scheme="http://alituofo.github.io/categories/2022/"/>
+    <category term="2022" scheme="http://alituofo.github.io/tags/2022/"/>
+    <content>
+      <![CDATA[<p>欢迎来到2022年！新的一年，新的起点。</p>]]>
+    </content>
+    <id>http://alituofo.github.io/2022/01/15/%E4%BD%A0%E5%A5%BD2022/</id>
+    <link href="http://alituofo.github.io/2022/01/15/%E4%BD%A0%E5%A5%BD2022/"/>
+    <published>2022-01-15T03:21:00.000Z</published>
+    <summary>
+      <![CDATA[<p>欢迎来到2022年！新的一年，新的起点。</p>]]>
+    </summary>
+    <title>你好2022</title>
+    <updated>2026-05-28T11:57:01.089Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="H5" scheme="http://alituofo.github.io/categories/H5/"/>
+    <category term="HTML" scheme="http://alituofo.github.io/tags/HTML/"/>
+    <content>
+      <![CDATA[<p>HTML 中定义样式可以通过内联样式、内部样式表和外部 CSS 文件来实现。不同方式各有优劣，选择时需要考虑维护性、复用性和性能。</p>]]>
+    </content>
+    <id>http://alituofo.github.io/2020/04/19/HTML%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</id>
+    <link href="http://alituofo.github.io/2020/04/19/HTML%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <published>2020-04-19T04:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>HTML 中定义样式可以通过内联样式、内部样式表和外部 CSS 文件来实现。不同方式各有优劣，选择时需要考虑维护性、复用性和性能。</p>]]>
+    </summary>
+    <title>HTML定义样式的思考</title>
+    <updated>2026-05-28T11:57:01.095Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Alituofo</name>
+    </author>
+    <category term="markdown" scheme="http://alituofo.github.io/categories/markdown/"/>
+    <category term="Hexo" scheme="http://alituofo.github.io/tags/Hexo/"/>
+    <content>
+      <![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p><em>上面分段(两个回车)了，这是斜体</em></p><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>上面换行了(两个空格+回车)，这是<strong>加粗</strong></p><blockquote><p>这是引用(&gt;)两个回车结束引用</p></blockquote><p>这是<a href="https://example.com/">链接</a></p>]]>
+    </content>
+    <id>http://alituofo.github.io/2020/04/14/Markdown%E7%AC%94%E8%AE%B0%E6%B5%8B%E8%AF%95/</id>
+    <link href="http://alituofo.github.io/2020/04/14/Markdown%E7%AC%94%E8%AE%B0%E6%B5%8B%E8%AF%95/"/>
+    <published>2020-04-14T02:55:05.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h2><p><em>上面分段(两个回车)了，这是斜体</em></p>
+<h2 id="二级标题"><a href="#二级标题" cl]]>
+    </summary>
+    <title>Markdown笔记测试</title>
+    <updated>2026-05-28T11:57:01.094Z</updated>
+  </entry>
+</feed>
