@@ -1,0 +1,88 @@
+# Hexo Configuration
+title: Alituofo
+subtitle: ''
+description: ''
+keywords:
+author: Alituofo
+language: zh-CN
+timezone: ''
+
+# URL
+url: http://alituofo.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - 'live2d_models/**/*'
+  - 'lib/**/*'
+  - 'assets/**/*'
+  - 'img/**/*'
+  - 'upload/**/*'
+  - 'fonts/**/*'
+  - 'plugins/**/*'
+  - 'gitment/**/*'
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+theme: yilia-plus
+
+# Deployment
+deploy:
+  type: git
+  repo: git@github.com:alituofo/alituofo.github.io.git
+  branch: master
